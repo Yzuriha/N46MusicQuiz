@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="manifest" href="manifest.json" />
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+</head>
+
+<body>
+  <div class="overlay"></div>
+  <img class="albumImg" src="test1.jpg">
+
+  <div class="main">
+    <div class="gameInformation center">
+      <div class="points">
+        <p><i class="fas fa-star"></i>&nbsp;77362</p>
+      </div>
+      <div class="songNumber">
+        <p><i class="fas fa-music"></i>&nbsp;12/46</p>
+      </div>
+    </div>
+    <div class="trackbar">
+
+    </div>
+    <div class="mediaControl">
+      <i class="fas fa-sync-alt"></i><i class="fas fa-play"></i><i class="fas fa-forward"></i>
+    </div>
+    <div class="answerOptions center">
+      <div class="answerOption center">
+        <p>君の名は希望<br>君の名は希望<br>君の名は希望</p>
+      </div>
+      <div class="answerOption center">
+        <p>僕がいる場所</p>
+      </div>
+      <div class="answerOption center">
+        <p>きっかけ</p>
+      </div>
+      <div class="answerOption center">
+        <p>帰り道は遠回りしたくなる帰り道は遠回りしたくなる帰り道は遠回りしたくなる帰り道は遠回りしたくなる</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script type="text/javascript">
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker
+			.register(`service-worker.js`)
+			.then(function() {
+				console.log('ServiceWorker registration successful');
+			});
+		// navigator.serviceWorker.ready.then(registration => {
+		// 	registration.active.postMessage(JSON.stringify(dataCardSet));
+		// });
+	}
+</script>
+<script defer src="js/settings.js"></script>
+<script defer src="js/install-handler.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.min.js"></script>
+<script src="js/app.js"></script>
