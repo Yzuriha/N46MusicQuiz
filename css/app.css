@@ -3,9 +3,8 @@ body {
   margin: 0;
   padding: 0;
   color: white;
-  font-size: calc(3.5vw);
+  font-size: 1vw;
 }
-
 
 .overlay {
   position: fixed;
@@ -18,13 +17,6 @@ body {
   z-index: -1;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: calc(100% - 100vw);
-}
-
 .center {
   display: flex;
   align-items: center;
@@ -32,11 +24,41 @@ body {
   flex-wrap: wrap;
 }
 
+.overflow-dots {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.trackbar {
+  border-radius: 20px;
+  height: 5px;
+  width: 100%;
+  margin: 0;
+  background-color: white;
+}
+
+.answerOption p {
+  margin: 0 15px;
+  /*class=overflow-dots*/
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .albumImg {
-  width: 90vw;
-  height: 90vw;
   padding: 5vw;
-  border-radius: 10%;
+  width: 42.5%;
+  height: auto;
+  border-radius: 15%;
 }
 
 .gameInformation {
@@ -47,75 +69,136 @@ body {
   margin: 0;
 }
 
-.trackbar {
-  border-radius: 20px;
-  height: 20px;
-  width: 90vw;
-  margin: 0 5vw;
-  background-color: white;
-}
-
 .mediaControl {
   text-align: center;
   padding: 0 5vw;
   font-size: 7vw;
 }
 
-.mediaControl i {
-  padding: 0 5vw;
-}
-
 .answerOptions {
-  height: calc(28vw + 12px + 4vw); /* each option is 14vw so that x2; +12px because of borders; 4vw to consider 1vw margin/padding of each box*/
+  height: 50%;
   padding: 0 5vw;
   justify-content: space-between;
 }
 
 .answerOption {
-  width: calc(50% - 1vw - 6px); /* 50% because two boxes; -2vw because each box should have 1vw margin/padding; -6px because border*/
-  height: 14vw;
-  border: 3px white solid;
-  border-radius: 20px;
+  width: calc(50% - 1vw - 6px);
+  /* 50% because two boxes; -2vw because each box should have 1vw margin/padding; -6px because border*/
+  height: calc(50% - 1vw - 16px);
+  border: 0.2vw white solid;
+  border-radius: 1.5vw;
   text-align: center;
 }
 
-.answerOption p {
-  margin: 15px;
-  /*class=overflow-dots*/
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+@media (min-width: 426px) {
+  .main {
+    padding: 5vw;
+    padding-left: 0;
+    /*because the big img already too big*/
+    width: 42.5%;
+    height: calc(100% - 10vw);
+  }
+
+  .mainWrapper {
+    display: flex;
+    height: 75vh;
+    width: 75vw;
+    padding: 12.5vh 12.5vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main div {
+    padding: 0;
+  }
+
+  .mediaControl i {
+    padding: 0 1.5vw;
+    font-size: 2.5vw;
+  }
 }
 
-.overflow-dots {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+@media (min-width: 426px) and (max-width: 1280px) {
+  body {
+    font-size: calc(1.5vw);
+  }
+
+  .mainWrapper {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+  }
+
+  .albumImg {
+    height: 42.5vw;
+  }
+
+  .main {
+    width: 42.5vw;
+    height: 42.5vw;
+  }
+
+  .trackbar {
+    width: 42.5vw;
+  }
+
+  .mediaControl i {
+    padding: 0 1.5vw;
+    font-size: 3.5vw;
+  }
 }
 
+@media (max-width: 425px) {
+  body {
+    font-size: calc(3.5vw);
+  }
 
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: calc(100% - 100vw);
+    max-height: none !important;
+  }
 
+  .albumImg {
+    width: 90vw;
+    height: 90vw;
+    padding: 5vw;
+    border-radius: 10%;
+  }
 
+  .trackbar {
+    width: 90vw;
+    margin: 0 5vw;
+  }
 
+  .mediaControl i {
+    padding: 0 5vw;
+  }
 
+  .answerOptions {
+    height: calc(28vw + 12px + 4vw);
+    /* each option is 14vw so that x2; +12px because of borders; 4vw to consider 1vw margin/padding of each box*/
+    padding: 0 5vw;
+    justify-content: space-between;
+  }
 
+  .answerOption {
+    width: calc(50% - 1vw - 6px);
+    /* 50% because two boxes; -2vw because each box should have 1vw margin/padding; -6px because border*/
+    height: 14vw;
+    border: 0.3vw white solid;
+    border-radius: 7px;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
+  .answerOption p {
+    margin: 0 10px;
+  }
+}
 
 /* MEDIA QUERIES */
-@media (max-device-height: 667px) {
+@media (max-height: 625px) and (max-width: 425px) {
   .albumImg {
     width: 60vw;
     height: 60vw;
@@ -126,5 +209,6 @@ body {
 
   .main {
     height: calc(100% - 70vw);
+    max-height: none !important;
   }
 }

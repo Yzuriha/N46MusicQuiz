@@ -16,7 +16,8 @@ if (img.complete) {
 
 
 
-
+// dirty cheat to make the img and main part always same height
+document.querySelector(".main").style.maxHeight = document.getElementsByClassName("albumImg")[0].height
 
 
 
