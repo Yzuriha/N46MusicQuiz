@@ -141,13 +141,12 @@ function addEventListenerToAnswers() {
 }
 
 function validateAnswer(){
-  toggleKillClick();
-  if (this.innerText == rightAnswer.name) {
+  if (this.innerText.trim() == rightAnswer.name.trim()) {
     let currentPoints = pointsNode.innerText;
     points += 100;
     animateValue("points", currentPoints, points, 300);
   }
-  // setTimeout(toggleRightAnswer, 1000)
+  toggleKillClick();
   toggleRightAnswer();
   document.getElementById("nextButton").classList.remove("kill-click");
 }
@@ -161,7 +160,7 @@ function toggleKillClick() {
 
 function toggleRightAnswer() {
   answerNodes.forEach((item, i) => {
-    if (item.innerText == rightAnswer.name)  {
+    if (item.innerText.trim() == rightAnswer.name.trim())  {
       item.classList.remove("fadeOutAnswer")
     }
   });
@@ -177,7 +176,6 @@ audio.addEventListener("playing", function() {
     item.classList.remove("kill-click");
     item.classList.remove("fadeOutAnswer");
   });
-  console.log("playing")
   startPointsCounter()
 })
 
