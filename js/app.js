@@ -17,7 +17,8 @@ function getSongList() {
 }
 
 function loadCoverImg(data) {
-  document.querySelector(".albumImg").src = `https://yzuriha.github.io/N46MusicQuiz/assets/image/${data.img}`
+  // once app is done, change path back to `../assets/images/${data.img}`
+  document.querySelector(".albumImg").src = `/assets/images/${data.img}`
 }
 
 function loadSong(data) {
