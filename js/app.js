@@ -161,7 +161,7 @@ function toggleRightAnswer() {
 
 
 function startPointsCounter(){
-  let startTime =
+
 }
 
 audio.addEventListener("playing", function() {
