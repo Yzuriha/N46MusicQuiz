@@ -17,6 +17,16 @@ body {
   z-index: -1;
 }
 
+.overlayHelper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: linear-gradient(rgb(199, 96, 121), rgb(53, 97, 126));
+}
+
 .center {
   display: flex;
   align-items: center;
@@ -38,11 +48,11 @@ body {
 }
 
 .trackbar {
-  border-radius: 20px;
-  height: 5px;
+  /* border-radius: 20px; */
+  /* height: 5px; */
   width: 100%;
   margin: 0;
-  background-color: white;
+  /* background-color: white; */
 }
 
 .answerOption p {
@@ -59,6 +69,7 @@ body {
   width: 42.5%;
   height: auto;
   border-radius: 15%;
+  object-fit: cover;
 }
 
 .gameInformation {

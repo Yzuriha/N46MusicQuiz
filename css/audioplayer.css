@@ -1,0 +1,17 @@
+:root {
+  --plyr-color-main: white;
+  --plyr-control-spacing: 0;
+  --plyr-audio-controls-background: none;
+}
+
+.plyr__volume {
+  display:none;
+}
+
+.plyr__controls .plyr__controls__item:first-child {
+  display: none;
+}
+
+.plyr__menu {
+  display: none;
+}

@@ -7,7 +7,7 @@ dataSet =
       "name":"13nichi no Kinyobi",
       "Single":"Kimi no Na wa Kibou",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/GHzsNEM.jpg",
+      "img":"GHzsNEM.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/13日の金曜日.mp3"
    },
@@ -16,7 +16,7 @@ dataSet =
       "name":"2dome no KISU kara",
       "Single":"Sayonara no Imi",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/BJzpy9o.jpg",
+      "img":"BJzpy9o.jpg",
       "albumImg":"https://i.imgur.com/013SnT2",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/２度目のキスから.mp3"
    },
@@ -25,7 +25,7 @@ dataSet =
       "name":"Scout Man",
       "Single":"Synchronicity",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/cCRxw7V.jpg",
+      "img":"cCRxw7V.jpg",
       "albumImg":"https://i.imgur.com/I3nwJcZ",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/スカウトマン.mp3"
    },
@@ -34,7 +34,7 @@ dataSet =
       "name":"Aimai",
       "Single":"Sing Out!",
       "album":"",
-      "img":"https://i.imgur.com/NYXItas.jpg",
+      "img":"NYXItas.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/曖昧.mp3"
    },
@@ -43,7 +43,7 @@ dataSet =
       "name":"Aitakatta Kamoshirenai",
       "Single":"Guru Guru Curtain",
       "album":"",
-      "img":"https://i.imgur.com/vEPVn78.jpg",
+      "img":"vEPVn78.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/会いたかったかもしれない.mp3"
    },
@@ -52,7 +52,7 @@ dataSet =
       "name":"Am I Loving",
       "Single":"Sing Out!",
       "album":"",
-      "img":"https://i.imgur.com/fYSZ2SH.jpg",
+      "img":"fYSZ2SH.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/Am I Loving.mp3"
    },
@@ -61,7 +61,7 @@ dataSet =
       "name":"Anastasia",
       "Single":"Shiawase no Hogosyoku",
       "album":"",
-      "img":"https://i.imgur.com/uzkvWNf.jpg",
+      "img":"uzkvWNf.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/アナスターシャ.mp3"
    },
@@ -70,7 +70,7 @@ dataSet =
       "name":"Anata no Tame ni Hikitai",
       "Single":"",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/M8EDL11.jpg",
+      "img":"M8EDL11.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/あなたのために弾きたい.mp3"
    },
@@ -79,7 +79,7 @@ dataSet =
       "name":"Anna ni suki datta no ni...",
       "Single":"Jikochuu de Ikou!",
       "album":"",
-      "img":"https://i.imgur.com/whSTMNe.jpg",
+      "img":"whSTMNe.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/あんなに好きだったのに….mp3"
    },
@@ -88,7 +88,7 @@ dataSet =
       "name":"Ano Hi Boku wa Tossa ni Uso wo Tsuita",
       "Single":"Nandome no Aozora ka?",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/bhltBSR.jpg",
+      "img":"bhltBSR.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/あの日 僕は咄嗟に嘘をついた.mp3"
    },
@@ -97,7 +97,7 @@ dataSet =
       "name":"Ano Kyoushitsu",
       "Single":"Sayonara no Imi",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/lt5555a.jpg",
+      "img":"lt5555a.jpg",
       "albumImg":"https://i.imgur.com/2vOwECY",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/あの教室.mp3"
    },
@@ -106,7 +106,7 @@ dataSet =
       "name":"Another Ghost",
       "Single":"Influencer",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/jdahoRh.jpg",
+      "img":"jdahoRh.jpg",
       "albumImg":"https://i.imgur.com/2vOwECY",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/Another Ghost.mp3"
    },
@@ -115,7 +115,7 @@ dataSet =
       "name":"Arakajime Katarareru Romance",
       "Single":"Inochi wa Utsukushii",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/VMMwORV.jpg",
+      "img":"VMMwORV.jpg",
       "albumImg":"https://i.imgur.com/azdDTg8",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/あらかじめ語られるロマンス.mp3"
    },
@@ -124,7 +124,7 @@ dataSet =
       "name":"Arigachi na Renai",
       "Single":"",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/OwJBHiE.jpg",
+      "img":"OwJBHiE.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ありがちな恋愛.mp3"
    },
@@ -133,7 +133,7 @@ dataSet =
       "name":"Atarashii Kafun ~Musical “Mishiranu Sekai” yori~",
       "Single":"Itsuka Dekirukara Kyou Dekiru",
       "album":"",
-      "img":"https://i.imgur.com/m2QxrF4.jpg",
+      "img":"m2QxrF4.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/新しい花粉 ～ミュージカル「見知らぬ世界」より～.mp3"
    },
@@ -142,7 +142,7 @@ dataSet =
       "name":"Atarashii Sekai",
       "Single":"Synchronicity",
       "album":"",
-      "img":"https://i.imgur.com/1A4z5zu.jpg",
+      "img":"1A4z5zu.jpg",
       "albumImg":"https://i.imgur.com/OwJBHiE",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/新しい世界.mp3"
    },
@@ -151,7 +151,7 @@ dataSet =
       "name":"Atari Sawari no Nai Hanashi",
       "Single":"Influencer",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/Fvbv9Co.jpg",
+      "img":"Fvbv9Co.jpg",
       "albumImg":"https://i.imgur.com/013SnT2",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/当たり障りのない話.mp3"
    },
@@ -160,7 +160,7 @@ dataSet =
       "name":"BARETTA",
       "Single":"Barrette",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/ovULZto.jpg",
+      "img":"ovULZto.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/バレッタ.mp3"
    },
@@ -169,7 +169,7 @@ dataSet =
       "name":"Blanco",
       "Single":"Sayonara no Imi",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/Sn5Rngd.jpg",
+      "img":"Sn5Rngd.jpg",
       "albumImg":"https://i.imgur.com/a1Xe1eV",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ブランコ.mp3"
    },
@@ -178,7 +178,7 @@ dataSet =
       "name":"Boku Dake no Hikari",
       "Single":"Hadashi de Summer",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/oURL25l.jpg",
+      "img":"oURL25l.jpg",
       "albumImg":"https://i.imgur.com/a1Xe1eV",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/僕だけの光.mp3"
    },
@@ -187,7 +187,7 @@ dataSet =
       "name":"Boku ga Ikanakya Dare ga Ikunda?",
       "Single":"Natsu no Free &amp; Easy",
       "album":"",
-      "img":"https://i.imgur.com/o3UZ3Ch.jpg",
+      "img":"o3UZ3Ch.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/僕が行かなきゃ誰が行くんだ.mp3"
    },
@@ -196,7 +196,7 @@ dataSet =
       "name":"Boku ga Iru Basho",
       "Single":"",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/M8EDL11.jpg",
+      "img":"M8EDL11.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/僕がいる場所.mp3"
    },
@@ -205,7 +205,7 @@ dataSet =
       "name":"Boku no Koto, Shitteru?",
       "Single":"Yoakemade Tsuyogaranakutemoii",
       "album":"",
-      "img":"https://i.imgur.com/uzkvWNf.jpg",
+      "img":"uzkvWNf.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/僕のこと、知ってる.mp3"
    },
@@ -214,7 +214,7 @@ dataSet =
       "name":"Boku no Omoikomi",
       "Single":"Yoakemade Tsuyogaranakutemoii",
       "album":"",
-      "img":"https://i.imgur.com/uzkvWNf.jpg",
+      "img":"uzkvWNf.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/僕の思い込み.mp3"
    },
@@ -223,7 +223,7 @@ dataSet =
       "name":"Boku no Shoudou",
       "Single":"Itsuka Dekirukara Kyou Dekiru",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/AypURqg.jpg",
+      "img":"AypURqg.jpg",
       "albumImg":"https://i.imgur.com/TGEERex",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/僕の衝動.mp3"
    },
@@ -232,7 +232,7 @@ dataSet =
       "name":"Border",
       "Single":"Inochi wa Utsukushii",
       "album":"",
-      "img":"https://i.imgur.com/4AqNlqO.jpg",
+      "img":"4AqNlqO.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ボーダー.mp3"
    },
@@ -241,7 +241,7 @@ dataSet =
       "name":"Boukyaku to bigaku",
       "Single":"",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/013SnT2.jpg",
+      "img":"013SnT2.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/忘却と美学.mp3"
    },
@@ -250,7 +250,7 @@ dataSet =
       "name":"Caravan wa Nemuranai",
       "Single":"Kaerimichi wa Toomawari Shitaku Naru",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/iH8o67w.jpg",
+      "img":"iH8o67w.jpg",
       "albumImg":"https://i.imgur.com/ueQMI6J",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/キャラバンは眠らない.mp3"
    },
@@ -259,7 +259,7 @@ dataSet =
       "name":"Chikyuu ga marui nara",
       "Single":"Jikochuu de Ikou!",
       "album":"",
-      "img":"https://i.imgur.com/6d6IqPJ.jpg",
+      "img":"6d6IqPJ.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/地球が丸いなら.mp3"
    },
@@ -268,7 +268,7 @@ dataSet =
       "name":"Chopin no Utsotsuki",
       "Single":"Kaerimichi wa Toomawari Shitaku Naru",
       "album":"",
-      "img":"https://i.imgur.com/Vb8w0qo.jpg",
+      "img":"Vb8w0qo.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ショパンの嘘つき.mp3"
    },
@@ -277,7 +277,7 @@ dataSet =
       "name":"Dai Kirai Na Hazu Datta",
       "Single":"",
       "album":"",
-      "img":"https://i.imgur.com/iEf0FQ8.jpg",
+      "img":"iEf0FQ8.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/大嫌いなはずだった。.mp3"
    },
@@ -286,7 +286,7 @@ dataSet =
       "name":"Dankeschen",
       "Single":"Kidzuitara Kataomoi",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/yzZIfHJ.jpg",
+      "img":"yzZIfHJ.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ダンケシェーン.mp3"
    },
@@ -295,7 +295,7 @@ dataSet =
       "name":"Dare Yori soba ni Itai",
       "Single":"",
       "album":"Boku Dake no Kimi ~Under Super Best~",
-      "img":"https://i.imgur.com/I8HW6Tb.jpg",
+      "img":"I8HW6Tb.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/誰よりそばにいたい.mp3"
    },
@@ -304,7 +304,7 @@ dataSet =
       "name":"Dareka wa Mikata",
       "Single":"",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/M8EDL11.jpg",
+      "img":"M8EDL11.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/誰かは味方.mp3"
    },
@@ -313,7 +313,7 @@ dataSet =
       "name":"Dekopin",
       "Single":"Kimi no Na wa Kibou",
       "album":"",
-      "img":"https://i.imgur.com/AWOUaGb.jpg",
+      "img":"AWOUaGb.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/でこぴん.mp3"
    },
@@ -322,7 +322,7 @@ dataSet =
       "name":"Fantastic Sanshokupan",
       "Single":"Shiawase no Hogosyoku",
       "album":"",
-      "img":"https://i.imgur.com/uzkvWNf.jpg",
+      "img":"uzkvWNf.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ファンタスティック三色パン.mp3"
    },
@@ -331,7 +331,7 @@ dataSet =
       "name":"Fuminsho",
       "Single":"Itsuka Dekirukara Kyou Dekiru",
       "album":"",
-      "img":"https://i.imgur.com/65O8VsF.jpg",
+      "img":"65O8VsF.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/不眠症.mp3"
    },
@@ -340,7 +340,7 @@ dataSet =
       "name":"Futougou",
       "Single":"Harujion ga Sakukoro",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/0DzFA3r.jpg",
+      "img":"0DzFA3r.jpg",
       "albumImg":"https://i.imgur.com/JtJ4rOU",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/不等号.mp3"
    },
@@ -349,7 +349,7 @@ dataSet =
       "name":"Fuusen wa Ikiteiru",
       "Single":"Influencer",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/vo2HX4E.jpg",
+      "img":"vo2HX4E.jpg",
       "albumImg":"https://i.imgur.com/a1Xe1eV",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/風船は生きている.mp3"
    },
@@ -358,7 +358,7 @@ dataSet =
       "name":"Girl's Rule",
       "Single":"Girl's Rule",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/iL30IeB.jpg",
+      "img":"iL30IeB.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ガールズルール.mp3"
    },
@@ -367,7 +367,7 @@ dataSet =
       "name":"Gomen ne Zutto...",
       "Single":"Inochi wa Utsukushii",
       "album":"",
-      "img":"https://i.imgur.com/4G8397W.jpg",
+      "img":"4G8397W.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ごめんね　ずっと・・・.mp3"
    },
@@ -376,7 +376,7 @@ dataSet =
       "name":"Gomen ne, Smoothie",
       "Single":"",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/CW6pQSX.jpg",
+      "img":"CW6pQSX.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ごめんね、スムージー.mp3"
    },
@@ -385,7 +385,7 @@ dataSet =
       "name":"Gorgonzola",
       "Single":"",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/I3nwJcZ.jpg",
+      "img":"I3nwJcZ.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ゴルゴンゾーラ.mp3"
    },
@@ -394,7 +394,7 @@ dataSet =
       "name":"Guru Guru Curtain",
       "Single":"Guru Guru Curtain",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/zJQpaoF.jpg",
+      "img":"zJQpaoF.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ぐるぐるカーテン.mp3"
    },
@@ -403,7 +403,7 @@ dataSet =
       "name":"Guuzen wo Iiwake ni Shite",
       "Single":"Oide, Shampoo",
       "album":"",
-      "img":"https://i.imgur.com/xHYQMP9.jpg",
+      "img":"xHYQMP9.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/偶然を言い訳にして.mp3"
    },
@@ -412,7 +412,7 @@ dataSet =
       "name":"Hadashi de Summer",
       "Single":"Hadashi de Summer",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/oURL25l.jpg",
+      "img":"oURL25l.jpg",
       "albumImg":"https://i.imgur.com/a1Xe1eV",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/裸足でSummer.mp3"
    },
@@ -421,7 +421,7 @@ dataSet =
       "name":"Hakumai sama",
       "Single":"Hadashi de Summer",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/VZrf02K.jpg",
+      "img":"VZrf02K.jpg",
       "albumImg":"https://i.imgur.com/CW6pQSX",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/白米様.mp3"
    },
@@ -430,7 +430,7 @@ dataSet =
       "name":"Hane no Kioku",
       "Single":"Taiyou Knock",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/lYQHppN.jpg",
+      "img":"lYQHppN.png",
       "albumImg":"https://i.imgur.com/azdDTg8",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/羽根の記憶.mp3"
    },
@@ -439,7 +439,7 @@ dataSet =
       "name":"Haru no Melody",
       "Single":"Seifuku no Mannequin",
       "album":"Boku Dake no Kimi ~Under Super Best~",
-      "img":"https://i.imgur.com/qgNXVye.jpg",
+      "img":"qgNXVye.jpg",
       "albumImg":"https://i.imgur.com/I8HW6Tb",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/春のメロディー.mp3"
    },
@@ -448,7 +448,7 @@ dataSet =
       "name":"Harujion ga Sakukoro",
       "Single":"Harujion ga Sakukoro",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/rjeA1Dq.jpg",
+      "img":"rjeA1Dq.jpg",
       "albumImg":"https://i.imgur.com/azdDTg8",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ハルジオンが咲く頃.mp3"
    },
@@ -457,7 +457,7 @@ dataSet =
       "name":"Harukanaru Bhutan",
       "Single":"Harujion ga Sakukoro",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/rjeA1Dq.jpg",
+      "img":"rjeA1Dq.jpg",
       "albumImg":"https://i.imgur.com/bBy478T",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/遥かなるブータン.mp3"
    },
@@ -466,7 +466,7 @@ dataSet =
       "name":"Hashire! Bicycle",
       "Single":"Hashire! Bicycle",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/cNQHVLA.jpg",
+      "img":"cNQHVLA.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/走れ!Bicycle.mp3"
    },
@@ -475,7 +475,7 @@ dataSet =
       "name":"Hatsukoi no Hito wo Ima Demo",
       "Single":"Barrette",
       "album":"Boku Dake no Kimi ~Under Super Best~",
-      "img":"https://i.imgur.com/CuCmyoH.jpg",
+      "img":"CuCmyoH.jpg",
       "albumImg":"https://i.imgur.com/I8HW6Tb",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/初恋の人を今でも.mp3"
    },
@@ -484,7 +484,7 @@ dataSet =
       "name":"Heikousen",
       "Single":"Sing Out!",
       "album":"",
-      "img":"https://i.imgur.com/1EeBi5N.jpg",
+      "img":"1EeBi5N.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/平行線.mp3"
    },
@@ -493,7 +493,7 @@ dataSet =
       "name":"Hidari Mune no Yuuki",
       "Single":"Guru Guru Curtain",
       "album":"Boku Dake no Kimi ~Under Super Best~",
-      "img":"https://i.imgur.com/zJQpaoF.jpg",
+      "img":"zJQpaoF.jpg",
       "albumImg":"https://i.imgur.com/I8HW6Tb",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/左胸の勇気.mp3"
    },
@@ -502,7 +502,7 @@ dataSet =
       "name":"Hito natsu no nagasa yori...",
       "Single":"Nigemizu",
       "album":"",
-      "img":"https://i.imgur.com/0xPvRTv.jpg",
+      "img":"0xPvRTv.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ひと夏の長さより・・・.mp3"
    },
@@ -511,7 +511,7 @@ dataSet =
       "name":"Hito wa Naze Hashiru no ka?",
       "Single":"Hashire! Bicycle",
       "album":"",
-      "img":"https://i.imgur.com/gamOnVZ.jpg",
+      "img":"gamOnVZ.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/人はなぜ走るのか.mp3"
    },
@@ -520,7 +520,7 @@ dataSet =
       "name":"Hitori Yogari",
       "Single":"",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/ll7UMap.jpg",
+      "img":"ll7UMap.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ひとりよがり.mp3"
    },
@@ -529,7 +529,7 @@ dataSet =
       "name":"Hodzue wo Tsuite Nemurenai",
       "Single":"",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/TGEERex.jpg",
+      "img":"TGEERex.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/頬杖をついては眠れない.mp3"
    },
@@ -538,7 +538,7 @@ dataSet =
       "name":"Hoka no Hoshi kara",
       "Single":"Girl's Rule",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/BnGnBmr.jpg",
+      "img":"BnGnBmr.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/他の星から.mp3"
    },
@@ -547,7 +547,7 @@ dataSet =
       "name":"Hausu!",
       "Single":"Oide, Shampoo",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/SINN3Hv.jpg",
+      "img":"SINN3Hv.jpg",
       "albumImg":"https://i.imgur.com/64Zxs4K",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ハウス！.mp3"
    },
@@ -556,7 +556,7 @@ dataSet =
       "name":"I see…",
       "Single":"Shiawase no Hogosyoku",
       "album":"",
-      "img":"https://i.imgur.com/uzkvWNf.jpg",
+      "img":"uzkvWNf.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/I see….mp3"
    },
@@ -565,7 +565,7 @@ dataSet =
       "name":"Igai BREAK",
       "Single":"Influencer",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/FnTJTrp.jpg",
+      "img":"FnTJTrp.jpg",
       "albumImg":"https://i.imgur.com/a1Xe1eV",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/意外BREAK.mp3"
    },
@@ -574,7 +574,7 @@ dataSet =
       "name":"Ikuate no Nai Bokutachi",
       "Single":"Hadashi de Summer",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/nKXltjJ.jpg",
+      "img":"nKXltjJ.jpg",
       "albumImg":"https://i.imgur.com/013SnT2",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/行くあてのない僕たち.mp3"
    },
@@ -583,7 +583,7 @@ dataSet =
       "name":"Ima, Hanashitai Dareka ga Iru",
       "Single":"Ima, Hanashitai Dareka ga Iru",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/8XNdxwL.jpg",
+      "img":"8XNdxwL.jpg",
       "albumImg":"https://i.imgur.com/azdDTg8",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/今、話したい誰かがいる.mp3"
    },
@@ -592,7 +592,7 @@ dataSet =
       "name":"INFURUENSAA",
       "Single":"Influencer",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/FnTJTrp.jpg",
+      "img":"FnTJTrp.jpg",
       "albumImg":"https://i.imgur.com/a1Xe1eV",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/インフルエンサー.mp3"
    },
@@ -601,7 +601,7 @@ dataSet =
       "name":"Inochi no Shinjitsu Musical 「Ringo Uri to Kamemushi」",
       "Single":"Hadashi de Summer",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/Xsik0TF.jpg",
+      "img":"Xsik0TF.jpg",
       "albumImg":"https://i.imgur.com/013SnT2",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/林檎売りとカメムシ.mp3"
    },
@@ -610,7 +610,7 @@ dataSet =
       "name":"Inochi wa Utsukushii",
       "Single":"Inochi wa Utsukushii",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/VMMwORV.jpg",
+      "img":"VMMwORV.jpg",
       "albumImg":"https://i.imgur.com/azdDTg8",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/命は美しい.mp3"
    },
@@ -619,7 +619,7 @@ dataSet =
       "name":"Itsuka Dekirukara Kyou Dekiru",
       "Single":"Itsuka Dekirukara Kyou Dekiru",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/65O8VsF.jpg",
+      "img":"65O8VsF.jpg",
       "albumImg":"https://i.imgur.com/OwJBHiE",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/いつかできるから今日できる.mp3"
    },
@@ -628,7 +628,7 @@ dataSet =
       "name":"Jaane.",
       "Single":"Shiawase no Hogosyoku",
       "album":"",
-      "img":"https://i.imgur.com/uzkvWNf.jpg",
+      "img":"uzkvWNf.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/じゃあね。.mp3"
    },
@@ -637,7 +637,7 @@ dataSet =
       "name":"Jibun ja nai kanji",
       "Single":"Jikochuu de Ikou!",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/uWiocmJ.jpg",
+      "img":"uWiocmJ.jpg",
       "albumImg":"https://i.imgur.com/ueQMI6J",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/自分じゃない感じ.mp3"
    },
@@ -646,7 +646,7 @@ dataSet =
       "name":"Jibun no koto",
       "Single":"",
       "album":"Boku Dake no Kimi ~Under Super Best~",
-      "img":"https://i.imgur.com/I8HW6Tb.jpg",
+      "img":"I8HW6Tb.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/自分のこと.mp3"
    },
@@ -655,7 +655,7 @@ dataSet =
       "name":"Jikochuu de Ikou!",
       "Single":"Jikochuu de Ikou!",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/4QyBFHg.jpg",
+      "img":"4QyBFHg.jpg",
       "albumImg":"https://i.imgur.com/OwJBHiE",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ジコチューで行こう！.mp3"
    },
@@ -664,7 +664,7 @@ dataSet =
       "name":"Jinsei wo Kangaetakunaru",
       "Single":"Influencer",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/FnTJTrp.jpg",
+      "img":"FnTJTrp.jpg",
       "albumImg":"https://i.imgur.com/a1Xe1eV",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/人生を考えたくなる.mp3"
    },
@@ -673,7 +673,7 @@ dataSet =
       "name":"Jiyuu no Kanata",
       "Single":"",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/ll7UMap.jpg",
+      "img":"ll7UMap.jpg",
       "albumImg":"https://i.imgur.com/I8HW6Tb",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/自由の彼方.mp3"
    },
@@ -682,7 +682,7 @@ dataSet =
       "name":"Kaerimichi wa Toomawari Shitaku Naru",
       "Single":"Kaerimichi wa Toomawari Shitaku Naru",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/iH8o67w.jpg",
+      "img":"iH8o67w.jpg",
       "albumImg":"https://i.imgur.com/OwJBHiE",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/帰り道は遠回りしたくなる.mp3"
    },
@@ -691,7 +691,7 @@ dataSet =
       "name":"Kairyuu no Shima yo",
       "Single":"Hashire! Bicycle",
       "album":"",
-      "img":"https://i.imgur.com/D4o9rYL.jpg",
+      "img":"D4o9rYL.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/海流の島よ.mp3"
    },
@@ -700,7 +700,7 @@ dataSet =
       "name":"Kakikoori no Kataomoi",
       "Single":"",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/JtJ4rOU.jpg",
+      "img":"JtJ4rOU.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/かき氷の片想い.mp3"
    },
@@ -709,7 +709,7 @@ dataSet =
       "name":"Kakumei no Uma",
       "Single":"",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/M8EDL11.jpg",
+      "img":"M8EDL11.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/革命の馬.mp3"
    },
@@ -718,7 +718,7 @@ dataSet =
       "name":"Kanashimi no Wasurekata",
       "Single":"Ima, Hanashitai Dareka ga Iru",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/u3yyv13.jpg",
+      "img":"u3yyv13.jpg",
       "albumImg":"https://i.imgur.com/azdDTg8",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/悲しみの忘れ方.mp3"
    },
@@ -727,7 +727,7 @@ dataSet =
       "name":"Kanjou Rokugousen",
       "Single":"",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/64Zxs4K.jpg",
+      "img":"64Zxs4K.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/環状六号線.mp3"
    },
@@ -736,7 +736,7 @@ dataSet =
       "name":"Kassouro",
       "Single":"Sing Out!",
       "album":"",
-      "img":"https://i.imgur.com/Agq1n9H.jpg",
+      "img":"Agq1n9H.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/滑走路.mp3"
    },
@@ -745,7 +745,7 @@ dataSet =
       "name":"Katai Kara no You ni Dakishimetai",
       "Single":"",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/2vOwECY.jpg",
+      "img":"2vOwECY.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/硬い殻のように抱きしめたい.mp3"
    },
@@ -754,7 +754,7 @@ dataSet =
       "name":"Keishasuru",
       "Single":"",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/ll7UMap.jpg",
+      "img":"ll7UMap.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/傾斜する.mp3"
    },
@@ -763,7 +763,7 @@ dataSet =
       "name":"Kidzuitara Kataomoi",
       "Single":"Kidzuitara Kataomoi",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/pkqa3ne.jpg",
+      "img":"pkqa3ne.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/気づいたら片想い.mp3"
    },
@@ -772,7 +772,7 @@ dataSet =
       "name":"Kikkake",
       "Single":"",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/azdDTg8.jpg",
+      "img":"azdDTg8.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/きっかけ.mp3"
    },
@@ -781,7 +781,7 @@ dataSet =
       "name":"Skydiving",
       "Single":"",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/a1Xe1eV.jpg",
+      "img":"a1Xe1eV.jpg",
       "albumImg":"https://i.imgur.com/I8HW6Tb",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/スカイダイビング.mp3"
    },
@@ -790,7 +790,7 @@ dataSet =
       "name":"Kimi ni okuru hana ga nai",
       "Single":"Sayonara no Imi",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/twOr7hu.jpg",
+      "img":"twOr7hu.jpg",
       "albumImg":"https://i.imgur.com/CW6pQSX",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/君に贈る花がない.mp3"
    },
@@ -799,7 +799,7 @@ dataSet =
       "name":"Kimi no Na wa Kibou",
       "Single":"Kimi no Na wa Kibou",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/LXttGpD.jpg",
+      "img":"LXttGpD.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/君の名は希望.mp3"
    },
@@ -808,7 +808,7 @@ dataSet =
       "name":"Kimi wa Boku to Awanai Hou ga Yokatta no Kana",
       "Single":"Inochi wa Utsukushii",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/9rw7lSR.jpg",
+      "img":"9rw7lSR.jpg",
       "albumImg":"https://i.imgur.com/JtJ4rOU",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/君は僕と会わない方がよかったのかな.mp3"
    },
@@ -817,7 +817,7 @@ dataSet =
       "name":"Kisu no shuriken",
       "Single":"",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/OwJBHiE.jpg",
+      "img":"OwJBHiE.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/キスの手裏剣.mp3"
    },
@@ -826,7 +826,7 @@ dataSet =
       "name":"Kodoku Kyoudai",
       "Single":"Kidzuitara Kataomoi",
       "album":"",
-      "img":"https://i.imgur.com/R1ar1hu.jpg",
+      "img":"R1ar1hu.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/孤独兄弟.mp3"
    },
@@ -835,7 +835,7 @@ dataSet =
       "name":"Kodoku no aozora",
       "Single":"Sayonara no Imi",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/lt5555a.jpg",
+      "img":"lt5555a.jpg",
       "albumImg":"https://i.imgur.com/a1Xe1eV",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/孤独な青空.mp3"
    },
@@ -844,7 +844,7 @@ dataSet =
       "name":"Koishitara, Kao wo Arae!",
       "Single":"",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/JtJ4rOU.jpg",
+      "img":"JtJ4rOU.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/失恋したら、顔を洗え!.mp3"
    },
@@ -853,7 +853,7 @@ dataSet =
       "name":"Koko Janai Doko ka",
       "Single":"Seifuku no Mannequin",
       "album":"",
-      "img":"https://i.imgur.com/ynDvCGX.jpg",
+      "img":"ynDvCGX.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ここじゃないどこか.mp3"
    },
@@ -862,7 +862,7 @@ dataSet =
       "name":"Koko ni Iru Riyuu",
       "Single":"Natsu no Free &amp; Easy",
       "album":"Boku Dake no Kimi ~Under Super Best~",
-      "img":"https://i.imgur.com/akoIJ4A.jpg",
+      "img":"akoIJ4A.jpg",
       "albumImg":"https://i.imgur.com/I8HW6Tb",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ここにいる理由.mp3"
    },
@@ -871,7 +871,7 @@ dataSet =
       "name":"Kokoro no Kusuri",
       "Single":"Oide, Shampoo",
       "album":"",
-      "img":"https://i.imgur.com/xHYQMP9.jpg",
+      "img":"xHYQMP9.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/心の薬.mp3"
    },
@@ -880,7 +880,7 @@ dataSet =
       "name":"Kokoro no Monologue",
       "Single":"Jikochuu de Ikou!",
       "album":"",
-      "img":"https://i.imgur.com/mRvWFfI.jpg",
+      "img":"mRvWFfI.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/心のモノローグ.mp3"
    },
@@ -889,7 +889,7 @@ dataSet =
       "name":"Kokuhaku no Junban",
       "Single":"Kaerimichi wa Toomawari Shitaku Naru",
       "album":"",
-      "img":"https://i.imgur.com/1EhuqVv.jpg",
+      "img":"1EhuqVv.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/告白の順番.mp3"
    },
@@ -898,7 +898,7 @@ dataSet =
       "name":"Korogatta Kane wo Narase!",
       "Single":"Nandome no Aozora ka?",
       "album":"",
-      "img":"https://i.imgur.com/Tp2HzYL.jpg",
+      "img":"Tp2HzYL.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/転がった鐘を鳴らせ！.mp3"
    },
@@ -907,7 +907,7 @@ dataSet =
       "name":"Kotodamaho",
       "Single":"Synchronicity",
       "album":"",
-      "img":"https://i.imgur.com/O0gJ0dr.jpg",
+      "img":"O0gJ0dr.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/言霊砲.mp3"
    },
@@ -916,7 +916,7 @@ dataSet =
       "name":"Kougousei Kibou",
       "Single":"",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/azdDTg8.jpg",
+      "img":"azdDTg8.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/光合成希望.mp3"
    },
@@ -925,7 +925,7 @@ dataSet =
       "name":"KOUMORI yo",
       "Single":"Girl's Rule",
       "album":"",
-      "img":"https://i.imgur.com/iL30IeB.jpg",
+      "img":"iL30IeB.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/コウモリよ.mp3"
    },
@@ -934,7 +934,7 @@ dataSet =
       "name":"Kuciyakusoku",
       "Single":"",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/64Zxs4K.jpg",
+      "img":"64Zxs4K.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/口約束.mp3"
    },
@@ -943,7 +943,7 @@ dataSet =
       "name":"Kumo ni Nareba ii",
       "Single":"Synchronicity",
       "album":"",
-      "img":"https://i.imgur.com/5QTDIXH.jpg",
+      "img":"5QTDIXH.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/雲になればいい.mp3"
    },
@@ -952,7 +952,7 @@ dataSet =
       "name":"Kuukikan",
       "Single":"",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/azdDTg8.jpg",
+      "img":"azdDTg8.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/空気感.mp3"
    },
@@ -961,7 +961,7 @@ dataSet =
       "name":"Kyuushamen",
       "Single":"Harujion ga Sakukoro",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/uctDGMo.jpg",
+      "img":"uctDGMo.jpg",
       "albumImg":"https://i.imgur.com/azdDTg8",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/急斜面.mp3"
    },
@@ -970,7 +970,7 @@ dataSet =
       "name":"Raibu kami",
       "Single":"Nigemizu",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/8MdMpa1.jpg",
+      "img":"8MdMpa1.jpg",
       "albumImg":"https://i.imgur.com/ueQMI6J",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ライブ神.mp3"
    },
@@ -979,7 +979,7 @@ dataSet =
       "name":"Maa ii ka?",
       "Single":"Itsuka Dekirukara Kyou Dekiru",
       "album":"",
-      "img":"https://i.imgur.com/65O8VsF.jpg",
+      "img":"65O8VsF.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/まあいいか？.mp3"
    },
@@ -988,7 +988,7 @@ dataSet =
       "name":"Mainichi ga Brand New Day",
       "Single":"Shiawase no Hogosyoku",
       "album":"",
-      "img":"https://i.imgur.com/uzkvWNf.jpg",
+      "img":"uzkvWNf.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/毎日がBrand new day.mp3"
    },
@@ -997,7 +997,7 @@ dataSet =
       "name":"Mangetsu ga Kieta",
       "Single":"",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/2vOwECY.jpg",
+      "img":"2vOwECY.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/満月が消えた.mp3"
    },
@@ -1006,7 +1006,7 @@ dataSet =
       "name":"Minikui Watashi",
       "Single":"",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/CW6pQSX.jpg",
+      "img":"CW6pQSX.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/醜い私.mp3"
    },
@@ -1015,7 +1015,7 @@ dataSet =
       "name":"Mirai no kotae",
       "Single":"Nigemizu",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/HV77dvx.jpg",
+      "img":"HV77dvx.jpg",
       "albumImg":"https://i.imgur.com/I3nwJcZ",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/未来の答え.mp3"
    },
@@ -1024,7 +1024,7 @@ dataSet =
       "name":"Mizutama Moyou",
       "Single":"Oide, Shampoo",
       "album":"",
-      "img":"https://i.imgur.com/SOHOAIP.jpg",
+      "img":"SOHOAIP.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/水玉模様.mp3"
    },
@@ -1033,7 +1033,7 @@ dataSet =
       "name":"Moshi Kimi ga Inakereba",
       "Single":"",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/OwJBHiE.jpg",
+      "img":"OwJBHiE.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/もし君がいなければ.mp3"
    },
@@ -1042,7 +1042,7 @@ dataSet =
       "name":"Mou Sukoshi no Yume",
       "Single":"Taiyou Knock",
       "album":"",
-      "img":"https://i.imgur.com/bhzYVYK.jpg",
+      "img":"bhzYVYK.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/もう少しの夢.mp3"
    },
@@ -1051,7 +1051,7 @@ dataSet =
       "name":"Mousugu ~ Zambi Densetsu ~",
       "Single":"",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/ueQMI6J.jpg",
+      "img":"ueQMI6J.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/もうすぐ～ザンビ伝説～.mp3"
    },
@@ -1060,7 +1060,7 @@ dataSet =
       "name":"Muhyoujou",
       "Single":"Taiyou Knock",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/g4FTinn.jpg",
+      "img":"g4FTinn.jpg",
       "albumImg":"https://i.imgur.com/azdDTg8",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/無表情.mp3"
    },
@@ -1069,7 +1069,7 @@ dataSet =
       "name":"Mukuchi na RAION",
       "Single":"Natsu no Free &amp; Easy",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/IzZ21GQ.jpg",
+      "img":"IzZ21GQ.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/無口なライオン.mp3"
    },
@@ -1078,7 +1078,7 @@ dataSet =
       "name":"My Rule",
       "Single":"Itsuka Dekirukara Kyou Dekiru",
       "album":"Boku Dake no Kimi ~Under Super Best~",
-      "img":"https://i.imgur.com/hhc5aFE.jpg",
+      "img":"hhc5aFE.jpg",
       "albumImg":"https://i.imgur.com/I8HW6Tb",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/My Rule.mp3"
    },
@@ -1087,7 +1087,7 @@ dataSet =
       "name":"Naimononedari",
       "Single":"Sayonara no Imi",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/MF709iC.jpg",
+      "img":"MF709iC.png",
       "albumImg":"https://i.imgur.com/2vOwECY",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ないものねだり.mp3"
    },
@@ -1096,7 +1096,7 @@ dataSet =
       "name":"Naitatte iijanaika?",
       "Single":"Nigemizu",
       "album":"",
-      "img":"https://i.imgur.com/r8nw58o.jpg",
+      "img":"r8nw58o.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/泣いたっていいじゃないか？.mp3"
    },
@@ -1105,7 +1105,7 @@ dataSet =
       "name":"Namida ga mada kanashimi datta koro",
       "Single":"Hashire! Bicycle",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/cNQHVLA.jpg",
+      "img":"cNQHVLA.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/涙がまだ悲しみだった頃.mp3"
    },
@@ -1114,7 +1114,7 @@ dataSet =
       "name":"Nandome no Aozora ka?",
       "Single":"Nandome no Aozora ka?",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/Tp2HzYL.jpg",
+      "img":"Tp2HzYL.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/何度目の青空か？.mp3"
    },
@@ -1123,7 +1123,7 @@ dataSet =
       "name":"Nani mo Dekizu ni Soba ni Iru",
       "Single":"Natsu no Free &amp; Easy",
       "album":"",
-      "img":"https://i.imgur.com/EMvCiBX.jpg",
+      "img":"EMvCiBX.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/何もできずにそばにいる.mp3"
    },
@@ -1132,7 +1132,7 @@ dataSet =
       "name":"Natsu no Free&Easy",
       "Single":"Natsu no Free&Easy",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/EMvCiBX.jpg",
+      "img":"EMvCiBX.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/夏のFree&Easy.mp3"
    },
@@ -1141,7 +1141,7 @@ dataSet =
       "name":"Nazo no Rakugaki",
       "Single":"",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/ll7UMap.jpg",
+      "img":"ll7UMap.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/なぞの落書き.mp3"
    },
@@ -1150,7 +1150,7 @@ dataSet =
       "name":"Nichijou",
       "Single":"Kaerimichi wa Toomawari Shitaku Naru",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/k2A8YXD.jpg",
+      "img":"k2A8YXD.png",
       "albumImg":"https://i.imgur.com/OwJBHiE",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/日常.mp3"
    },
@@ -1159,7 +1159,7 @@ dataSet =
       "name":"Nigemizu",
       "Single":"Nigemizu",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/0xPvRTv.jpg",
+      "img":"0xPvRTv.jpg",
       "albumImg":"https://i.imgur.com/OwJBHiE",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/逃げ水.mp3"
    },
@@ -1168,7 +1168,7 @@ dataSet =
       "name":"Ningen to Iu Gakki",
       "Single":"Girl's Rule",
       "album":"",
-      "img":"https://i.imgur.com/tMHFsrw.jpg",
+      "img":"tMHFsrw.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/人間という楽器.mp3"
    },
@@ -1177,7 +1177,7 @@ dataSet =
       "name":"No You n Sonzai",
       "Single":"Sing Out!",
       "album":"",
-      "img":"https://i.imgur.com/Agq1n9H.jpg",
+      "img":"Agq1n9H.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/のような存在.mp3"
    },
@@ -1186,7 +1186,7 @@ dataSet =
       "name":"Nogizaka no Uta",
       "Single":"Guru Guru Curtain",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/zJQpaoF.jpg",
+      "img":"zJQpaoF.jpg",
       "albumImg":"https://i.imgur.com/azdDTg8",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/乃木坂の詩.mp3"
    },
@@ -1195,7 +1195,7 @@ dataSet =
       "name":"OFUSHOA GAARU",
       "Single":"Hadashi de Summer",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/oURL25l.jpg",
+      "img":"oURL25l.jpg",
       "albumImg":"https://i.imgur.com/CW6pQSX",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/オフショアガール.mp3"
    },
@@ -1204,7 +1204,7 @@ dataSet =
       "name":"Oide Shampoo",
       "Single":"Oide, Shampoo",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/xHYQMP9.jpg",
+      "img":"xHYQMP9.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/おいでシャンプー.mp3"
    },
@@ -1213,7 +1213,7 @@ dataSet =
       "name":"Omoide First",
       "Single":"",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/a1Xe1eV.jpg",
+      "img":"a1Xe1eV.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/思い出ファースト.mp3"
    },
@@ -1222,7 +1222,7 @@ dataSet =
       "name":"Onna wa hito ja nemurenai",
       "Single":"Nigemizu",
       "album":"",
-      "img":"https://i.imgur.com/0xPvRTv.jpg",
+      "img":"0xPvRTv.jpg",
       "albumImg":"https://i.imgur.com/n48wevV",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/女は一人じゃ眠れない.mp3"
    },
@@ -1231,7 +1231,7 @@ dataSet =
       "name":"Ookami ni Kuchibue wo",
       "Single":"Oide, Shampoo",
       "album":"Boku Dake no Kimi ~Under Super Best~",
-      "img":"https://i.imgur.com/yUB9UCS.jpg",
+      "img":"yUB9UCS.png",
       "albumImg":"https://i.imgur.com/I8HW6Tb",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/狼に口笛を.mp3"
    },
@@ -1240,7 +1240,7 @@ dataSet =
       "name":"Oto ga Denai Guitar",
       "Single":"Hashire! Bicycle",
       "album":"",
-      "img":"https://i.imgur.com/06qG8uE.jpg",
+      "img":"06qG8uE.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/音が出ないギター.mp3"
    },
@@ -1249,7 +1249,7 @@ dataSet =
       "name":"Otona e no Chikamichi",
       "Single":"Ima, Hanashitai Dareka ga Iru",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/HhVDmX9.jpg",
+      "img":"HhVDmX9.jpg",
       "albumImg":"https://i.imgur.com/JtJ4rOU",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/大人への近道.mp3"
    },
@@ -1258,7 +1258,7 @@ dataSet =
       "name":"OVERTURE",
       "Single":"",
       "album":"",
-      "img":"https://i.imgur.com/M8EDL11.jpg",
+      "img":"M8EDL11.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/OVERTURE.mp3"
    },
@@ -1267,7 +1267,7 @@ dataSet =
       "name":"Pocchito",
       "Single":"",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/TGEERex.jpg",
+      "img":"TGEERex.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ぼっち党.mp3"
    },
@@ -1276,7 +1276,7 @@ dataSet =
       "name":"Popipapapa",
       "Single":"Ima, Hanashitai Dareka ga Iru",
       "album":"",
-      "img":"https://i.imgur.com/8XNdxwL.jpg",
+      "img":"8XNdxwL.jpg",
       "albumImg":"https://i.imgur.com/bBy478T",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ポピパッパパー.mp3"
    },
@@ -1285,7 +1285,7 @@ dataSet =
       "name":"Psychokinesis no Kanosei",
       "Single":"Kimi no Na wa Kibou",
       "album":"",
-      "img":"https://i.imgur.com/Ut5T5bt.jpg",
+      "img":"Ut5T5bt.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/サイコキネシスの可能性.mp3"
    },
@@ -1294,7 +1294,7 @@ dataSet =
       "name":"Rewind ano hi",
       "Single":"",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/CW6pQSX.jpg",
+      "img":"CW6pQSX.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/Rewindあの日.mp3"
    },
@@ -1303,7 +1303,7 @@ dataSet =
       "name":"ROMANSU no SUTAATO",
       "Single":"Kidzuitara Kataomoi",
       "album":"",
-      "img":"https://i.imgur.com/pkqa3ne.jpg",
+      "img":"pkqa3ne.jpg",
       "albumImg":"https://i.imgur.com/64Zxs4K",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ロマンスのスタート.mp3"
    },
@@ -1312,7 +1312,7 @@ dataSet =
       "name":"Romantic Ikayaki",
       "Single":"Kimi no Na wa Kibou",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/LXttGpD.jpg",
+      "img":"LXttGpD.jpg",
       "albumImg":"https://i.imgur.com/64Zxs4K",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ロマンティックいか焼き.mp3"
    },
@@ -1321,7 +1321,7 @@ dataSet =
       "name":"Romendensha no Machi",
       "Single":"Yoakemade Tsuyogaranakutemoii",
       "album":"",
-      "img":"https://i.imgur.com/uzkvWNf.jpg",
+      "img":"uzkvWNf.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/路面電車の街.mp3"
    },
@@ -1330,7 +1330,7 @@ dataSet =
       "name":"Ryuusei Discotique",
       "Single":"",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/013SnT2.jpg",
+      "img":"013SnT2.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/流星ディスコティック.mp3"
    },
@@ -1339,7 +1339,7 @@ dataSet =
       "name":"Sakanatachi no LOVE SONG",
       "Single":"Taiyou Knock",
       "album":"",
-      "img":"https://i.imgur.com/bhzYVYK.jpg",
+      "img":"bhzYVYK.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/魚たちのLOVE SONG.mp3"
    },
@@ -1348,7 +1348,7 @@ dataSet =
       "name":"Sanbanme no Kaze",
       "Single":"Influencer",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/Qhp2jYB.jpg",
+      "img":"Qhp2jYB.png",
       "albumImg":"https://i.imgur.com/a1Xe1eV",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/三番目の風.mp3"
    },
@@ -1357,7 +1357,7 @@ dataSet =
       "name":"Sankaku no Akichi",
       "Single":"Jikochuu de Ikou!",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/4QyBFHg.jpg",
+      "img":"4QyBFHg.jpg",
       "albumImg":"https://i.imgur.com/OwJBHiE",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/三角の空き地.mp3"
    },
@@ -1366,7 +1366,7 @@ dataSet =
       "name":"SAYONARA no Imi",
       "Single":"Sayonara no Imi",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/lt5555a.jpg",
+      "img":"lt5555a.jpg",
       "albumImg":"https://i.imgur.com/a1Xe1eV",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/サヨナラの意味.mp3"
    },
@@ -1375,7 +1375,7 @@ dataSet =
       "name":"Sayonara Stay With Me",
       "Single":"Shiawase no Hogosyoku",
       "album":"",
-      "img":"https://i.imgur.com/uzkvWNf.jpg",
+      "img":"uzkvWNf.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/サヨナラ Stay with me.mp3"
    },
@@ -1384,7 +1384,7 @@ dataSet =
       "name":"Sayuringo Boshuchu",
       "Single":"",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/I3nwJcZ.jpg",
+      "img":"I3nwJcZ.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/さゆりんご募集中.mp3"
    },
@@ -1393,7 +1393,7 @@ dataSet =
       "name":"Shiikuretto gurafitii",
       "Single":"Hadashi de Summer",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/RtD0N3q.jpg",
+      "img":"RtD0N3q.png",
       "albumImg":"https://i.imgur.com/a1Xe1eV",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/シークレットグラフィティー.mp3"
    },
@@ -1402,7 +1402,7 @@ dataSet =
       "name":"Seifuku no Mannequin",
       "Single":"Seifuku no Mannequin",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/SmWEuky.jpg",
+      "img":"SmWEuky.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/制服のマネキン.mp3"
    },
@@ -1411,7 +1411,7 @@ dataSet =
       "name":"Seifuku wo Nuide Sayonara wo…",
       "Single":"Taiyou Knock",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/UYa8bdy.jpg",
+      "img":"UYa8bdy.png",
       "albumImg":"https://i.imgur.com/bBy478T",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/制服を脱いでサヨナラを….mp3"
    },
@@ -1420,7 +1420,7 @@ dataSet =
       "name":"Sekai de Ichiban Kodoku na Lover",
       "Single":"Girl's Rule",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/iL30IeB.jpg",
+      "img":"iL30IeB.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/世界で一番 孤独なLover.mp3"
    },
@@ -1429,7 +1429,7 @@ dataSet =
       "name":"Sekkachi na Katatsumuri",
       "Single":"Hashire! Bicycle",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/cNQHVLA.jpg",
+      "img":"cNQHVLA.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/せっかちなかたつむり.mp3"
    },
@@ -1438,7 +1438,7 @@ dataSet =
       "name":"Senpuuki",
       "Single":"Girl's Rule",
       "album":"Boku Dake no Kimi ~Under Super Best~",
-      "img":"https://i.imgur.com/qpTMeme.jpg",
+      "img":"qpTMeme.jpg",
       "albumImg":"https://i.imgur.com/I8HW6Tb",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/扇風機.mp3"
    },
@@ -1447,7 +1447,7 @@ dataSet =
       "name":"Kimi ga Aoi de Kureta",
       "Single":"",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/a1Xe1eV.jpg",
+      "img":"a1Xe1eV.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/君が扇いでくれた.mp3"
    },
@@ -1456,7 +1456,7 @@ dataSet =
       "name":"Shakiism",
       "Single":"Kimi no Na wa Kibou",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/LXttGpD.jpg",
+      "img":"LXttGpD.jpg",
       "albumImg":"https://i.imgur.com/64Zxs4K",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/シャキイズム.mp3"
    },
@@ -1465,7 +1465,7 @@ dataSet =
       "name":"Shiawase no Hogosyoku",
       "Single":"Shiawase no Hogosyoku",
       "album":"",
-      "img":"https://i.imgur.com/uzkvWNf.jpg",
+      "img":"uzkvWNf.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/しあわせの保護色.mp3"
    },
@@ -1474,7 +1474,7 @@ dataSet =
       "name":"Shibuya buruusu",
       "Single":"Seifuku no Mannequin",
       "album":"",
-      "img":"https://i.imgur.com/LFJ2xcZ.jpg",
+      "img":"LFJ2xcZ.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/渋谷ブルース.mp3"
    },
@@ -1483,7 +1483,7 @@ dataSet =
       "name":"Shiritai Koto",
       "Single":"Kaerimichi wa Toomawari Shitaku Naru",
       "album":"",
-      "img":"https://i.imgur.com/4ewMNsF.jpg",
+      "img":"4ewMNsF.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/知りたいこと.mp3"
    },
@@ -1492,7 +1492,7 @@ dataSet =
       "name":"Shiroi Kumo ni Notte",
       "Single":"Guru Guru Curtain",
       "album":"",
-      "img":"https://i.imgur.com/UEN0dmc.jpg",
+      "img":"UEN0dmc.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/白い雲にのって.mp3"
    },
@@ -1501,7 +1501,7 @@ dataSet =
       "name":"Shitsuren wo Shoji Hito",
       "Single":"Itsuka Dekirukara Kyou Dekiru",
       "album":"",
-      "img":"https://i.imgur.com/b9up7iq.jpg",
+      "img":"b9up7iq.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/失恋お掃除人.mp3"
    },
@@ -1510,7 +1510,7 @@ dataSet =
       "name":"Shitto no Kenri",
       "Single":"Ima, Hanashitai Dareka ga Iru",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/8XNdxwL.jpg",
+      "img":"8XNdxwL.jpg",
       "albumImg":"https://i.imgur.com/JtJ4rOU",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/嫉妬の権利.mp3"
    },
@@ -1519,7 +1519,7 @@ dataSet =
       "name":"Sing Out!",
       "Single":"Sing Out!",
       "album":"",
-      "img":"https://i.imgur.com/Agq1n9H.jpg",
+      "img":"Agq1n9H.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/Sing Out!.mp3"
    },
@@ -1528,7 +1528,7 @@ dataSet =
       "name":"Settei Ondo",
       "Single":"",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/a1Xe1eV.jpg",
+      "img":"a1Xe1eV.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/設定温度.mp3"
    },
@@ -1537,7 +1537,7 @@ dataSet =
       "name":"Sonna Baka na...",
       "Single":"Barrette",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/uuhyrJA.jpg",
+      "img":"uuhyrJA.png",
       "albumImg":"https://i.imgur.com/64Zxs4K",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/そんなバカな・・・.mp3"
    },
@@ -1546,7 +1546,7 @@ dataSet =
       "name":"Sono Hito",
       "Single":"",
       "album":"Boku Dake no Kimi ~Under Super Best~",
-      "img":"https://i.imgur.com/I8HW6Tb.jpg",
+      "img":"I8HW6Tb.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/その女.mp3"
    },
@@ -1555,7 +1555,7 @@ dataSet =
       "name":"Sono Saki no Deguchi",
       "Single":"Natsu no Free &amp; Easy",
       "album":"",
-      "img":"https://i.imgur.com/EMvCiBX.jpg",
+      "img":"EMvCiBX.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/その先の出口.mp3"
    },
@@ -1564,7 +1564,7 @@ dataSet =
       "name":"Sora Tobira",
       "Single":"Jikochuu de Ikou!",
       "album":"",
-      "img":"https://i.imgur.com/4QyBFHg.jpg",
+      "img":"4QyBFHg.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/空扉.mp3"
    },
@@ -1573,7 +1573,7 @@ dataSet =
       "name":"Sukima",
       "Single":"Ima, Hanashitai Dareka ga Iru",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/bzEkTx2.jpg",
+      "img":"bzEkTx2.png",
       "albumImg":"https://i.imgur.com/azdDTg8",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/隙間.mp3"
    },
@@ -1582,7 +1582,7 @@ dataSet =
       "name":"Shinkuronishiti",
       "Single":"Synchronicity",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/5QTDIXH.jpg",
+      "img":"5QTDIXH.jpg",
       "albumImg":"https://i.imgur.com/OwJBHiE",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/シンクロニシティ.mp3"
    },
@@ -1591,7 +1591,7 @@ dataSet =
       "name":"Tachinaori Chuu",
       "Single":"Inochi wa Utsukushii",
       "album":"",
-      "img":"https://i.imgur.com/VMMwORV.jpg",
+      "img":"VMMwORV.jpg",
       "albumImg":"https://i.imgur.com/bBy478T",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/立ち直り中.mp3"
    },
@@ -1600,7 +1600,7 @@ dataSet =
       "name":"Taiyou Knock",
       "Single":"Taiyou Knock",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/bhzYVYK.jpg",
+      "img":"bhzYVYK.jpg",
       "albumImg":"https://i.imgur.com/azdDTg8",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/太陽ノック.mp3"
    },
@@ -1609,7 +1609,7 @@ dataSet =
       "name":"Taiyou ni Kudokarete",
       "Single":"",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/azdDTg8.jpg",
+      "img":"azdDTg8.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/太陽に口説かれて.mp3"
    },
@@ -1618,7 +1618,7 @@ dataSet =
       "name":"Teitaion no KISU",
       "Single":"",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/bBy478T.jpg",
+      "img":"bBy478T.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/低体温のキス.mp3"
    },
@@ -1627,7 +1627,7 @@ dataSet =
       "name":"Tender Days",
       "Single":"Nandome no Aozora ka?",
       "album":"",
-      "img":"https://i.imgur.com/mqmj0T1.jpg",
+      "img":"mqmj0T1.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/Tender Days.mp3"
    },
@@ -1636,7 +1636,7 @@ dataSet =
       "name":"Threefold choice",
       "Single":"",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/bBy478T.jpg",
+      "img":"bBy478T.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/Threefold choice.mp3"
    },
@@ -1645,7 +1645,7 @@ dataSet =
       "name":"Toiki no MESODDO",
       "Single":"Kidzuitara Kataomoi",
       "album":"",
-      "img":"https://i.imgur.com/pkqa3ne.jpg",
+      "img":"pkqa3ne.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/吐息のメソッド.mp3"
    },
@@ -1654,7 +1654,7 @@ dataSet =
       "name":"Tokidoki Omoidashite Kudasai",
       "Single":"Yoakemade Tsuyogaranakutemoii",
       "album":"",
-      "img":"https://i.imgur.com/uzkvWNf.jpg",
+      "img":"uzkvWNf.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/時々　思い出してください.mp3"
    },
@@ -1663,7 +1663,7 @@ dataSet =
       "name":"Tokitokimekimeki",
       "Single":"Synchronicity",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/4bSVuZZ.jpg",
+      "img":"4bSVuZZ.png",
       "albumImg":"https://i.imgur.com/OwJBHiE",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/トキトキメキメキ.mp3"
    },
@@ -1672,7 +1672,7 @@ dataSet =
       "name":"Toomawari no Aijou",
       "Single":"Nandome no Aozora ka?",
       "album":"",
-      "img":"https://i.imgur.com/Tp2HzYL.jpg",
+      "img":"Tp2HzYL.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/遠回りの愛情.mp3"
    },
@@ -1681,7 +1681,7 @@ dataSet =
       "name":"Toshoshitsu no Kimi e",
       "Single":"Yoakemade Tsuyogaranakutemoii",
       "album":"",
-      "img":"https://i.imgur.com/uzkvWNf.jpg",
+      "img":"uzkvWNf.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/図書室の君へ.mp3"
    },
@@ -1690,7 +1690,7 @@ dataSet =
       "name":"Tsudzuku",
       "Single":"Kaerimichi wa Toomawari Shitaku Naru",
       "album":"Ima ga Omoide ni Naru Made",
-      "img":"https://i.imgur.com/iH8o67w.jpg",
+      "img":"iH8o67w.jpg",
       "albumImg":"https://i.imgur.com/OwJBHiE",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/つづく.mp3"
    },
@@ -1699,7 +1699,7 @@ dataSet =
       "name":"Tsuki no Okisa",
       "Single":"Barrette",
       "album":"",
-      "img":"https://i.imgur.com/ovULZto.jpg",
+      "img":"ovULZto.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/月の大きさ.mp3"
    },
@@ -1708,7 +1708,7 @@ dataSet =
       "name":"Tsuribori",
       "Single":"Harujion ga Sakukoro",
       "album":"",
-      "img":"https://i.imgur.com/JJPoKe7.jpg",
+      "img":"JJPoKe7.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/釣り堀.mp3"
    },
@@ -1717,7 +1717,7 @@ dataSet =
       "name":"Tsuyogaru Tsubomi",
       "Single":"Harujion ga Sakukoro",
       "album":"",
-      "img":"https://i.imgur.com/rjeA1Dq.jpg",
+      "img":"rjeA1Dq.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/強がる蕾.mp3"
    },
@@ -1726,7 +1726,7 @@ dataSet =
       "name":"Umareta Mama de",
       "Single":"Kidzuitara Kataomoi",
       "album":"Boku Dake no Kimi ~Under Super Best~",
-      "img":"https://i.imgur.com/5UuBXkB.jpg",
+      "img":"5UuBXkB.png",
       "albumImg":"https://i.imgur.com/I8HW6Tb",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/生まれたままで.mp3"
    },
@@ -1735,7 +1735,7 @@ dataSet =
       "name":"Under",
       "Single":"Nigemizu",
       "album":"Boku Dake no Kimi ~Under Super Best~",
-      "img":"https://i.imgur.com/w3H3A7f.jpg",
+      "img":"w3H3A7f.png",
       "albumImg":"https://i.imgur.com/I8HW6Tb",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/アンダー.mp3"
    },
@@ -1744,7 +1744,7 @@ dataSet =
       "name":"Unubore Beach",
       "Single":"",
       "album":"Boku Dake no Kimi ~Under Super Best~",
-      "img":"https://i.imgur.com/I8HW6Tb.jpg",
+      "img":"I8HW6Tb.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/自惚れビーチ.mp3"
    },
@@ -1753,7 +1753,7 @@ dataSet =
       "name":"Ushinaitakunai kara",
       "Single":"Guru Guru Curtain",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/nYSnqAz.jpg",
+      "img":"nYSnqAz.png",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/失いたくないから.mp3"
    },
@@ -1762,7 +1762,7 @@ dataSet =
       "name":"Wakaregiwa, Motto Suki ni Naru",
       "Single":"Taiyou Knock",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/tDRODoa.jpg",
+      "img":"tDRODoa.jpg",
       "albumImg":"https://i.imgur.com/JtJ4rOU",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/別れ際、もっと好きになる.mp3"
    },
@@ -1771,7 +1771,7 @@ dataSet =
       "name":"Watabokori",
       "Single":"",
       "album":"Umaretekara Hajimete Mita Yume",
-      "img":"https://i.imgur.com/2vOwECY.jpg",
+      "img":"2vOwECY.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ワタボコリ.mp3"
    },
@@ -1780,7 +1780,7 @@ dataSet =
       "name":"Watashi no Tame ni, Dareka no Tame ni",
       "Single":"Barrette",
       "album":"Toumei na Iro",
-      "img":"https://i.imgur.com/ovULZto.jpg",
+      "img":"ovULZto.jpg",
       "albumImg":"https://i.imgur.com/M8EDL11",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/私のために　誰かのために.mp3"
    },
@@ -1789,7 +1789,7 @@ dataSet =
       "name":"Watashi, Okiru",
       "Single":"Nandome no Aozora ka?",
       "album":"",
-      "img":"https://i.imgur.com/lXKz4Dm.jpg",
+      "img":"lXKz4Dm.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/私、起きる.mp3"
    },
@@ -1798,7 +1798,7 @@ dataSet =
       "name":"Yasashisa nara Ma ni Atteru",
       "Single":"Seifuku no Mannequin",
       "album":"",
-      "img":"https://i.imgur.com/SmWEuky.jpg",
+      "img":"SmWEuky.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/やさしさなら間に合ってる.mp3"
    },
@@ -1807,7 +1807,7 @@ dataSet =
       "name":"Yasashisa to wa",
       "Single":"Barrette",
       "album":"",
-      "img":"https://i.imgur.com/eYrpXU7.jpg",
+      "img":"eYrpXU7.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/やさしさとは.mp3"
    },
@@ -1816,7 +1816,7 @@ dataSet =
       "name":"Yoakemade Tsuyogaranakutemoii",
       "Single":"Yoakemade Tsuyogaranakutemoii",
       "album":"",
-      "img":"https://i.imgur.com/uzkvWNf.jpg",
+      "img":"uzkvWNf.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/夜明けまで強がらなくてもいい.mp3"
    },
@@ -1825,7 +1825,7 @@ dataSet =
       "name":"Yokubo no Reincarnation",
       "Single":"",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/azdDTg8.jpg",
+      "img":"azdDTg8.jpg",
       "albumImg":"https://i.imgur.com/I8HW6Tb",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/欲望のリインカーネーション.mp3"
    },
@@ -1834,7 +1834,7 @@ dataSet =
       "name":"Yonbanme no Hikari",
       "Single":"Sing Out!",
       "album":"",
-      "img":"https://i.imgur.com/OM0AZRK.jpg",
+      "img":"OM0AZRK.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/4番目の光.mp3"
    },
@@ -1843,7 +1843,7 @@ dataSet =
       "name":"Yubi Bouenkyou",
       "Single":"Seifuku no Mannequin",
       "album":"",
-      "img":"https://i.imgur.com/SmWEuky.jpg",
+      "img":"SmWEuky.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/指望遠鏡.mp3"
    },
@@ -1852,7 +1852,7 @@ dataSet =
       "name":"Yuutsu to Fuusengamu",
       "Single":"Harujion ga Sakukoro",
       "album":"Sorezore no Isu",
-      "img":"https://i.imgur.com/3b6Vdl6.jpg",
+      "img":"3b6Vdl6.png",
       "albumImg":"https://i.imgur.com/bBy478T",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/憂鬱と風船ガム.mp3"
    },
@@ -1861,7 +1861,7 @@ dataSet =
       "name":"~Do my best~ Ja Imi wa Nai",
       "Single":"Yoakemade Tsuyogaranakutemoii",
       "album":"",
-      "img":"https://i.imgur.com/uzkvWNf.jpg",
+      "img":"uzkvWNf.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/～Do my best～じゃ意味はない.mp3"
    }

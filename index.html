@@ -2,24 +2,22 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="manifest" href="manifest.json" />
-  <title></title>
-  <link rel="stylesheet" type="text/css" href="css/app.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
   <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>乃木坂46 Music Quiz</title>
+  <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.3/plyr.css" />
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+  <link rel="stylesheet" type="text/css" href="css/audioPlayer.css">
 
 </head>
 
 <body>
+  <div class="overlayHelper"></div>
   <div class="overlay"></div>
-  <audio controls  style="display:none">
-    <source src="https://yzuriha.github.io/N46Sort/src/songs/スカウトマン.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-
-  </audio>
   <div class="mainWrapper">
-
     <img class="albumImg" src="test1.jpg">
 
     <div class="main">
@@ -32,10 +30,13 @@
         </div>
       </div>
       <div class="trackbar">
-
+        <audio id="player">
+          <source src="https://yzuriha.github.io/N46Sort/src/songs/スカウトマン.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
       </div>
       <div class="mediaControl">
-        <i class="fas fa-sync-alt"></i><i class="fas fa-play"></i><i class="fas fa-forward"></i>
+        <i class="fas fa-sync-alt"></i><i class="fas fa-play" id="playPauseButton" onclick="togglePlay()"></i><i class="fas fa-forward" onclick="nextSong()"></i>
       </div>
       <div class="answerOptions center">
         <div class="answerOption center">
@@ -72,4 +73,6 @@
 <script defer src="js/settings.js"></script>
 <script defer src="js/install-handler.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.min.js"></script>
+<script src="https://cdn.plyr.io/3.6.3/plyr.js"></script>
+<script src="js/data.js"></script>
 <script src="js/app.js"></script>
