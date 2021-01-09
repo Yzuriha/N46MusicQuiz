@@ -9,6 +9,15 @@ const playPauseButton = document.getElementById("playPauseButton");
 const overlayHelper = document.querySelector(".overlayHelper");
 const background = document.querySelector("#background");
 
+const answerNodes = document.querySelectorAll(".answerOption");
+
+const pointsNode = document.querySelector("#points");
+var points = 0;
+
+var audio = document.getElementById("player");
+
+var rightAnswer;
+
 function getSongList() {
   let songList = [];
   shuffledSongList.forEach((item, i) => {
@@ -28,6 +37,7 @@ function loadSong(data) {
 }
 
 function togglePlay() {
+  startPointsCounter();
   if (myAudio.paused) {
     playPauseButton.classList.replace("fa-play", "fa-pause");
     return myAudio.play();
@@ -91,17 +101,120 @@ function triggerOverlayHelper() {
   toggleFadeClass();
 }
 
+function generateAnswers(data){
+  let answerNodesText = document.querySelectorAll(".answerOption p");
+  let answers = [];
+  let shuffledSongListHelper = shuffle(shuffledSongList);
+  answers.push(data.name)
+  answers.push(shuffle(dataSet)[0].name);
+  answers.push(shuffle(dataSet)[1].name);
+  answers.push(shuffle(dataSet)[2].name);
+  answers = shuffle(answers);
+  answerNodesText.forEach((item, i) => {
+    item.innerText = answers.pop();
+  });
+
+}
+
 function nextSong() {
   let singleSongData = shuffledSongList.pop();
+  rightAnswer = singleSongData;
+  addEventListenerToAnswers();
   loadCoverImg(singleSongData);
   triggerOverlayHelper();
   changeBGColor();
   loadSong(singleSongData);
-  //togglePlay();
+  generateAnswers(singleSongData);
+}
+
+function addEventListenerToAnswers() {
+  answerNodes.forEach((item, i) => {
+    item.addEventListener("click", validateAnswer);
+    item.classList.remove("kill-click");
+    item.classList.remove("fadeOutAnswer");
+  });
+}
+
+function validateAnswer(){
+  toggleKillClick();
+  if (this.innerText == rightAnswer.name) {
+    let currentPoints = pointsNode.innerText;
+    points += 100;
+    animateValue("points", currentPoints, points, 300);
+    // points = pointsNode.innerText;
+  }
+  toggleRightAnswer()
+}
+
+function toggleKillClick() {
+  answerNodes.forEach((item, i) => {
+    item.classList.toggle("kill-click");
+    item.classList.toggle("fadeOutAnswer");
+  });
+}
+
+function toggleRightAnswer() {
+  answerNodes.forEach((item, i) => {
+    if (item.innerText == rightAnswer.name)  item.classList.remove("fadeOutAnswer")
+  });
+}
+
+
+function startPointsCounter(){
+  let startTime =
+}
+
+audio.addEventListener("playing", function() {
+  console.log("playing")
+  startPointsCounter()
+})
+
+
+
+
+
+
+// https://stackoverflow.com/questions/16994662/count-animation-from-number-a-to-b
+function animateValue(id, start, end, duration) {
+    // assumes integer values for start and end
+
+    var obj = document.getElementById(id);
+    var range = end - start;
+    // no timer shorter than 50ms (not really visible any way)
+    var minTimer = 50;
+    // calc step time to show all interediate values
+    var stepTime = Math.abs(Math.floor(duration / range));
+
+    // never go below minTimer
+    stepTime = Math.max(stepTime, minTimer);
+
+    // get current time and calculate desired end time
+    var startTime = new Date().getTime();
+    var endTime = startTime + duration;
+    var timer;
+
+    function run() {
+        var now = new Date().getTime();
+        var remaining = Math.max((endTime - now) / duration, 0);
+        var value = Math.round(end - (remaining * range));
+        obj.innerHTML = value;
+        if (value == end) {
+            clearInterval(timer);
+        }
+    }
+
+    timer = setInterval(run, stepTime);
+    run();
 }
 
 
 
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min +1)) + min;
+}
 
 
 // Shuffle function from http://stackoverflow.com/a/2450976

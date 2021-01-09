@@ -430,7 +430,7 @@ dataSet =
       "name":"Hane no Kioku",
       "Single":"Taiyou Knock",
       "album":"Sorezore no Isu",
-      "img":"lYQHppN.png",
+      "img":"lYQHppN.jpg",
       "albumImg":"https://i.imgur.com/azdDTg8",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/羽根の記憶.mp3"
    },
@@ -1080,7 +1080,7 @@ dataSet =
       "album":"Boku Dake no Kimi ~Under Super Best~",
       "img":"hhc5aFE.jpg",
       "albumImg":"https://i.imgur.com/I8HW6Tb",
-      "song":"https://yzuriha.github.io/N46Sort/src/songs/My Rule.mp3"
+      "song":"https://yzuriha.github.io/N46Sort/src/songs/My rule.mp3"
    },
    {
       "nameKanji":"ないものねだり",
@@ -1629,7 +1629,7 @@ dataSet =
       "album":"",
       "img":"mqmj0T1.jpg",
       "albumImg":"https://i.imgur.com/",
-      "song":"https://yzuriha.github.io/N46Sort/src/songs/Tender Days.mp3"
+      "song":"https://yzuriha.github.io/N46Sort/src/songs/Tender days.mp3"
    },
    {
       "nameKanji":"Threefold choice",

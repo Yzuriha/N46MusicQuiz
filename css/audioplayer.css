@@ -8,10 +8,8 @@
   display:none;
 }
 
-.plyr__controls .plyr__controls__item:first-child {
-  display: none;
-}
-
+.plyr__controls .plyr__controls__item:first-child,
+.plyr__time,
 .plyr__menu {
   display: none;
 }

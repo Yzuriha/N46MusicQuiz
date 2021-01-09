@@ -40,6 +40,16 @@ body {
   -webkit-transition: opacity .75s ease-in-out;
 }
 
+.fadeOutAnswer {
+   opacity: 0.6;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.kill-click {
+  pointer-events: none;
+}
 
 .center {
   display: flex;
@@ -61,12 +71,20 @@ body {
   justify-content: space-between;
 }
 
+#points {
+  min-width: 40px;
+}
+
 .trackbar {
   /* border-radius: 20px; */
   /* height: 5px; */
   width: 100%;
   margin: 0;
   /* background-color: white; */
+}
+
+.answerOption {
+  cursor: pointer;
 }
 
 .answerOption p {
@@ -98,6 +116,10 @@ body {
   text-align: center;
   padding: 0 5vw;
   font-size: 7vw;
+}
+
+.mediaControl i {
+  cursor: pointer;
 }
 
 .answerOptions {
