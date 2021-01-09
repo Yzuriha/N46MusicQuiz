@@ -127,7 +127,9 @@ function nextSong() {
   changeBGColor();
   loadSong(singleSongData);
   generateAnswers(singleSongData);
+  toggleKillClick();
   document.getElementById("songCounter").innerText = ++songCounter;
+  document.getElementById("nextButton").classList.add("kill-click");
 }
 
 function addEventListenerToAnswers() {
@@ -144,21 +146,24 @@ function validateAnswer(){
     let currentPoints = pointsNode.innerText;
     points += 100;
     animateValue("points", currentPoints, points, 300);
-    // points = pointsNode.innerText;
   }
-  toggleRightAnswer()
+  // setTimeout(toggleRightAnswer, 1000)
+  toggleRightAnswer();
+  document.getElementById("nextButton").classList.remove("kill-click");
 }
 
 function toggleKillClick() {
   answerNodes.forEach((item, i) => {
-    item.classList.toggle("kill-click");
-    item.classList.toggle("fadeOutAnswer");
+    item.classList.add("kill-click");
+    item.classList.add("fadeOutAnswer");
   });
 }
 
 function toggleRightAnswer() {
   answerNodes.forEach((item, i) => {
-    if (item.innerText == rightAnswer.name)  item.classList.remove("fadeOutAnswer")
+    if (item.innerText == rightAnswer.name)  {
+      item.classList.remove("fadeOutAnswer")
+    }
   });
 }
 
@@ -168,6 +173,10 @@ function startPointsCounter(){
 }
 
 audio.addEventListener("playing", function() {
+  answerNodes.forEach((item, i) => {
+    item.classList.remove("kill-click");
+    item.classList.remove("fadeOutAnswer");
+  });
   console.log("playing")
   startPointsCounter()
 })
