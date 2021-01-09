@@ -71,8 +71,12 @@ body {
   justify-content: space-between;
 }
 
-#points {
-  min-width: 40px;
+.pointsContainer {
+  min-width: 55px;
+}
+
+.songNumber {
+  min-width: 64px;
 }
 
 .trackbar {
@@ -229,6 +233,10 @@ body {
     /* each option is 14vw so that x2; +12px because of borders; 4vw to consider 1vw margin/padding of each box*/
     padding: 0 5vw;
     justify-content: space-between;
+  }
+
+  .gameInformation i {
+    font-size: calc(3.5vw + 1px);
   }
 
   .answerOption {

@@ -14,6 +14,8 @@ const answerNodes = document.querySelectorAll(".answerOption");
 const pointsNode = document.querySelector("#points");
 var points = 0;
 
+var songCounter = 0;
+
 var audio = document.getElementById("player");
 
 var rightAnswer;
@@ -125,6 +127,7 @@ function nextSong() {
   changeBGColor();
   loadSong(singleSongData);
   generateAnswers(singleSongData);
+  document.getElementById("songCounter").innerText = ++songCounter;
 }
 
 function addEventListenerToAnswers() {
