@@ -17,8 +17,8 @@ function getSongList() {
 }
 
 function loadCoverImg(data) {
-  // once app is done, change path back to `../assets/images/${data.img}`
-  document.querySelector(".albumImg").src = `/assets/images/${data.img}`
+  // static path because github is stupid; for lokal developement use `/assets/images/${data.img}`
+  document.querySelector(".albumImg").src = `https://yzuriha.github.io/N46MusicQuiz/assets/images/${data.img}`
 }
 
 function loadSong(data) {
