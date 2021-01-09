@@ -18,7 +18,7 @@ function getSongList() {
 
 function loadCoverImg(data) {
   // static path because github is stupid; for lokal developement use `/assets/images/${data.img}`
-  document.querySelector(".albumImg").src = `/assets/images/${data.img}`
+  document.querySelector(".albumImg").src = `${window.location.href}/assets/images/${data.img}`
 }
 
 function loadSong(data) {
