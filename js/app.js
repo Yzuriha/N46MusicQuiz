@@ -6,6 +6,8 @@ const myAudio = document.getElementById("player");
 
 const playPauseButton = document.getElementById("playPauseButton");
 
+const overlayHelper = document.querySelector(".overlayHelper");
+
 function getSongList() {
   let songList = [];
   shuffledSongList.forEach((item, i) => {
@@ -34,10 +36,30 @@ function togglePlay() {
   }
 };
 
+function toggleFadeClass() {
+  // fadeOut the overlayHelper background to show the new background
+  overlayHelper.classList.add("fadeOut");
+
+  // since the fadeOut is 250ms long, wait for that amount + buffertime and then
+  // make old overlayHelper background to new one and set opcacity back to 1
+  setTimeout(function(){
+    overlayHelper.style.background = document.body.style.background;
+    overlayHelper.classList.remove("fadeOut");
+  }, 250);
+}
+
+function triggerOverlayHelper() {
+  // add old background to overlayHelper
+  overlayHelper.style.background = document.body.style.background;
+  toggleFadeClass();
+}
+
 function nextSong() {
+  // toggleFadeClass();
   let singleSongData = shuffledSongList.pop();
   loadCoverImg(singleSongData);
   loadSong(singleSongData);
+  triggerOverlayHelper();
   changeBGColor();
   togglePlay();
 }

@@ -23,9 +23,24 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: -1;
-  background: linear-gradient(rgb(199, 96, 121), rgb(53, 97, 126));
+  z-index: -2;
 }
+
+.fadeOut {
+   opacity: 0;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+
 
 .center {
   display: flex;
