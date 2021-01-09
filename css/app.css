@@ -17,7 +17,7 @@ body {
   z-index: -1;
 }
 
-.overlayHelper {
+.overlayHelper, #background {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -39,7 +39,6 @@ body {
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;
 }
-
 
 
 .center {
