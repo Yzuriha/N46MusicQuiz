@@ -18,7 +18,7 @@ function getSongList() {
 
 function loadCoverImg(data) {
   // static path because github is stupid; for lokal developement use `/assets/images/${data.img}`
-  document.querySelector(".albumImg").src = `https://yzuriha.github.io/N46MusicQuiz/assets/images/${data.img}`
+  document.querySelector(".albumImg").src = `/assets/images/${data.img}`
 }
 
 function loadSong(data) {
@@ -46,7 +46,7 @@ function toggleFadeClass() {
   setTimeout(function(){
     overlayHelper.style.background = document.body.style.background;
     overlayHelper.classList.remove("fadeOut");
-  }, 250);
+  }, 300);
 }
 
 function triggerOverlayHelper() {
@@ -59,10 +59,10 @@ function nextSong() {
   // toggleFadeClass();
   let singleSongData = shuffledSongList.pop();
   loadCoverImg(singleSongData);
-  loadSong(singleSongData);
   triggerOverlayHelper();
   changeBGColor();
-  togglePlay();
+  loadSong(singleSongData);
+  //togglePlay();
 }
 
 
