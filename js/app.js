@@ -18,6 +18,9 @@ var songCounter = 0;
 
 var audio = document.getElementById("player");
 
+var currentSongTime = document.querySelector(".currentTime");
+var remainingSongDuration = document.querySelector(".remainingDuration");
+
 var rightAnswer;
 
 function getSongList() {
@@ -179,9 +182,37 @@ audio.addEventListener("playing", function() {
   startPointsCounter()
 })
 
+audio.addEventListener("timeupdate", function() {
+  currentSongTime.innerHTML = formatTime(audio.currentTime);
+  if (!isNaN(audio.duration)) {
+    remainingSongDuration.innerHTML = `-${formatTime(audio.duration - audio.currentTime)}`
+  }
+})
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// https://stackoverflow.com/questions/4605342/how-to-format-html5-audios-currenttime-property-with-javascript
+function formatTime(seconds) {
+  minutes = Math.floor(seconds / 60);
+  minutes = (minutes >= 10) ? minutes : "0" + minutes;
+  seconds = Math.floor(seconds % 60);
+  seconds = (seconds >= 10) ? seconds : "0" + seconds;
+  return minutes + ":" + seconds;
+}
 
 
 // https://stackoverflow.com/questions/16994662/count-animation-from-number-a-to-b

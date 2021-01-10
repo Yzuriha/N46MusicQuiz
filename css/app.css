@@ -87,6 +87,12 @@ body {
   /* background-color: white; */
 }
 
+.times {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1px;
+}
+
 .answerOption {
   cursor: pointer;
 }
@@ -222,6 +228,10 @@ body {
   .trackbar {
     width: 90vw;
     margin: 0 5vw;
+  }
+
+  .currentTime, .remainingDuration {
+    font-size: calc(3.5vw - 2px);
   }
 
   .mediaControl i {
