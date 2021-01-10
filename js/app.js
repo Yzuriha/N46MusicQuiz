@@ -153,11 +153,8 @@ function validateAnswer(){
   endTime = Date.now();
   if (this.innerText.trim() == rightAnswer.name.trim()) {
     let currentPoints = pointsNode.innerText;
-    // let calculateDurationPercentage = (1 - ((audio.duration - audio.currentTime) / audio.duration))*100;
     let calculateDurationPercentage = (1 - ((audio.duration - (endTime - startTime) / 1000) / audio.duration))*100;
-    // let score = Math.round(((audio.duration - audio.currentTime + 0.5) / audio.duration) * 100)
-    // formula for 100*0.948^x; the faster you answer, the more points you gain; formula is approximated, but if you take full duration you should have 0 points
-    let score = Math.round(103*Math.pow(0.948, calculateDurationPercentage));
+    let score = Math.round(0.01*Math.pow(calculateDurationPercentage - 100.5, 2));
     points += score <= 100 ? score : 100;
     animateValue("points", currentPoints, points, 300);
   }
