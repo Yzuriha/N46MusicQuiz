@@ -23,6 +23,11 @@ var remainingSongDuration = document.querySelector(".remainingDuration");
 
 var rightAnswer;
 
+var startTime = 0;
+var endTime = 0;
+var resetTimer = true;
+
+
 function getSongList() {
   let songList = [];
   shuffledSongList.forEach((item, i) => {
@@ -131,6 +136,7 @@ function nextSong() {
   loadSong(singleSongData);
   generateAnswers(singleSongData);
   toggleKillClick();
+  resetTimer = true;
   document.getElementById("songCounter").innerText = ++songCounter;
   document.getElementById("nextButton").classList.add("kill-click");
 }
@@ -144,9 +150,11 @@ function addEventListenerToAnswers() {
 }
 
 function validateAnswer(){
+  endTime = Date.now();
   if (this.innerText.trim() == rightAnswer.name.trim()) {
     let currentPoints = pointsNode.innerText;
-    let calculateDurationPercentage = (1 - ((audio.duration - audio.currentTime) / audio.duration))*100;
+    // let calculateDurationPercentage = (1 - ((audio.duration - audio.currentTime) / audio.duration))*100;
+    let calculateDurationPercentage = (1 - ((audio.duration - (endTime - startTime) / 1000) / audio.duration))*100;
     // let score = Math.round(((audio.duration - audio.currentTime + 0.5) / audio.duration) * 100)
     // formula for 100*0.948^x; the faster you answer, the more points you gain; formula is approximated, but if you take full duration you should have 0 points
     let score = Math.round(103*Math.pow(0.948, calculateDurationPercentage));
@@ -173,9 +181,11 @@ function toggleRightAnswer() {
   });
 }
 
-
 function startPointsCounter(){
-
+  if(resetTimer) {
+    startTime = Date.now();
+    resetTimer = false;
+  }
 }
 
 audio.addEventListener("playing", function() {
