@@ -146,7 +146,11 @@ function addEventListenerToAnswers() {
 function validateAnswer(){
   if (this.innerText.trim() == rightAnswer.name.trim()) {
     let currentPoints = pointsNode.innerText;
-    points += 100;
+    let calculateDurationPercentage = (1 - ((audio.duration - audio.currentTime) / audio.duration))*100;
+    // let score = Math.round(((audio.duration - audio.currentTime + 0.5) / audio.duration) * 100)
+    // formula for 100*0.948^x; the faster you answer, the more points you gain; formula is approximated, but if you take full duration you should have 0 points
+    let score = Math.round(103*Math.pow(0.948, calculateDurationPercentage));
+    points += score <= 100 ? score : 100;
     animateValue("points", currentPoints, points, 300);
   }
   toggleKillClick();
