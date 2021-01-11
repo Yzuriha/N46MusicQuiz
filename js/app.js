@@ -27,6 +27,7 @@ var startTime = 0;
 var endTime = 0;
 var resetTimer = true;
 
+var isNextSong = true;
 
 function getSongList() {
   let songList = [];
@@ -137,6 +138,7 @@ function nextSong() {
   generateAnswers(singleSongData);
   toggleKillClick();
   resetTimer = true;
+  isNextSong = true;
   document.getElementById("songCounter").innerText = ++songCounter;
   document.getElementById("nextButton").classList.add("kill-click");
 }
@@ -151,6 +153,7 @@ function addEventListenerToAnswers() {
 
 function validateAnswer(){
   endTime = Date.now();
+  isNextSong = false;
   if (this.innerText.trim() == rightAnswer.name.trim()) {
     let currentPoints = pointsNode.innerText;
     let calculateDurationPercentage = (1 - ((audio.duration - (endTime - startTime) / 1000) / audio.duration))*100;
@@ -186,11 +189,13 @@ function startPointsCounter(){
 }
 
 audio.addEventListener("playing", function() {
-  answerNodes.forEach((item, i) => {
-    item.classList.remove("kill-click");
-    item.classList.remove("fadeOutAnswer");
-  });
-  startPointsCounter()
+  if(isNextSong) {
+    answerNodes.forEach((item, i) => {
+      item.classList.remove("kill-click");
+      item.classList.remove("fadeOutAnswer");
+    });
+    startPointsCounter()
+  }
 })
 
 audio.addEventListener("timeupdate", function() {
