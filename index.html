@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
   <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
   <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.plyr.io/3.6.3/plyr.css" />
   <link rel="stylesheet" type="text/css" href="css/app.css">
   <link rel="stylesheet" type="text/css" href="css/audioplayer.css">
@@ -21,8 +21,8 @@
   <div class="mainWrapper">
     <img class="albumImg" src="assets/icons/logo.png">
 
-    <div class="main"> 
-      <div class="gameInformation center">
+    <div class="main">
+      <div class="gameInformation center noselect">
         <div class="pointsContainer">
           <i class="fas fa-star">&nbsp;</i><span id="points">0</span>
         </div>
@@ -30,7 +30,7 @@
           <i class="fas fa-music">&nbsp;</i><span id="songCounter">0</span>/<span>207</span>
         </div>
       </div>
-      <div class="trackbar">
+      <div class="trackbar noselect">
         <audio id="player">
           <source src="" type="audio/mpeg">
           Your browser does not support the audio element.
@@ -40,8 +40,10 @@
           <div class="remainingDuration">--:--</div>
         </div>
       </div>
-      <div class="mediaControl">
-        <i class="fas fa-sync-alt"></i><i class="fas fa-play" id="playPauseButton" onclick="togglePlay()"></i><i class="fas fa-forward" id="nextButton" onclick="nextSong()"></i>
+      <div class="mediaControl noselect">
+        <i class="fas fa-sliders-h" id="settingsButton" onclick="toggleSettings()"></i>
+        <i class="fas fa-play" id="playPauseButton" onclick="togglePlay()"></i>
+        <i class="fas fa-forward" id="nextButton" onclick="nextSong()"></i>
       </div>
       <div class="answerOptions center">
         <div class="answerOption center">
@@ -60,20 +62,78 @@
     </div>
   </div>
 
+  <!-- settings = {
+    "customAmount":0,
+    "expert":0,
+    "hideCover":0,
+    "randomStart":0,
+    "autoplayNext":0,
+    "endless":0
+  } -->
+
+  <div class="settings close">
+    <div class="overlay"></div>
+    <div>
+      <i class="fas fa-arrow-left" id="closeButton" onclick="toggleSettings()"></i>
+      <h2 class="center">Settings</h3>
+    </div>
+    <li>
+      <div class="setting">
+        <label for="customAmount">Custom Amount</label>
+        <input type="checkbox" id="customAmount" name="customAmount">
+      </div>
+      <div class="settingDetail">Choose a custom amount of songs.</div>
+      </li>
+      <li>
+        <div class="setting">
+          <label for="expert">Expert Mode</label>
+          <input type="checkbox" id="expert" name="expert">
+        </div>
+        <div class="settingDetail">Earn 3x the points by writing out the song names instead of given a choice.</div>
+      </li>
+      <li>
+        <div class="setting">
+          <label for="hideCover">Hidden Album Image</label>
+          <input type="checkbox" id="hideCover" name="hideCover">
+        </div>
+        <div class="settingDetail">Earn 10 extra points by hiding the Album Image.</div>
+      </li>
+      <li>
+        <div class="setting">
+          <label for="randomStart">Random Startpoint</label>
+          <input type="checkbox" id="randomStart" name="randomStart">
+        </div>
+        <div class="settingDetail">Earn 10 extra points by having the song start from a random point.</div>
+      </li>
+      <li>
+        <div class="setting">
+          <label for="autoplayNext">Autoplay Next Song</label>
+          <input type="checkbox" id="autoplayNext" name="autoplayNext">
+        </div>
+        <div class="settingDetail">Autoplay the next song after answering.</div>
+      </li>
+      <li>
+        <div class="setting">
+          <label for="endless">Endless Mode</label>
+          <input type="checkbox" id="endless" name="endless">
+        </div>
+        <div class="settingDetail">Wrongly guessed songs can be guessed again later for 80% of the points.</div>
+      </li>
+      </div>
 </body>
 
 </html>
 <script type="text/javascript">
-	if ('serviceWorker' in navigator) {
-		navigator.serviceWorker
-			.register(`service-worker.js`)
-			.then(function() {
-				console.log('ServiceWorker registration successful');
-			});
-		// navigator.serviceWorker.ready.then(registration => {
-		// 	registration.active.postMessage(JSON.stringify(dataCardSet));
-		// });
-	}
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register(`service-worker.js`)
+      .then(function() {
+        console.log('ServiceWorker registration successful');
+      });
+    // navigator.serviceWorker.ready.then(registration => {
+    // 	registration.active.postMessage(JSON.stringify(dataCardSet));
+    // });
+  }
 </script>
 <script defer src="js/settings.js"></script>
 <script defer src="js/install-handler.js"></script>

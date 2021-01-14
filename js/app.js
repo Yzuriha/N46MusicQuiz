@@ -4,6 +4,8 @@ const player = new Plyr('#player');
 
 const myAudio = document.getElementById("player");
 
+const settingsButton = document.getElementById("settingsButton");
+
 const playPauseButton = document.getElementById("playPauseButton");
 
 const overlayHelper = document.querySelector(".overlayHelper");
@@ -28,6 +30,8 @@ var endTime = 0;
 var resetTimer = true;
 
 var isNextSong = true;
+
+var gameSettings = settings;
 
 function getSongList() {
   let songList = [];
@@ -125,6 +129,10 @@ function generateAnswers(data){
     item.innerText = answers.pop();
   });
 
+}
+
+function toggleSettings() {
+  document.querySelector(".settings").classList.toggle("close")
 }
 
 function nextSong() {

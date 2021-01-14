@@ -6,6 +6,46 @@ body {
   font-size: 1vw;
 }
 
+input[type='checkbox'], input[type='checkbox']:focus {
+  width: 20px !important;
+  height: 20px !important;
+  /* margin: 5px; */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 2px solid white;
+  box-shadow: none;
+  font-size: 2em;
+  outline: none;
+  border-radius: 4px;
+  opacity: 0.8
+}
+
+input[type='checkbox']:checked {
+  /* background-color: #000; */
+}
+
+input[type='checkbox']:checked:after {
+  content: '\2713';
+  color: white;
+  position: absolute;
+  line-height: 1rem;
+  font-size:1rem;
+  padding-left: 0.15rem;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+
 .overlay {
   position: fixed;
   top: 0;
@@ -147,6 +187,60 @@ body {
   text-align: center;
 }
 
+#closeButton {
+  position: absolute;
+  font-size: 1.5em;
+  /* margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px; */
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.settings {
+  background: linear-gradient(rgb(199, 96, 121), rgb(53, 97, 126));
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  transition: all 0.5s;
+  left: 0;
+}
+
+.settings.close{
+  /* top: 100%;
+  height: 0; */
+  left: -50%;
+}
+
+.settings .overlay {
+  position: absolute;
+}
+
+.settings li {
+  list-style-type: none;
+  /* padding: 15px; */
+  padding: 2.5vh 15px;
+  /* padding: calc(100% / 7 / 2) 15px; */
+  border-top: 1px solid black
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+}
+
+.setting label {
+  font-size: 1.5vw;
+  padding-bottom: 10px;
+}
+
+.settingDetail {
+  opacity: 0.75;
+  width: calc(100% - 28px);
+}
+
 @media (min-width: 426px) {
   .main {
     padding: 5vw;
@@ -210,6 +304,11 @@ body {
     font-size: calc(3.5vw);
   }
 
+ /* Dirty Cheat to replace Arrow with X */
+  .fa-arrow-left:before {
+    content: "\f00d";
+  }
+
   .main {
     display: flex;
     flex-direction: column;
@@ -260,6 +359,24 @@ body {
   .answerOption p {
     margin: 0 10px;
   }
+
+  .settings {
+    width: 100%;
+  }
+
+  .settings.close {
+    top: 100%;
+    height: 0;
+    left: 0;
+  }
+
+  .setting label {
+    font-size: 4vw;
+  }
+
+  .settings li {
+    padding: 3vh 15px;
+  }
 }
 
 /* MEDIA QUERIES */
@@ -275,5 +392,9 @@ body {
   .main {
     height: calc(100% - 70vw);
     max-height: none !important;
+  }
+
+  .settings li {
+    padding: 2vh 15px;
   }
 }
