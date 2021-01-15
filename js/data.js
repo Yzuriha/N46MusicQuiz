@@ -1,12 +1,13 @@
 dataSetVersion = "2020-05-17"; // Change this when creating a new data set version. YYYY-MM-DD format.
 
 settings = {
-  "customAmount":0,
-  "expert":0,
-  "hideCover":0,
-  "randomStart":0,
-  "autoplayNext":0,
-  "endless":0
+  "customAmount":false,
+  "expert":false,
+  "hideCover":false,
+  "randomStart":false,
+  "endless":false,
+  "autoplayNext":false,
+  "displayKanji":false
 }
 
 dataSet =

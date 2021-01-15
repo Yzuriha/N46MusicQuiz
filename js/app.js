@@ -7,9 +7,12 @@ const myAudio = document.getElementById("player");
 const settingsButton = document.getElementById("settingsButton");
 
 const playPauseButton = document.getElementById("playPauseButton");
+const nextButton = document.getElementById("nextButton");
 
 const overlayHelper = document.querySelector(".overlayHelper");
 const background = document.querySelector("#background");
+
+const settingsBackground = document.querySelector(".settings");
 
 const answerNodes = document.querySelectorAll(".answerOption");
 
@@ -33,6 +36,18 @@ var isNextSong = true;
 
 var gameSettings = settings;
 
+var gameStarted = false;
+
+var checkedCheckboxes = [];
+
+var customAmount = false;
+var expert = false;
+var hideCover = false;
+var randomStart =false;
+var endless = false;
+var autoplayNext = false;
+var displayKanji = false;
+
 function getSongList() {
   let songList = [];
   shuffledSongList.forEach((item, i) => {
@@ -52,15 +67,64 @@ function loadSong(data) {
 }
 
 function togglePlay() {
-  startPointsCounter();
-  if (myAudio.paused) {
-    playPauseButton.classList.replace("fa-play", "fa-pause");
-    return myAudio.play();
+  //make the first playButton press to start the game
+  if(!gameStarted){
+    nextButton.click();
+    gameStarted = true;
+    getGameSettings();
+    if(hideCover) {document.querySelector(".albumImg").classList.add("blurImage")}
   } else {
-    playPauseButton.classList.replace("fa-pause", "fa-play");
-    return myAudio.pause()
+    startPointsCounter();
+    if (myAudio.paused) {
+      playPauseButton.classList.replace("fa-play", "fa-pause");
+      myAudio.addEventListener("loadedmetadata", function() {
+        if (randomStart) {
+          let randomDuration = shuffle([...Array(Math.round(myAudio.duration) - 30).keys()]).pop()
+          myAudio.currentTime = randomDuration;
+        }
+      })
+      return myAudio.play();
+    } else {
+      playPauseButton.classList.replace("fa-pause", "fa-play");
+      return myAudio.pause()
+    }
+
   }
 };
+
+function getGameSettings() {
+  let chosenGameSettings = [];
+  Array.from(getCheckedCheckboxes()).forEach((item, i) => {
+    chosenGameSettings.push(item.id)
+  });
+
+  customAmount = chosenGameSettings.includes("customAmount");
+  expert = chosenGameSettings.includes("expert");
+  hideCover = chosenGameSettings.includes("hideCover");
+  randomStart =chosenGameSettings.includes("randomStart");
+  endless = chosenGameSettings.includes("endless");
+  autoplayNext = chosenGameSettings.includes("autoplayNext");
+  displayKanji = chosenGameSettings.includes("displayKanji");
+
+  for(var value in gameSettings) {
+     if (chosenGameSettings.includes(value)) {
+       gameSettings[value] = 1;
+     }
+  }
+
+  checkCustomAmountInputVisibility();
+
+  console.log(gameSettings)
+}
+
+function checkCustomAmountInputVisibility() {
+  let customAmountInput = document.getElementById("customAmountInput")
+  if (document.getElementById("customAmount").checked) {
+    customAmountInput.classList.remove("hide")
+  } else {
+    customAmountInput.classList.add("hide")
+  }
+}
 
 // NO IDEA HOW THIS WORKS; IT JUST DOES
 whichTransitionEvent = () => {
@@ -139,6 +203,7 @@ function nextSong() {
   let singleSongData = shuffledSongList.pop();
   rightAnswer = singleSongData;
   addEventListenerToAnswers();
+  if(hideCover) {document.querySelector(".albumImg").classList.add("blurImage")}
   loadCoverImg(singleSongData);
   triggerOverlayHelper();
   changeBGColor();
@@ -165,13 +230,21 @@ function validateAnswer(){
   if (this.innerText.trim() == rightAnswer.name.trim()) {
     let currentPoints = pointsNode.innerText;
     let calculateDurationPercentage = (1 - ((audio.duration - (endTime - startTime) / 1000) / audio.duration))*100;
+
     let score = Math.round(0.01*Math.pow(calculateDurationPercentage - 100.5, 2));
-    points += score <= 100 ? score : 100;
+    if(score > 100) score = 100;
+    let hideCoverScore = hideCover ? 10 : 0;
+    let randomStartScore = randomStart ? 20 : 0;
+    let expertScore = expert ? score = score * 2 : score;
+    let endlessScore = endless ? score * 0.8 : 0;
+    points += hideCoverScore + randomStartScore + expertScore + endlessScore;
     animateValue("points", currentPoints, points, 300);
   }
   toggleKillClick();
   toggleRightAnswer();
   document.getElementById("nextButton").classList.remove("kill-click");
+  if(hideCover) {document.querySelector(".albumImg").classList.remove("blurImage")}
+
 }
 
 function toggleKillClick() {
@@ -213,6 +286,9 @@ audio.addEventListener("timeupdate", function() {
   }
 })
 
+function getCheckedCheckboxes(){
+  return checkedCheckboxes = document.querySelectorAll("input[type=checkbox]:checked");
+}
 
 
 
@@ -314,10 +390,12 @@ function changeBGColor() {
   if (img.complete) {
     arr = colorThief.getPalette(img, 3)
     background.style.background = `linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[1].toString()}))`;
+    settingsBackground.style.background = background.style.background;
   } else {
     img.addEventListener('load', function() {
       arr = colorThief.getPalette(img, 3)
       background.style.background = `linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[1].toString()}))`;
+      settingsBackground.style.background = background.style.background;
     });
   }
 }

@@ -2,7 +2,8 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <!-- <meta content="width=device-width, initial-scale=1" name="viewport" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
   <title>乃木坂46 Music Quiz</title>
   <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
   <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
@@ -43,7 +44,7 @@
       <div class="mediaControl noselect">
         <i class="fas fa-sliders-h" id="settingsButton" onclick="toggleSettings()"></i>
         <i class="fas fa-play" id="playPauseButton" onclick="togglePlay()"></i>
-        <i class="fas fa-forward" id="nextButton" onclick="nextSong()"></i>
+        <i class="fas fa-forward kill-click" id="nextButton" onclick="nextSong()"></i>
       </div>
       <div class="answerOptions center">
         <div class="answerOption center">
@@ -62,62 +63,65 @@
     </div>
   </div>
 
-  <!-- settings = {
-    "customAmount":0,
-    "expert":0,
-    "hideCover":0,
-    "randomStart":0,
-    "autoplayNext":0,
-    "endless":0
-  } -->
-
   <div class="settings close">
     <div class="overlay"></div>
-    <div>
-      <i class="fas fa-arrow-left" id="closeButton" onclick="toggleSettings()"></i>
-      <h2 class="center">Settings</h3>
-    </div>
-    <li>
+    <li style="border-top: none">
+      <div class="">
+        <i class="fas fa-arrow-left" id="closeButton" onclick="toggleSettings()"></i>
+        <h1 class="center">Settings</h1>
+      </div>
+    </li>
+    <li class="kill-click" style="opacity: 0.6">
       <div class="setting">
-        <label for="customAmount">Custom Amount</label>
-        <input type="checkbox" id="customAmount" name="customAmount">
+        <label for="customAmount">Custom Amount (coming soon)</label>
+        <div class="customAmountWrapper">
+          <input type="tel" id="customAmountInput" class="hide">
+          <input type="checkbox" id="customAmount" name="customAmount" onclick="checkCustomAmountInputVisibility()">
+        </div>
       </div>
       <div class="settingDetail">Choose a custom amount of songs.</div>
       </li>
-      <li>
+      <li class="kill-click" style="opacity: 0.6">
         <div class="setting">
-          <label for="expert">Expert Mode</label>
+          <label for="expert">Expert Mode (coming soon)</label>
           <input type="checkbox" id="expert" name="expert">
         </div>
-        <div class="settingDetail">Earn 3x the points by writing out the song names instead of given a choice.</div>
+        <div class="settingDetail">Earn x2 the points by writing out the song names instead of given a choice.</div>
       </li>
       <li>
         <div class="setting">
           <label for="hideCover">Hidden Album Image</label>
           <input type="checkbox" id="hideCover" name="hideCover">
         </div>
-        <div class="settingDetail">Earn 10 extra points by hiding the Album Image.</div>
+        <div class="settingDetail">Earn +10 extra points by hiding the Album Image.</div>
       </li>
       <li>
         <div class="setting">
           <label for="randomStart">Random Startpoint</label>
           <input type="checkbox" id="randomStart" name="randomStart">
         </div>
-        <div class="settingDetail">Earn 10 extra points by having the song start from a random point.</div>
+        <div class="settingDetail">Earn +20 extra points by having the song start from a random point.</div>
       </li>
-      <li>
+      <li class="kill-click" style="opacity: 0.6">
         <div class="setting">
-          <label for="autoplayNext">Autoplay Next Song</label>
+          <label for="endless">Endless Mode (coming soon)</label>
+          <input type="checkbox" id="endless" name="endless">
+        </div>
+        <div class="settingDetail">Wrongly guessed songs can be guessed again later for 80% of the points.</div>
+      </li>
+      <li class="kill-click" style="opacity: 0.6">
+        <div class="setting">
+          <label for="autoplayNext">Autoplay Next Song (coming soon)</label>
           <input type="checkbox" id="autoplayNext" name="autoplayNext">
         </div>
         <div class="settingDetail">Autoplay the next song after answering.</div>
       </li>
-      <li>
+      <li class="kill-click" style="opacity: 0.6">
         <div class="setting">
-          <label for="endless">Endless Mode</label>
-          <input type="checkbox" id="endless" name="endless">
+          <label for="displayKanji">Display Kanji Names (coming soon)</label>
+          <input type="checkbox" id="displayKanji" name="displayKanji">
         </div>
-        <div class="settingDetail">Wrongly guessed songs can be guessed again later for 80% of the points.</div>
+        <div class="settingDetail">Display Kanji instead of Romaji names.</div>
       </li>
       </div>
 </body>

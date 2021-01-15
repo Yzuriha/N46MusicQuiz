@@ -6,24 +6,31 @@ body {
   font-size: 1vw;
 }
 
-input[type='checkbox'], input[type='checkbox']:focus {
-  width: 20px !important;
+input[type='checkbox'], input[type='checkbox']:focus,
+input[type='tel'], input[type='tel']:focus{
   height: 20px !important;
-  /* margin: 5px; */
   -webkit-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
   appearance: none;
   border: 2px solid white;
   box-shadow: none;
-  font-size: 2em;
   outline: none;
   border-radius: 4px;
-  opacity: 0.8
+  opacity: 0.8;
 }
 
-input[type='checkbox']:checked {
-  /* background-color: #000; */
+input[type='checkbox'], input[type='checkbox']:focus {
+  width: 20px !important;
+  font-size: 2em;
+}
+
+input[type='tel'], input[type='tel']:focus {
+  width: 35px !important;
+  background: none;
+  color: white;
+  margin: 3px;
+  text-align: center;
 }
 
 input[type='checkbox']:checked:after {
@@ -33,6 +40,10 @@ input[type='checkbox']:checked:after {
   line-height: 1rem;
   font-size:1rem;
   padding-left: 0.15rem;
+}
+
+.hide {
+  display: none;
 }
 
 .noselect {
@@ -152,6 +163,12 @@ input[type='checkbox']:checked:after {
   height: auto;
   border-radius: 15%;
   object-fit: cover;
+  transition: all 0.15s;
+}
+
+.blurImage {
+  filter: blur(40px)grayscale(0.3);
+  /* transition: all 0.1s; */
 }
 
 .gameInformation {
@@ -201,29 +218,33 @@ input[type='checkbox']:checked:after {
 .settings {
   background: linear-gradient(rgb(199, 96, 121), rgb(53, 97, 126));
   position: fixed;
-  top: 0;
+  bottom: 0;
   width: 50%;
   height: 100%;
-  transition: all 0.5s;
+  transition: ease-in-out 0.5s;
   left: 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px 0px #000;
 }
 
 .settings.close{
-  /* top: 100%;
-  height: 0; */
   left: -50%;
 }
 
 .settings .overlay {
   position: absolute;
+  opacity: 0.6;
 }
 
 .settings li {
   list-style-type: none;
   /* padding: 15px; */
-  padding: 2.5vh 15px;
+  /* padding: 2.5vh 15px; */
+  padding: 1.5vh 15px;
   /* padding: calc(100% / 7 / 2) 15px; */
-  border-top: 1px solid black
+  border-top: 1px solid #7b7b7b8a;
 }
 
 .setting {
@@ -238,7 +259,13 @@ input[type='checkbox']:checked:after {
 
 .settingDetail {
   opacity: 0.75;
-  width: calc(100% - 28px);
+  width: calc(100% - 2px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.customAmountWrapper {
+  display: inherit;
 }
 
 @media (min-width: 426px) {
@@ -296,6 +323,10 @@ input[type='checkbox']:checked:after {
   .mediaControl i {
     padding: 0 1.5vw;
     font-size: 3.5vw;
+  }
+
+  .settingDetail {
+    font-size: calc(1.5vw - 2px)
   }
 }
 
@@ -362,21 +393,23 @@ input[type='checkbox']:checked:after {
 
   .settings {
     width: 100%;
+    /* left: 0; */
   }
 
   .settings.close {
-    top: 100%;
-    height: 0;
+    bottom: -100%;
+    /* height: 0; */
     left: 0;
+    /* bottom: -100%; */
   }
 
   .setting label {
     font-size: 4vw;
   }
 
-  .settings li {
+  /* .settings li {
     padding: 3vh 15px;
-  }
+  } */
 }
 
 /* MEDIA QUERIES */
@@ -394,7 +427,7 @@ input[type='checkbox']:checked:after {
     max-height: none !important;
   }
 
-  .settings li {
-    padding: 2vh 15px;
-  }
+  /* .settings li {
+    padding: 10px 15px;
+  } */
 }
