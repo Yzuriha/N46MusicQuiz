@@ -301,8 +301,8 @@ function validateAnswer() {
 
     let score = Math.round(0.01 * Math.pow(calculateDurationPercentage - 100.5, 2));
     if (score > 100) score = 100;
-    let hideCoverScore = hideCover ? 5 : 0;
-    let randomStartScore = randomStart ? 10 : 0;
+    let hideCoverScore = hideCover ? 3 : 0;
+    let randomStartScore = randomStart ? 5 : 0;
     let expertScore = expert ? score = score * 2 : score;
     // let endlessScore = isRepeatedSong ? Math.round(score * 0.8) : 0;
     let totalPoints = hideCoverScore + randomStartScore + expertScore;

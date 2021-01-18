@@ -23,7 +23,7 @@ dataSet =
    },
    {
       "nameKanji":"２度目のキスから",
-      "name":"2dome no KISU kara",
+      "name":"2dome no Kiss Kara",
       "Single":"Sayonara no Imi",
       "album":"Umaretekara Hajimete Mita Yume",
       "img":"BJzpy9o.jpg",
@@ -167,7 +167,7 @@ dataSet =
    },
    {
       "nameKanji":"バレッタ",
-      "name":"BARETTA",
+      "name":"Barette",
       "Single":"Barrette",
       "album":"Toumei na Iro",
       "img":"ovULZto.jpg",
@@ -248,7 +248,7 @@ dataSet =
    },
    {
       "nameKanji":"忘却と美学",
-      "name":"Boukyaku to bigaku",
+      "name":"Boukyaku to Bigaku",
       "Single":"",
       "album":"Umaretekara Hajimete Mita Yume",
       "img":"013SnT2.jpg",
@@ -266,7 +266,7 @@ dataSet =
    },
    {
       "nameKanji":"地球が丸いなら",
-      "name":"Chikyuu ga marui nara",
+      "name":"Chikyuu ga Marui Nara",
       "Single":"Jikochuu de Ikou!",
       "album":"",
       "img":"6d6IqPJ.jpg",
@@ -293,7 +293,7 @@ dataSet =
    },
    {
       "nameKanji":"ダンケシェーン",
-      "name":"Dankeschen",
+      "name":"Dankeschoen",
       "Single":"Kidzuitara Kataomoi",
       "album":"Toumei na Iro",
       "img":"yzZIfHJ.jpg",
@@ -302,7 +302,7 @@ dataSet =
    },
    {
       "nameKanji":"誰よりそばにいたい",
-      "name":"Dare Yori soba ni Itai",
+      "name":"Dare Yori Soba ni Itai",
       "Single":"",
       "album":"Boku Dake no Kimi ~Under Super Best~",
       "img":"I8HW6Tb.jpg",
@@ -428,7 +428,7 @@ dataSet =
    },
    {
       "nameKanji":"白米様",
-      "name":"Hakumai sama",
+      "name":"Hakumai Sama",
       "Single":"Hadashi de Summer",
       "album":"Umaretekara Hajimete Mita Yume",
       "img":"VZrf02K.jpg",
@@ -509,7 +509,7 @@ dataSet =
    },
    {
       "nameKanji":"ひと夏の長さより・・・",
-      "name":"Hito natsu no nagasa yori...",
+      "name":"Hito Natsu no Nagasa Yori...",
       "Single":"Nigemizu",
       "album":"",
       "img":"0xPvRTv.jpg",
@@ -545,7 +545,7 @@ dataSet =
    },
    {
       "nameKanji":"他の星から",
-      "name":"Hoka no Hoshi kara",
+      "name":"Hoka no Hoshi Kara",
       "Single":"Girl's Rule",
       "album":"Toumei na Iro",
       "img":"BnGnBmr.jpg",
@@ -554,7 +554,7 @@ dataSet =
    },
    {
       "nameKanji":"ハウス！",
-      "name":"Hausu!",
+      "name":"House!",
       "Single":"Oide, Shampoo",
       "album":"Sorezore no Isu",
       "img":"SINN3Hv.jpg",
@@ -599,7 +599,7 @@ dataSet =
    },
    {
       "nameKanji":"インフルエンサー",
-      "name":"INFURUENSAA",
+      "name":"Influencer",
       "Single":"Influencer",
       "album":"Umaretekara Hajimete Mita Yume",
       "img":"FnTJTrp.jpg",
@@ -644,7 +644,7 @@ dataSet =
    },
    {
       "nameKanji":"自分じゃない感じ",
-      "name":"Jibun ja nai kanji",
+      "name":"Jibun ja nai Kanji",
       "Single":"Jikochuu de Ikou!",
       "album":"Ima ga Omoide ni Naru Made",
       "img":"uWiocmJ.jpg",
@@ -653,7 +653,7 @@ dataSet =
    },
    {
       "nameKanji":"自分のこと",
-      "name":"Jibun no koto",
+      "name":"Jibun no Koto",
       "Single":"",
       "album":"Boku Dake no Kimi ~Under Super Best~",
       "img":"I8HW6Tb.jpg",
@@ -797,7 +797,7 @@ dataSet =
    },
    {
       "nameKanji":"君に贈る花がない",
-      "name":"Kimi ni okuru hana ga nai",
+      "name":"Kimi ni Okuru Hana ga nai",
       "Single":"Sayonara no Imi",
       "album":"Umaretekara Hajimete Mita Yume",
       "img":"twOr7hu.jpg",
@@ -824,7 +824,7 @@ dataSet =
    },
    {
       "nameKanji":"キスの手裏剣",
-      "name":"Kisu no shuriken",
+      "name":"Kiss no Shuriken",
       "Single":"",
       "album":"Ima ga Omoide ni Naru Made",
       "img":"OwJBHiE.png",
@@ -842,7 +842,7 @@ dataSet =
    },
    {
       "nameKanji":"孤独な青空",
-      "name":"Kodoku no aozora",
+      "name":"Kodoku no Aozora",
       "Single":"Sayonara no Imi",
       "album":"Umaretekara Hajimete Mita Yume",
       "img":"lt5555a.jpg",
@@ -932,7 +932,7 @@ dataSet =
    },
    {
       "nameKanji":"コウモリよ",
-      "name":"KOUMORI yo",
+      "name":"Koumori yo",
       "Single":"Girl's Rule",
       "album":"",
       "img":"iL30IeB.jpg",
@@ -977,7 +977,7 @@ dataSet =
    },
    {
       "nameKanji":"ライブ神",
-      "name":"Raibu kami",
+      "name":"Live Kami",
       "Single":"Nigemizu",
       "album":"Ima ga Omoide ni Naru Made",
       "img":"8MdMpa1.jpg",
@@ -1022,7 +1022,7 @@ dataSet =
    },
    {
       "nameKanji":"未来の答え",
-      "name":"Mirai no kotae",
+      "name":"Mirai no Kotae",
       "Single":"Nigemizu",
       "album":"Ima ga Omoide ni Naru Made",
       "img":"HV77dvx.jpg",
@@ -1076,7 +1076,7 @@ dataSet =
    },
    {
       "nameKanji":"無口なライオン",
-      "name":"Mukuchi na RAION",
+      "name":"Mukuchi na Lion",
       "Single":"Natsu no Free &amp; Easy",
       "album":"Toumei na Iro",
       "img":"IzZ21GQ.jpg",
@@ -1112,7 +1112,7 @@ dataSet =
    },
    {
       "nameKanji":"涙がまだ悲しみだった頃",
-      "name":"Namida ga mada kanashimi datta koro",
+      "name":"Namida ga Mada Kanashimi Datta Koro",
       "Single":"Hashire! Bicycle",
       "album":"Toumei na Iro",
       "img":"cNQHVLA.jpg",
@@ -1184,7 +1184,7 @@ dataSet =
    },
    {
       "nameKanji":"のような存在",
-      "name":"No You n Sonzai",
+      "name":"No You na Sonzai",
       "Single":"Sing Out!",
       "album":"",
       "img":"Agq1n9H.jpg",
@@ -1202,7 +1202,7 @@ dataSet =
    },
    {
       "nameKanji":"オフショアガール",
-      "name":"OFUSHOA GAARU",
+      "name":"Offshore Girl",
       "Single":"Hadashi de Summer",
       "album":"Umaretekara Hajimete Mita Yume",
       "img":"oURL25l.jpg",
@@ -1229,7 +1229,7 @@ dataSet =
    },
    {
       "nameKanji":"女は一人じゃ眠れない",
-      "name":"Onna wa hito ja nemurenai",
+      "name":"Onna wa Hito ja Nemurenai",
       "Single":"Nigemizu",
       "album":"",
       "img":"0xPvRTv.jpg",
@@ -1301,7 +1301,7 @@ dataSet =
    },
    {
       "nameKanji":"Rewindあの日",
-      "name":"Rewind ano hi",
+      "name":"Rewind ano Hi",
       "Single":"",
       "album":"Umaretekara Hajimete Mita Yume",
       "img":"CW6pQSX.jpg",
@@ -1310,7 +1310,7 @@ dataSet =
    },
    {
       "nameKanji":"ロマンスのスタート",
-      "name":"ROMANSU no SUTAATO",
+      "name":"Romance no Start",
       "Single":"Kidzuitara Kataomoi",
       "album":"",
       "img":"pkqa3ne.jpg",
@@ -1373,7 +1373,7 @@ dataSet =
    },
    {
       "nameKanji":"サヨナラの意味",
-      "name":"SAYONARA no Imi",
+      "name":"Sayonara no Imi",
       "Single":"Sayonara no Imi",
       "album":"Umaretekara Hajimete Mita Yume",
       "img":"lt5555a.jpg",
@@ -1400,7 +1400,7 @@ dataSet =
    },
    {
       "nameKanji":"シークレットグラフィティー",
-      "name":"Shiikuretto gurafitii",
+      "name":"Shiikuretto Graffiti",
       "Single":"Hadashi de Summer",
       "album":"Umaretekara Hajimete Mita Yume",
       "img":"RtD0N3q.png",
@@ -1481,7 +1481,7 @@ dataSet =
    },
    {
       "nameKanji":"渋谷ブルース",
-      "name":"Shibuya buruusu",
+      "name":"Shibuya Blues",
       "Single":"Seifuku no Mannequin",
       "album":"",
       "img":"LFJ2xcZ.jpg",
@@ -1589,7 +1589,7 @@ dataSet =
    },
    {
       "nameKanji":"シンクロニシティ",
-      "name":"Shinkuronishiti",
+      "name":"Synchronicity",
       "Single":"Synchronicity",
       "album":"Ima ga Omoide ni Naru Made",
       "img":"5QTDIXH.jpg",
@@ -1625,7 +1625,7 @@ dataSet =
    },
    {
       "nameKanji":"低体温のキス",
-      "name":"Teitaion no KISU",
+      "name":"Teitaion no Kiss",
       "Single":"",
       "album":"Sorezore no Isu",
       "img":"bBy478T.jpg",
@@ -1642,8 +1642,8 @@ dataSet =
       "song":"https://yzuriha.github.io/N46Sort/src/songs/Tender days.mp3"
    },
    {
-      "nameKanji":"Threefold choice",
-      "name":"Threefold choice",
+      "nameKanji":"Threefold Choice",
+      "name":"Threefold Choice",
       "Single":"",
       "album":"Sorezore no Isu",
       "img":"bBy478T.jpg",
@@ -1652,7 +1652,7 @@ dataSet =
    },
    {
       "nameKanji":"吐息のメソッド",
-      "name":"Toiki no MESODDO",
+      "name":"Toiki no Method",
       "Single":"Kidzuitara Kataomoi",
       "album":"",
       "img":"pkqa3ne.jpg",
@@ -1760,7 +1760,7 @@ dataSet =
    },
    {
       "nameKanji":"失いたくないから",
-      "name":"Ushinaitakunai kara",
+      "name":"Ushinaitakunai Kara",
       "Single":"Guru Guru Curtain",
       "album":"Toumei na Iro",
       "img":"nYSnqAz.png",
