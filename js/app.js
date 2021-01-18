@@ -49,7 +49,7 @@ var customAmount = false;
 var songAmount = dataSet.length;
 var expert = false;
 var hideCover = false;
-var randomStart =false;
+var randomStart = false;
 var endless = false;
 var autoplayNext = false;
 var displayKanji = false;
@@ -61,6 +61,9 @@ var repeatedSongList = [];
 
 
 function loadCoverImg(data) {
+  // if (hideCover) {
+  //   document.querySelector(".albumImg").classList.add("blurImage")
+  // }
   document.querySelector(".albumImg").src = `${window.location.href}/assets/images/${data.img}`
 }
 
@@ -72,10 +75,12 @@ function loadSong(data) {
 
 function togglePlay() {
   //make the first playButton press to start the game
-  if(!gameStarted){
+  if (!gameStarted) {
     getGameSettings();
-    if(hideCover) {document.querySelector(".albumImg").classList.add("blurImage")}
-    if(customAmount){
+    if (hideCover) {
+      document.querySelector(".albumImg").classList.add("blurImage")
+    }
+    if (customAmount) {
       var numbersToRemove = document.getElementById("customAmountInput").value;
       shuffledSongList = shuffledSongList.splice(0, numbersToRemove);
       songAmount = shuffledSongList.length;
@@ -114,15 +119,15 @@ function getGameSettings() {
   customAmount = chosenGameSettings.includes("customAmount");
   expert = chosenGameSettings.includes("expert");
   hideCover = chosenGameSettings.includes("hideCover");
-  randomStart =chosenGameSettings.includes("randomStart");
+  randomStart = chosenGameSettings.includes("randomStart");
   endless = chosenGameSettings.includes("endless");
   autoplayNext = chosenGameSettings.includes("autoplayNext");
   displayKanji = chosenGameSettings.includes("displayKanji");
 
-  for(var value in gameSettings) {
-     if (chosenGameSettings.includes(value)) {
-       gameSettings[value] = 1;
-     }
+  for (var value in gameSettings) {
+    if (chosenGameSettings.includes(value)) {
+      gameSettings[value] = 1;
+    }
   }
 
   checkCustomAmountInputVisibility();
@@ -190,11 +195,11 @@ function triggerOverlayHelper() {
   toggleFadeClass();
 }
 
-function generateAnswers(data){
+function generateAnswers(data) {
   let answerNodesText = document.querySelectorAll(".answerOption p");
   let answers = [];
   let shuffledSongListHelper = shuffle(shuffledSongList);
-  if(displayKanji){
+  if (displayKanji) {
     answers.push(data.nameKanji)
     answers.push(shuffle(dataSet)[0].nameKanji);
     answers.push(shuffle(dataSet)[1].nameKanji);
@@ -218,35 +223,35 @@ function toggleSettings() {
 }
 
 function loadSettings() {
-   customAmount = gameSettings.customAmount;
-   expert = gameSettings.expert;
-   hideCover = gameSettings.hideCover;
-   randomStart =gameSettings.randomStart;
-   endless = gameSettings.endless;
-   autoplayNext = gameSettings.autoplayNext;
-   displayKanji = gameSettings.displayKanji;
-   document.querySelectorAll(".setting input[type=checkbox]").forEach((item, i) => {
-     if(gameSettings[item.id]) {
-       item.checked = true
-     }
-   });
+  customAmount = gameSettings.customAmount;
+  expert = gameSettings.expert;
+  hideCover = gameSettings.hideCover;
+  randomStart = gameSettings.randomStart;
+  endless = gameSettings.endless;
+  autoplayNext = gameSettings.autoplayNext;
+  displayKanji = gameSettings.displayKanji;
+  document.querySelectorAll(".setting input[type=checkbox]").forEach((item, i) => {
+    if (gameSettings[item.id]) {
+      item.checked = true
+    }
+  });
 
-   if(localStorage.getItem("customAmount") != ""){
-     document.getElementById("customAmountInput").value = localStorage.getItem("customAmount")
-   }
+  if (localStorage.getItem("customAmount") != "") {
+    document.getElementById("customAmountInput").value = localStorage.getItem("customAmount")
+  }
 
 }
 
 function saveSettingsToLocalStorage() {
   getGameSettings();
   let newSettings = {
-    "customAmount":customAmount,
-    "expert":expert,
-    "hideCover":hideCover,
-    "randomStart":randomStart,
-    "endless":endless,
-    "autoplayNext":autoplayNext,
-    "displayKanji":displayKanji
+    "customAmount": customAmount,
+    "expert": expert,
+    "hideCover": hideCover,
+    "randomStart": randomStart,
+    "endless": endless,
+    "autoplayNext": autoplayNext,
+    "displayKanji": displayKanji
   }
 
   localStorage.setItem('customSettings', JSON.stringify(newSettings));
@@ -255,11 +260,13 @@ function saveSettingsToLocalStorage() {
 
 function nextSong() {
   autoplayTimeoutFunctionClear();
+  if (hideCover) {
+    document.querySelector(".albumImg").classList.add("blurImage")
+  }
   document.querySelector('#earnedPoints').classList.add("fadeOutFast");
   singleSongData = shuffledSongList.shift();
   rightAnswer = singleSongData;
   addEventListenerToAnswers();
-  if(hideCover) {document.querySelector(".albumImg").classList.add("blurImage")}
   loadCoverImg(singleSongData);
   triggerOverlayHelper();
   changeBGColor();
@@ -281,31 +288,32 @@ function addEventListenerToAnswers() {
 }
 
 var autoplayTimeout;
-function validateAnswer(){
+
+function validateAnswer() {
   endTime = Date.now();
   isNextSong = false;
 
-  let rightAnswerHelper = displayKanji ? rightAnswer.nameKanji.trim(): rightAnswer.name.trim()
+  let rightAnswerHelper = displayKanji ? rightAnswer.nameKanji.trim() : rightAnswer.name.trim()
 
   if (this.innerText.trim() == rightAnswerHelper) {
     let currentPoints = pointsNode.innerText;
-    let calculateDurationPercentage = (1 - ((audio.duration - (endTime - startTime) / 1000) / audio.duration))*100;
+    let calculateDurationPercentage = (1 - ((audio.duration - (endTime - startTime) / 1000) / audio.duration)) * 100;
 
-    let score = Math.round(0.01*Math.pow(calculateDurationPercentage - 100.5, 2));
-    if(score > 100) score = 100;
+    let score = Math.round(0.01 * Math.pow(calculateDurationPercentage - 100.5, 2));
+    if (score > 100) score = 100;
     let hideCoverScore = hideCover ? 5 : 0;
     let randomStartScore = randomStart ? 10 : 0;
     let expertScore = expert ? score = score * 2 : score;
     // let endlessScore = isRepeatedSong ? Math.round(score * 0.8) : 0;
     let totalPoints = hideCoverScore + randomStartScore + expertScore;
-    if(repeatedSongList.includes(rightAnswerHelper)){
+    if (repeatedSongList.includes(rightAnswerHelper)) {
       isRepeatedSong = true
       console.log("repeated")
-      console.log(Math.round(totalPoints * Math.pow(0.8, countOccurrences(repeatedSongList,rightAnswerHelper))))
+      console.log(Math.round(totalPoints * Math.pow(0.8, countOccurrences(repeatedSongList, rightAnswerHelper))))
     }
 
-    if(isRepeatedSong) {
-      totalPoints = Math.round(totalPoints * Math.pow(0.8, countOccurrences(repeatedSongList,rightAnswerHelper)))
+    if (isRepeatedSong) {
+      totalPoints = Math.round(totalPoints * Math.pow(0.8, countOccurrences(repeatedSongList, rightAnswerHelper)))
     }
 
     points += totalPoints;
@@ -322,13 +330,17 @@ function validateAnswer(){
   }
   toggleKillClick();
   toggleRightAnswer();
-  if(hideCover) {document.querySelector(".albumImg").classList.remove("blurImage")}
+  if (hideCover) {
+    document.querySelector(".albumImg").classList.remove("blurImage")
+  }
 
-  if(document.getElementById("songCounter").innerText == songAmount) {
-    setTimeout(function(){ displayWinner(); }, 2000);
+  if (document.getElementById("songCounter").innerText == songAmount) {
+    setTimeout(function() {
+      displayWinner();
+    }, 2000);
   } else {
     document.getElementById("nextButton").classList.remove("kill-click");
-    if (autoplayNext){
+    if (autoplayNext) {
       autoplayTimeoutFunction();
     }
   }
@@ -340,7 +352,9 @@ function displayAdditionalPoints(totalPoints) {
 }
 
 function autoplayTimeoutFunction() {
-  autoplayTimeout = setTimeout(function(){ nextSong(); }, 2000);
+  autoplayTimeout = setTimeout(function() {
+    nextSong();
+  }, 2000);
 }
 
 function autoplayTimeoutFunctionClear() {
@@ -358,7 +372,9 @@ function displayWinner() {
   `
 
   document.querySelector(".winnerScreen").classList.remove("hide");
- setTimeout(function(){ document.querySelector(".winnerScreen").classList.add("fadeInFast"); }, 50)
+  setTimeout(function() {
+    document.querySelector(".winnerScreen").classList.add("fadeInFast");
+  }, 50)
   // document.querySelector(".winnerScreen").classList.add("fadeIn");
 
   document.querySelector('#earnedPoints').classList.add("fadeOutFast");
@@ -377,23 +393,23 @@ function toggleKillClick() {
 }
 
 function toggleRightAnswer() {
-  let rightAnswerHelper = displayKanji ? rightAnswer.nameKanji.trim(): rightAnswer.name.trim()
+  let rightAnswerHelper = displayKanji ? rightAnswer.nameKanji.trim() : rightAnswer.name.trim()
   answerNodes.forEach((item, i) => {
-    if (item.innerText.trim() == rightAnswerHelper)  {
+    if (item.innerText.trim() == rightAnswerHelper) {
       item.classList.remove("fadeOutAnswer")
     }
   });
 }
 
-function startPointsCounter(){
-  if(resetTimer) {
+function startPointsCounter() {
+  if (resetTimer) {
     startTime = Date.now();
     resetTimer = false;
   }
 }
 
 audio.addEventListener("playing", function() {
-  if(isNextSong) {
+  if (isNextSong) {
     answerNodes.forEach((item, i) => {
       item.classList.remove("kill-click");
       item.classList.remove("fadeOutAnswer");
@@ -409,16 +425,9 @@ audio.addEventListener("timeupdate", function() {
   }
 })
 
-function getCheckedCheckboxes(){
+function getCheckedCheckboxes() {
   return checkedCheckboxes = document.querySelectorAll("input[type=checkbox]:checked");
 }
-
-
-
-
-
-
-
 
 
 
@@ -440,35 +449,35 @@ function formatTime(seconds) {
 
 // https://stackoverflow.com/questions/16994662/count-animation-from-number-a-to-b
 function animateValue(id, start, end, duration) {
-    // assumes integer values for start and end
+  // assumes integer values for start and end
 
-    var obj = document.getElementById(id);
-    var range = end - start;
-    // no timer shorter than 50ms (not really visible any way)
-    var minTimer = 50;
-    // calc step time to show all interediate values
-    var stepTime = Math.abs(Math.floor(duration / range));
+  var obj = document.getElementById(id);
+  var range = end - start;
+  // no timer shorter than 50ms (not really visible any way)
+  var minTimer = 50;
+  // calc step time to show all interediate values
+  var stepTime = Math.abs(Math.floor(duration / range));
 
-    // never go below minTimer
-    stepTime = Math.max(stepTime, minTimer);
+  // never go below minTimer
+  stepTime = Math.max(stepTime, minTimer);
 
-    // get current time and calculate desired end time
-    var startTime = new Date().getTime();
-    var endTime = startTime + duration;
-    var timer;
+  // get current time and calculate desired end time
+  var startTime = new Date().getTime();
+  var endTime = startTime + duration;
+  var timer;
 
-    function run() {
-        var now = new Date().getTime();
-        var remaining = Math.max((endTime - now) / duration, 0);
-        var value = Math.round(end - (remaining * range));
-        obj.innerHTML = value;
-        if (value == end) {
-            clearInterval(timer);
-        }
+  function run() {
+    var now = new Date().getTime();
+    var remaining = Math.max((endTime - now) / duration, 0);
+    var value = Math.round(end - (remaining * range));
+    obj.innerHTML = value;
+    if (value == end) {
+      clearInterval(timer);
     }
+  }
 
-    timer = setInterval(run, stepTime);
-    run();
+  timer = setInterval(run, stepTime);
+  run();
 }
 
 
@@ -477,7 +486,7 @@ function animateValue(id, start, end, duration) {
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min +1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 
