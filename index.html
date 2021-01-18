@@ -25,10 +25,10 @@
     <div class="main">
       <div class="gameInformation center noselect">
         <div class="pointsContainer">
-          <i class="fas fa-star">&nbsp;</i><span id="points">0</span>
+          <i class="fas fa-star">&nbsp;</i><span id="points">0</span><span id="earnedPoints" class=""></span>
         </div>
         <div class="songNumber">
-          <i class="fas fa-music">&nbsp;</i><span id="songCounter">0</span>/<span>207</span>
+          <i class="fas fa-music">&nbsp;</i><span id="songCounter">- </span>/<span id="totalSongs"> -</span><span id="additionalSongs"></span>
         </div>
       </div>
       <div class="trackbar noselect">
@@ -54,11 +54,12 @@
           <p>2. Press play to start the game</p>
         </div>
         <div class="answerOption center">
-          <p>きっかけ</p>
+          <p>(A) You can seek in the song with no penalty.</p>
         </div>
         <div class="answerOption center">
-          <p>帰り道は遠回りしたくなる帰り道は遠回りしたくなる帰り道は遠回りしたくなる帰り道は遠回りしたくなる</p>
+          <p>(B) Have fun playing the game :)</p>
         </div>
+        <div class="winnerScreen hide"></div>
       </div>
     </div>
   </div>
@@ -67,13 +68,13 @@
     <div class="overlay"></div>
     <li style="border-top: none">
       <div class="">
-        <i class="fas fa-arrow-left" id="closeButton" onclick="toggleSettings()"></i>
+        <i class="fas fa-arrow-left" id="closeButton" onclick="toggleSettings();saveSettingsToLocalStorage()"></i>
         <h1 class="center">Settings</h1>
       </div>
     </li>
-    <li class="kill-click" style="opacity: 0.6">
+    <li class="" style="">
       <div class="setting">
-        <label for="customAmount">Custom Amount (coming soon)</label>
+        <label for="customAmount">Custom Amount</label>
         <div class="customAmountWrapper">
           <input type="tel" id="customAmountInput" class="hide">
           <input type="checkbox" id="customAmount" name="customAmount" onclick="checkCustomAmountInputVisibility()">
@@ -93,32 +94,32 @@
           <label for="hideCover">Hidden Album Image</label>
           <input type="checkbox" id="hideCover" name="hideCover">
         </div>
-        <div class="settingDetail">Earn +10 extra points by hiding the Album Image.</div>
+        <div class="settingDetail">Earn +5 extra points by hiding the Album Image.</div>
       </li>
       <li>
         <div class="setting">
           <label for="randomStart">Random Startpoint</label>
           <input type="checkbox" id="randomStart" name="randomStart">
         </div>
-        <div class="settingDetail">Earn +20 extra points by having the song start from a random point.</div>
+        <div class="settingDetail">Earn +10 extra points by having the song start from a random point.</div>
       </li>
-      <li class="kill-click" style="opacity: 0.6">
+      <li class="" style="">
         <div class="setting">
-          <label for="endless">Endless Mode (coming soon)</label>
+          <label for="endless">Endless Mode</label>
           <input type="checkbox" id="endless" name="endless">
         </div>
         <div class="settingDetail">Wrongly guessed songs can be guessed again later for 80% of the points.</div>
       </li>
-      <li class="kill-click" style="opacity: 0.6">
+      <li class="" style="">
         <div class="setting">
-          <label for="autoplayNext">Autoplay Next Song (coming soon)</label>
+          <label for="autoplayNext">Autoplay Next Song</label>
           <input type="checkbox" id="autoplayNext" name="autoplayNext">
         </div>
-        <div class="settingDetail">Autoplay the next song after answering.</div>
+        <div class="settingDetail">Autoplay the next song after a few seconds when done answering.</div>
       </li>
-      <li class="kill-click" style="opacity: 0.6">
+      <li class="k" style="">
         <div class="setting">
-          <label for="displayKanji">Display Kanji Names (coming soon)</label>
+          <label for="displayKanji">Display Kanji Names</label>
           <input type="checkbox" id="displayKanji" name="displayKanji">
         </div>
         <div class="settingDetail">Display Kanji instead of Romaji names.</div>

@@ -1,4 +1,4 @@
-const shuffledSongList = shuffle(dataSet);
+var shuffledSongList = shuffle(dataSet);
 
 const player = new Plyr('#player');
 
@@ -27,6 +27,7 @@ var currentSongTime = document.querySelector(".currentTime");
 var remainingSongDuration = document.querySelector(".remainingDuration");
 
 var rightAnswer;
+var singleSongData;
 
 var startTime = 0;
 var endTime = 0;
@@ -34,13 +35,18 @@ var resetTimer = true;
 
 var isNextSong = true;
 
-var gameSettings = settings;
+var guessedSongs = 0;
+
+var additionalSongsAmount = 0;
+
+var gameSettings = localStorage.getItem("customSettings") != null ? JSON.parse(localStorage.getItem("customSettings")) : settings;
 
 var gameStarted = false;
 
 var checkedCheckboxes = [];
 
 var customAmount = false;
+var songAmount = dataSet.length;
 var expert = false;
 var hideCover = false;
 var randomStart =false;
@@ -48,13 +54,11 @@ var endless = false;
 var autoplayNext = false;
 var displayKanji = false;
 
-function getSongList() {
-  let songList = [];
-  shuffledSongList.forEach((item, i) => {
-    songList.push(item.song)
-  });
-  return songList;
-}
+//#Source https://bit.ly/2neWfJ2
+const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
+var isRepeatedSong = false;
+var repeatedSongList = [];
+
 
 function loadCoverImg(data) {
   document.querySelector(".albumImg").src = `${window.location.href}/assets/images/${data.img}`
@@ -69,10 +73,19 @@ function loadSong(data) {
 function togglePlay() {
   //make the first playButton press to start the game
   if(!gameStarted){
-    nextButton.click();
-    gameStarted = true;
     getGameSettings();
     if(hideCover) {document.querySelector(".albumImg").classList.add("blurImage")}
+    if(customAmount){
+      var numbersToRemove = document.getElementById("customAmountInput").value;
+      shuffledSongList = shuffledSongList.splice(0, numbersToRemove);
+      songAmount = shuffledSongList.length;
+      document.getElementById("totalSongs").innerText = numbersToRemove;
+    } else {
+      document.getElementById("totalSongs").innerText = shuffledSongList.length;
+    }
+    nextButton.click();
+    gameStarted = true;
+
   } else {
     startPointsCounter();
     if (myAudio.paused) {
@@ -113,8 +126,6 @@ function getGameSettings() {
   }
 
   checkCustomAmountInputVisibility();
-
-  console.log(gameSettings)
 }
 
 function checkCustomAmountInputVisibility() {
@@ -173,7 +184,6 @@ transitionEndCallback = (e) => {
   togglePlay();
 }
 
-
 function triggerOverlayHelper() {
   // add old background to overlayHelper
   overlayHelper.style.background = background.style.background;
@@ -184,10 +194,18 @@ function generateAnswers(data){
   let answerNodesText = document.querySelectorAll(".answerOption p");
   let answers = [];
   let shuffledSongListHelper = shuffle(shuffledSongList);
-  answers.push(data.name)
-  answers.push(shuffle(dataSet)[0].name);
-  answers.push(shuffle(dataSet)[1].name);
-  answers.push(shuffle(dataSet)[2].name);
+  if(displayKanji){
+    answers.push(data.nameKanji)
+    answers.push(shuffle(dataSet)[0].nameKanji);
+    answers.push(shuffle(dataSet)[1].nameKanji);
+    answers.push(shuffle(dataSet)[2].nameKanji);
+  } else {
+    answers.push(data.name)
+    answers.push(shuffle(dataSet)[0].name);
+    answers.push(shuffle(dataSet)[1].name);
+    answers.push(shuffle(dataSet)[2].name);
+  }
+
   answers = shuffle(answers);
   answerNodesText.forEach((item, i) => {
     item.innerText = answers.pop();
@@ -196,11 +214,49 @@ function generateAnswers(data){
 }
 
 function toggleSettings() {
-  document.querySelector(".settings").classList.toggle("close")
+  document.querySelector(".settings").classList.toggle("close");
+}
+
+function loadSettings() {
+   customAmount = gameSettings.customAmount;
+   expert = gameSettings.expert;
+   hideCover = gameSettings.hideCover;
+   randomStart =gameSettings.randomStart;
+   endless = gameSettings.endless;
+   autoplayNext = gameSettings.autoplayNext;
+   displayKanji = gameSettings.displayKanji;
+   document.querySelectorAll(".setting input[type=checkbox]").forEach((item, i) => {
+     if(gameSettings[item.id]) {
+       item.checked = true
+     }
+   });
+
+   if(localStorage.getItem("customAmount") != ""){
+     document.getElementById("customAmountInput").value = localStorage.getItem("customAmount")
+   }
+
+}
+
+function saveSettingsToLocalStorage() {
+  getGameSettings();
+  let newSettings = {
+    "customAmount":customAmount,
+    "expert":expert,
+    "hideCover":hideCover,
+    "randomStart":randomStart,
+    "endless":endless,
+    "autoplayNext":autoplayNext,
+    "displayKanji":displayKanji
+  }
+
+  localStorage.setItem('customSettings', JSON.stringify(newSettings));
+  localStorage.setItem('customAmount', document.getElementById("customAmountInput").value);
 }
 
 function nextSong() {
-  let singleSongData = shuffledSongList.pop();
+  autoplayTimeoutFunctionClear();
+  document.querySelector('#earnedPoints').classList.add("fadeOutFast");
+  singleSongData = shuffledSongList.shift();
   rightAnswer = singleSongData;
   addEventListenerToAnswers();
   if(hideCover) {document.querySelector(".albumImg").classList.add("blurImage")}
@@ -224,28 +280,94 @@ function addEventListenerToAnswers() {
   });
 }
 
+var autoplayTimeout;
 function validateAnswer(){
   endTime = Date.now();
   isNextSong = false;
-  if (this.innerText.trim() == rightAnswer.name.trim()) {
+
+  let rightAnswerHelper = displayKanji ? rightAnswer.nameKanji.trim(): rightAnswer.name.trim()
+
+  if (this.innerText.trim() == rightAnswerHelper) {
     let currentPoints = pointsNode.innerText;
     let calculateDurationPercentage = (1 - ((audio.duration - (endTime - startTime) / 1000) / audio.duration))*100;
 
     let score = Math.round(0.01*Math.pow(calculateDurationPercentage - 100.5, 2));
     if(score > 100) score = 100;
-    let hideCoverScore = hideCover ? 10 : 0;
-    let randomStartScore = randomStart ? 20 : 0;
+    let hideCoverScore = hideCover ? 5 : 0;
+    let randomStartScore = randomStart ? 10 : 0;
     let expertScore = expert ? score = score * 2 : score;
-    let endlessScore = endless ? score * 0.8 : 0;
-    points += hideCoverScore + randomStartScore + expertScore + endlessScore;
-    animateValue("points", currentPoints, points, 300);
+    // let endlessScore = isRepeatedSong ? Math.round(score * 0.8) : 0;
+    let totalPoints = hideCoverScore + randomStartScore + expertScore;
+    if(repeatedSongList.includes(rightAnswerHelper)){
+      isRepeatedSong = true
+      console.log("repeated")
+      console.log(Math.round(totalPoints * Math.pow(0.8, countOccurrences(repeatedSongList,rightAnswerHelper))))
+    }
+
+    if(isRepeatedSong) {
+      totalPoints = Math.round(totalPoints * Math.pow(0.8, countOccurrences(repeatedSongList,rightAnswerHelper)))
+    }
+
+    points += totalPoints;
+    displayAdditionalPoints(totalPoints);
+    animateValue("points", currentPoints, points, 500);
+    guessedSongs++;
+    isRepeatedSong = false
+  } else if (endless) {
+    shuffledSongList.push(singleSongData);
+    repeatedSongList.push(rightAnswerHelper);
+    songAmount++;
+    additionalSongsAmount++;
+    document.querySelector('#additionalSongs').innerText = ` (+${additionalSongsAmount})`;
   }
   toggleKillClick();
   toggleRightAnswer();
-  document.getElementById("nextButton").classList.remove("kill-click");
   if(hideCover) {document.querySelector(".albumImg").classList.remove("blurImage")}
 
+  if(document.getElementById("songCounter").innerText == songAmount) {
+    setTimeout(function(){ displayWinner(); }, 2000);
+  } else {
+    document.getElementById("nextButton").classList.remove("kill-click");
+    if (autoplayNext){
+      autoplayTimeoutFunction();
+    }
+  }
 }
+
+function displayAdditionalPoints(totalPoints) {
+  document.querySelector('#earnedPoints').classList.remove("fadeOutFast")
+  document.querySelector('#earnedPoints').innerText = ` (+${totalPoints})`;
+}
+
+function autoplayTimeoutFunction() {
+  autoplayTimeout = setTimeout(function(){ nextSong(); }, 2000);
+}
+
+function autoplayTimeoutFunctionClear() {
+  clearTimeout(autoplayTimeout);
+}
+
+function displayWinner() {
+  document.querySelectorAll(".answerOption").forEach((item, i) => {
+    item.classList.add("hide");
+  });
+
+  document.querySelector(".winnerScreen").innerHTML = `<p>Congratulations!</p>
+  <p>You guessed <b>${guessedSongs}/${songAmount}</b> songs and</p>
+  <p>earned <b>${document.querySelector("#points").innerText}</b> points!</p>
+  `
+
+  document.querySelector(".winnerScreen").classList.remove("hide");
+ setTimeout(function(){ document.querySelector(".winnerScreen").classList.add("fadeInFast"); }, 50)
+  // document.querySelector(".winnerScreen").classList.add("fadeIn");
+
+  document.querySelector('#earnedPoints').classList.add("fadeOutFast");
+
+
+}
+
+
+
 
 function toggleKillClick() {
   answerNodes.forEach((item, i) => {
@@ -255,8 +377,9 @@ function toggleKillClick() {
 }
 
 function toggleRightAnswer() {
+  let rightAnswerHelper = displayKanji ? rightAnswer.nameKanji.trim(): rightAnswer.name.trim()
   answerNodes.forEach((item, i) => {
-    if (item.innerText.trim() == rightAnswer.name.trim())  {
+    if (item.innerText.trim() == rightAnswerHelper)  {
       item.classList.remove("fadeOutAnswer")
     }
   });
@@ -452,6 +575,8 @@ function vaildateCacheIfOnline() {
 
 //----------------- START THINGS TO DO ONCE DONE LOADING -----------------------
 changeBGColor();
+loadSettings();
+checkCustomAmountInputVisibility();
 
 
 // dirty cheat to make the img and main part always same height

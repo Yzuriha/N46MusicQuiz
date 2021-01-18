@@ -43,7 +43,7 @@ input[type='checkbox']:checked:after {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .noselect {
@@ -84,11 +84,25 @@ input[type='checkbox']:checked:after {
    -webkit-transition: opacity .75s ease-in-out;
 }
 
+.fadeOutFast {
+   opacity: 0;
+   transition: opacity .2s ease-in-out;
+   -moz-transition: opacity .2s ease-in-out;
+   -webkit-transition: opacity .2s ease-in-out;
+}
+
 .fadeIn {
-  opacity: 1;
+  opacity: 1 !important;
   transition: opacity .75s ease-in-out;
   -moz-transition: opacity .75s ease-in-out;
   -webkit-transition: opacity .75s ease-in-out;
+}
+
+.fadeInFast {
+  opacity: 1 !important;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
 }
 
 .fadeOutAnswer {
@@ -122,12 +136,14 @@ input[type='checkbox']:checked:after {
   justify-content: space-between;
 }
 
-.pointsContainer {
-  min-width: 55px;
+.pointsContainer:after {
+  /* min-width: 125px; */
+  /* content: "\00a0(+100)";
+  position: absolute; */
 }
 
 .songNumber {
-  min-width: 64px;
+  /* min-width: 125px; */
 }
 
 .trackbar {
@@ -156,6 +172,18 @@ input[type='checkbox']:checked:after {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+.winnerScreen {
+  width: calc(100%);
+  height: calc(100% - 1vw - 16px);
+  border: 2px white solid;
+  border-radius: 7px;
+  text-align: center;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .albumImg {
   padding: 5vw;
@@ -172,7 +200,8 @@ input[type='checkbox']:checked:after {
 }
 
 .gameInformation {
-  justify-content: space-around;
+  justify-content: space-evenly;
+  text-align: center;
 }
 
 .gameInformation p {
@@ -199,8 +228,8 @@ input[type='checkbox']:checked:after {
   width: calc(50% - 1vw - 6px);
   /* 50% because two boxes; -2vw because each box should have 1vw margin/padding; -6px because border*/
   height: calc(50% - 1vw - 16px);
-  border: 0.2vw white solid;
-  border-radius: 1.5vw;
+  border: 2px white solid;
+  border-radius: 1vw;
   text-align: center;
 }
 
@@ -389,6 +418,19 @@ input[type='checkbox']:checked:after {
 
   .answerOption p {
     margin: 0 10px;
+  }
+
+  .winnerScreen {
+    width: calc(100%);
+    height: 28vw;
+    border: 0.3vw white solid;
+    border-radius: 7px;
+    text-align: center;
+    opacity: 0.5;
+  }
+
+  .winnerScreen p {
+    margin: 0.5em;
   }
 
   .settings {
