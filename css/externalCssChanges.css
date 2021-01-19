@@ -67,6 +67,11 @@ input#awesomplete {
   border-radius: 6px;
 }
 
+input#awesomplete:focus {
+  outline: none;
+  border-width: 2px;
+}
+
 .awesomplete > ul[hidden], .awesomplete > ul:empty{
   transform: scale(1, 0);
 }

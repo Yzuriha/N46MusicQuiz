@@ -81,7 +81,7 @@ function togglePlay() {
     if (hideCover) {
       document.querySelector(".albumImg").classList.add("blurImage")
     }
-    if(expert) {
+    if (expert) {
       createAwesompleteList();
       document.querySelectorAll(".answerOption").forEach((item, i) => {
         item.classList.add("hide")
@@ -208,25 +208,25 @@ function triggerOverlayHelper() {
 
 function generateAnswers(data) {
   // if(!expert){
-    let answerNodesText = document.querySelectorAll(".answerOption p");
-    let answers = [];
-    let shuffledSongListHelper = shuffle(shuffledSongList);
-    if (displayKanji) {
-      answers.push(data.nameKanji)
-      answers.push(shuffle(dataSet)[0].nameKanji);
-      answers.push(shuffle(dataSet)[1].nameKanji);
-      answers.push(shuffle(dataSet)[2].nameKanji);
-    } else {
-      answers.push(data.name)
-      answers.push(shuffle(dataSet)[0].name);
-      answers.push(shuffle(dataSet)[1].name);
-      answers.push(shuffle(dataSet)[2].name);
-    }
+  let answerNodesText = document.querySelectorAll(".answerOption p");
+  let answers = [];
+  let shuffledSongListHelper = shuffle(shuffledSongList);
+  if (displayKanji) {
+    answers.push(data.nameKanji)
+    answers.push(shuffle(dataSet)[0].nameKanji);
+    answers.push(shuffle(dataSet)[1].nameKanji);
+    answers.push(shuffle(dataSet)[2].nameKanji);
+  } else {
+    answers.push(data.name)
+    answers.push(shuffle(dataSet)[0].name);
+    answers.push(shuffle(dataSet)[1].name);
+    answers.push(shuffle(dataSet)[2].name);
+  }
 
-    answers = shuffle(answers);
-    answerNodesText.forEach((item, i) => {
-      item.innerText = answers.pop();
-    });
+  answers = shuffle(answers);
+  answerNodesText.forEach((item, i) => {
+    item.innerText = answers.pop();
+  });
   // } else {
 
 
@@ -274,22 +274,25 @@ function saveSettingsToLocalStorage() {
 }
 
 function nextSong() {
-  autoplayTimeoutFunctionClear();
   if (hideCover) {
     document.querySelector(".albumImg").classList.add("blurImage")
   }
+  autoplayTimeoutFunctionClear();
   document.querySelector('#earnedPoints').classList.add("fadeOutFast");
   singleSongData = shuffledSongList.shift();
   rightAnswer = singleSongData;
-  addEventListenerToAnswers();
-  loadCoverImg(singleSongData);
   triggerOverlayHelper();
+  loadCoverImg(singleSongData);
   changeBGColor();
+  addEventListenerToAnswers();
   loadSong(singleSongData);
-  if(!expert){
-     generateAnswers(singleSongData);
+  if (!expert) {
+    generateAnswers(singleSongData);
   } else {
-    document.getElementById("awesomplete").value = ""
+    document.getElementById("awesomplete").value = "";
+    if (document.querySelector(".correctAnswer")) {
+      document.querySelector(".correctAnswer").remove()
+    }
   }
   toggleKillClick();
   resetTimer = true;
@@ -313,16 +316,25 @@ function validateAnswer() {
   isNextSong = false;
 
   // let rightAnswerHelper = displayKanji ? rightAnswer.nameKanji.trim() : rightAnswer.name.trim()
- let rightAnswerChoice = "";
- if(expert) {
-   document.getElementById("awesomplete").blur();
-   rightAnswerChoice = document.getElementById("awesomplete").value.trim()
- } else {
-   rightAnswerChoice = this.innerText.trim()
- }
-  // let rightAnswerChoice = expert ? document.getElementById("awesomplete").value.trim() : this.innerText.trim();
+  let rightAnswerChoice = "";
   let rightAnswerNormal = rightAnswer.name.trim()
   let rightAnswerKanji = rightAnswer.nameKanji.trim()
+  if (expert) {
+    let awesompleteEl = document.getElementById("awesomplete");
+    awesompleteEl.blur()
+    rightAnswerChoice = awesompleteEl.value.trim()
+    let awesompleteUl = document.getElementById("awesomplete_list_1");
+    awesompleteUl.insertAdjacentHTML("afterend",
+      `<div class="correctAnswer center" style="flex-direction: column;">
+        <p>The correct answer is:</p>
+        <p><b>${rightAnswerNormal}</b> or <b>${rightAnswerKanji}</b></p>
+       </div>`);
+
+  } else {
+    rightAnswerChoice = this.innerText.trim()
+  }
+  // let rightAnswerChoice = expert ? document.getElementById("awesomplete").value.trim() : this.innerText.trim();
+
 
   if (rightAnswerChoice == rightAnswerNormal || rightAnswerChoice == rightAnswerKanji) {
     let currentPoints = pointsNode.innerText;
@@ -459,6 +471,7 @@ function getCheckedCheckboxes() {
 
 
 var awesompleteList = []
+
 function createAwesompleteList() {
   for (item in dataSet) {
     awesompleteList.push(dataSet[item].name)
@@ -471,18 +484,12 @@ function createAwesompleteList() {
 var input = document.getElementById("awesomplete");
 new Awesomplete(input, {
   // maxItems: 4,
-	list: awesompleteList
+  list: awesompleteList
 });
 
-input.addEventListener("awesomplete-selectcomplete",  function() {
+input.addEventListener("awesomplete-selectcomplete", function() {
   validateAnswer();
 });
-
-
-
-
-
-
 
 
 
@@ -576,12 +583,12 @@ function changeBGColor() {
   // Make sure image is finished loading
   if (img.complete) {
     arr = colorThief.getPalette(img, 3)
-    background.style.background = `linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[1].toString()}))`;
+    background.style.background = `linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[2].toString()}))`;
     settingsBackground.style.background = background.style.background;
   } else {
     img.addEventListener('load', function() {
       arr = colorThief.getPalette(img, 3)
-      background.style.background = `linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[1].toString()}))`;
+      background.style.background = `linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[2].toString()}))`;
       settingsBackground.style.background = background.style.background;
     });
   }
