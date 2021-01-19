@@ -1,25 +1,24 @@
-let cacheName = "memoryGame-v1";
+let cacheName = "songQuiz-v1";
 
 let filesToCache = [
   // "/",
+  "/N46MusicQuiz/"
   "service-worker.js",
-  // "js/app.js",
+  "js/app.js",
   "js/install-handler.js",
   "js/settings.js",
   "js/data.js",
   "css/app.css",
-  "css/toggle.css",
+  "css/externalCssChanges.css",
   "css/fonts/Lato-Regular.ttf",
-  "assets/icons/icon.png",
-  "assets/icons/NogiText.png",
   "assets/icons/logo.png",
-  "assets/icons/logo.svg",
-  "assets/icons/logoAnimated.svg",
   "manifest.json",
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css",
-  "https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css",
-  "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js",
-  "https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.min.js"
+  "https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.min.js",
+  "https://cdn.plyr.io/3.6.3/plyr.css",
+  "https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.css",
+  "https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.js",
+  "https://cdn.plyr.io/3.6.3/plyr.js"
 ];
 
 
@@ -57,7 +56,7 @@ self.addEventListener('fetch', function(event) {
     console.log('Cache cleared')
   }
 
-  // CACHE FIRST; NETWORK FALLBACK
+  //CACHE FIRST; NETWORK FALLBACK
   // event.respondWith(
   //   caches.match(event.request).then(function(response) {
   //     if (response) {

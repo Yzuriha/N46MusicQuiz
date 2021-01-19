@@ -1103,7 +1103,7 @@ dataSet =
    },
    {
       "nameKanji":"泣いたっていいじゃないか？",
-      "name":"Naitatte iijanaika?",
+      "name":"Naitatte Iijanaika?",
       "Single":"Nigemizu",
       "album":"",
       "img":"r8nw58o.png",
@@ -1301,7 +1301,7 @@ dataSet =
    },
    {
       "nameKanji":"Rewindあの日",
-      "name":"Rewind ano Hi",
+      "name":"Rewind Ano Hi",
       "Single":"",
       "album":"Umaretekara Hajimete Mita Yume",
       "img":"CW6pQSX.jpg",

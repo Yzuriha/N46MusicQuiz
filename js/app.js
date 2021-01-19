@@ -1,4 +1,5 @@
 var shuffledSongList = shuffle(dataSet);
+var deepCopy = dataSet;
 
 const player = new Plyr('#player');
 
@@ -80,6 +81,14 @@ function togglePlay() {
     if (hideCover) {
       document.querySelector(".albumImg").classList.add("blurImage")
     }
+    if(expert) {
+      createAwesompleteList();
+      document.querySelectorAll(".answerOption").forEach((item, i) => {
+        item.classList.add("hide")
+      });
+
+      document.querySelector(".awesomplete").style.display = "inline-block";
+    }
     if (customAmount) {
       var numbersToRemove = document.getElementById("customAmountInput").value;
       shuffledSongList = shuffledSongList.splice(0, numbersToRemove);
@@ -88,6 +97,8 @@ function togglePlay() {
     } else {
       document.getElementById("totalSongs").innerText = shuffledSongList.length;
     }
+
+
     nextButton.click();
     gameStarted = true;
 
@@ -196,26 +207,30 @@ function triggerOverlayHelper() {
 }
 
 function generateAnswers(data) {
-  let answerNodesText = document.querySelectorAll(".answerOption p");
-  let answers = [];
-  let shuffledSongListHelper = shuffle(shuffledSongList);
-  if (displayKanji) {
-    answers.push(data.nameKanji)
-    answers.push(shuffle(dataSet)[0].nameKanji);
-    answers.push(shuffle(dataSet)[1].nameKanji);
-    answers.push(shuffle(dataSet)[2].nameKanji);
-  } else {
-    answers.push(data.name)
-    answers.push(shuffle(dataSet)[0].name);
-    answers.push(shuffle(dataSet)[1].name);
-    answers.push(shuffle(dataSet)[2].name);
-  }
+  // if(!expert){
+    let answerNodesText = document.querySelectorAll(".answerOption p");
+    let answers = [];
+    let shuffledSongListHelper = shuffle(shuffledSongList);
+    if (displayKanji) {
+      answers.push(data.nameKanji)
+      answers.push(shuffle(dataSet)[0].nameKanji);
+      answers.push(shuffle(dataSet)[1].nameKanji);
+      answers.push(shuffle(dataSet)[2].nameKanji);
+    } else {
+      answers.push(data.name)
+      answers.push(shuffle(dataSet)[0].name);
+      answers.push(shuffle(dataSet)[1].name);
+      answers.push(shuffle(dataSet)[2].name);
+    }
 
-  answers = shuffle(answers);
-  answerNodesText.forEach((item, i) => {
-    item.innerText = answers.pop();
-  });
+    answers = shuffle(answers);
+    answerNodesText.forEach((item, i) => {
+      item.innerText = answers.pop();
+    });
+  // } else {
 
+
+  // }
 }
 
 function toggleSettings() {
@@ -271,7 +286,11 @@ function nextSong() {
   triggerOverlayHelper();
   changeBGColor();
   loadSong(singleSongData);
-  generateAnswers(singleSongData);
+  if(!expert){
+     generateAnswers(singleSongData);
+  } else {
+    document.getElementById("awesomplete").value = ""
+  }
   toggleKillClick();
   resetTimer = true;
   isNextSong = true;
@@ -293,9 +312,19 @@ function validateAnswer() {
   endTime = Date.now();
   isNextSong = false;
 
-  let rightAnswerHelper = displayKanji ? rightAnswer.nameKanji.trim() : rightAnswer.name.trim()
+  // let rightAnswerHelper = displayKanji ? rightAnswer.nameKanji.trim() : rightAnswer.name.trim()
+ let rightAnswerChoice = "";
+ if(expert) {
+   document.getElementById("awesomplete").blur();
+   rightAnswerChoice = document.getElementById("awesomplete").value.trim()
+ } else {
+   rightAnswerChoice = this.innerText.trim()
+ }
+  // let rightAnswerChoice = expert ? document.getElementById("awesomplete").value.trim() : this.innerText.trim();
+  let rightAnswerNormal = rightAnswer.name.trim()
+  let rightAnswerKanji = rightAnswer.nameKanji.trim()
 
-  if (this.innerText.trim() == rightAnswerHelper) {
+  if (rightAnswerChoice == rightAnswerNormal || rightAnswerChoice == rightAnswerKanji) {
     let currentPoints = pointsNode.innerText;
     let calculateDurationPercentage = (1 - ((audio.duration - (endTime - startTime) / 1000) / audio.duration)) * 100;
 
@@ -306,14 +335,12 @@ function validateAnswer() {
     let expertScore = expert ? score = score * 2 : score;
     // let endlessScore = isRepeatedSong ? Math.round(score * 0.8) : 0;
     let totalPoints = hideCoverScore + randomStartScore + expertScore;
-    if (repeatedSongList.includes(rightAnswerHelper)) {
+    if (repeatedSongList.includes(rightAnswerNormal) || repeatedSongList.includes(rightAnswerKanji)) {
       isRepeatedSong = true
-      console.log("repeated")
-      console.log(Math.round(totalPoints * Math.pow(0.8, countOccurrences(repeatedSongList, rightAnswerHelper))))
     }
 
     if (isRepeatedSong) {
-      totalPoints = Math.round(totalPoints * Math.pow(0.8, countOccurrences(repeatedSongList, rightAnswerHelper)))
+      totalPoints = Math.round(totalPoints * Math.pow(0.8, countOccurrences(repeatedSongList, rightAnswerNormal)))
     }
 
     points += totalPoints;
@@ -323,7 +350,8 @@ function validateAnswer() {
     isRepeatedSong = false
   } else if (endless) {
     shuffledSongList.push(singleSongData);
-    repeatedSongList.push(rightAnswerHelper);
+    repeatedSongList.push(rightAnswerNormal);
+    repeatedSongList.push(rightAnswerKanji);
     songAmount++;
     additionalSongsAmount++;
     document.querySelector('#additionalSongs').innerText = ` (+${additionalSongsAmount})`;
@@ -428,6 +456,33 @@ audio.addEventListener("timeupdate", function() {
 function getCheckedCheckboxes() {
   return checkedCheckboxes = document.querySelectorAll("input[type=checkbox]:checked");
 }
+
+
+var awesompleteList = []
+function createAwesompleteList() {
+  for (item in dataSet) {
+    awesompleteList.push(dataSet[item].name)
+    awesompleteList.push(dataSet[item].nameKanji)
+  }
+
+}
+// createAwesompleteList();
+
+var input = document.getElementById("awesomplete");
+new Awesomplete(input, {
+  // maxItems: 4,
+	list: awesompleteList
+});
+
+input.addEventListener("awesomplete-selectcomplete",  function() {
+  validateAnswer();
+});
+
+
+
+
+
+
 
 
 

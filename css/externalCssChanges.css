@@ -1,0 +1,114 @@
+/*----------------------------START PLYR-----------------------------*/
+
+:root {
+  --plyr-color-main: white;
+  --plyr-control-spacing: 0;
+  --plyr-audio-controls-background: none;
+  --plyr-range-thumb-height: 6px;
+  --plyr-range-track-height: 3px;
+  --plyr-range-thumb-active-shadow-width: 3px;
+  /* --plyr-range-thumb-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1); */
+
+  /* --plyr-range-thumb-active-shadow-width: 20px; */
+  --plyr-audio-range-thumb-active-shadow-color: rgba(255, 255, 255, 1);
+  /* --plyr-video-progress-buffered-background: rgba(255, 255, 255, 1) */
+
+}
+
+.plyr__volume {
+  display:none;
+}
+
+.plyr__controls .plyr__controls__item:first-child,
+.plyr__tooltip,
+.plyr__menu,
+.plyr__time,
+.plyr [data-plyr=airplay], .plyr [data-plyr=captions], .plyr [data-plyr=fullscreen], .plyr [data-plyr=pip] {
+  display: none;
+}
+
+.plyr__time {
+  color: white;
+}
+
+.times {
+  /* text-align: right; */
+  opacity: 0.7;
+  font-size: calc(1vw);
+}
+
+.plyr__progress input[type=range]:active {
+  --plyr-range-thumb-shadow: 0 1px 1px rgba(255, 255, 255, 0.1), 0 0 0 5px rgba(255, 255, 255, 0.1);
+}
+/*----------------------------END PLYR-----------------------------*/
+
+
+
+
+/*----------------------------START AWESOMPLETE-----------------------------*/
+
+.awesomplete > ul:before {
+  display: none
+}
+.awesomplete {
+  width: 100%;
+  height: calc(28vw + 12px + 4vw);
+  text-align: center;
+  display: none;
+}
+input#awesomplete {
+  background: none;
+  color: white;
+  width: 100%;
+  padding: .3em .5em;
+  height: calc(3.5vw + 1em + 2px);
+  text-align: center;
+  border: white 1px solid;
+  border-radius: 6px;
+}
+
+.awesomplete > ul[hidden], .awesomplete > ul:empty{
+  transform: scale(1, 0);
+}
+
+.awesomplete li[aria-selected="true"] mark{
+  background: hsl(0deg 0% 48%);
+}
+
+.awesomplete > ul{
+  background: none;
+  max-height: calc(100% - (3.5vw + 1em + 2px));
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.awesomplete mark {
+  background: #ffffff9e;
+}
+
+@media (min-width: 426px) {
+  .awesomplete{
+    height: 100%;
+  }
+  input#awesomplete {
+    font-size: 1vw;
+    height: calc(1vw + 1em + 2px);
+    border-radius: 10px;
+  }
+
+  .awesomplete > ul{
+    max-height: calc(100% - (1vw + 1em + 2px));
+  }
+}
+
+@media (min-width: 426px) and (max-width: 1280px) {
+  input#awesomplete {
+    font-size: 1.5vw;
+    height: calc(1.5vw + 1em + 2px);
+  }
+
+  .awesomplete > ul{
+    max-height: calc(100% - (1.5vw + 1em + 2px));
+  }
+}
+/*----------------------------END AWESOMPLETE-----------------------------*/
