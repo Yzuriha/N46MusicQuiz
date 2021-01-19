@@ -88,6 +88,11 @@ function togglePlay() {
       });
 
       document.querySelector(".awesomplete").style.display = "inline-block";
+      document.querySelector("#awesomplete").classList.remove("hide")
+      // document.querySelectorAll(".awesomplete").forEach((item, i) => {
+      //   item.classList.remove("hide")
+      // });
+
     }
     if (customAmount) {
       var numbersToRemove = document.getElementById("customAmountInput").value;
@@ -553,21 +558,27 @@ function getRandomIntInclusive(min, max) {
 
 
 // Shuffle function from http://stackoverflow.com/a/2450976
-function shuffle(array) {
-  var currentIndex = array.length,
-    temporaryValue, randomIndex;
+// function shuffle(array) {
+//   var currentIndex = array.length,
+//     temporaryValue, randomIndex;
+//
+//   while (currentIndex !== 0) {
+//     randomIndex = Math.floor(Math.random() * currentIndex);
+//     currentIndex -= 1;
+//     temporaryValue = array[currentIndex];
+//     array[currentIndex] = array[randomIndex];
+//     array[randomIndex] = temporaryValue;
+//   }
+//   return array;
+// }
 
-  while (currentIndex !== 0) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-  return array;
-}
-
-
+// function shuffle(array) {
+//     for (let i = array.length - 1; i > 0; i--) {
+//         const j = Math.floor(Math.random() * (i + 1));
+//         [array[i], array[j]] = [array[j], array[i]];
+//     }
+//     return array;
+// }
 
 
 
@@ -645,11 +656,24 @@ function vaildateCacheIfOnline() {
 
 
 //----------------- START THINGS TO DO ONCE DONE LOADING -----------------------
-changeBGColor();
 loadSettings();
 checkCustomAmountInputVisibility();
+// let mainImgArr = ["assets/icons/nanaseImg/nanase1.jpg", "assets/icons/nanaseImg/nanase2.jpg", "assets/icons/nanaseImg/nanase3.jpg", "assets/icons/nanaseImg/nanase4.jpg", "assets/icons/nanaseImg/nanase5.jpg"]
+// document.querySelector(".albumImg").src = shuffle(mainImgArr).pop();
+changeBGColor();
+
+function setHeight() {
+  if (img.complete) {
+    document.querySelector(".main").style.height = document.getElementsByClassName("albumImg")[0].height;
+  } else {
+    img.addEventListener('load', function() {
+      document.querySelector(".main").style.height = document.getElementsByClassName("albumImg")[0].height;
+    });
+  }
+}
+setHeight();
 
 
 // dirty cheat to make the img and main part always same height
-document.querySelector(".main").style.maxHeight = document.getElementsByClassName("albumImg")[0].height;
+// document.querySelector(".main").style.height = document.getElementsByClassName("albumImg")[0].height;
 //----------------- END THINGS TO DO ONCE DONE LOADING -----------------------

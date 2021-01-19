@@ -213,7 +213,7 @@ input[type='checkbox']:checked:after {
 .mediaControl {
   text-align: center;
   padding: 0 5vw;
-  font-size: 7vw;
+  /* font-size: 7vw; */
 }
 
 .mediaControl i {
@@ -393,13 +393,15 @@ input[type='checkbox']:checked:after {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: calc(100vh - 100vw);
+    height: calc(100vh - 100vw) !important;
     max-height: none !important;
   }
 
   .albumImg {
     width: 90vw;
     height: 90vw;
+    min-width: 90vw;
+    max-width: 90vw;
     padding: 5vw;
     border-radius: 10%;
   }
@@ -413,8 +415,14 @@ input[type='checkbox']:checked:after {
     font-size: calc(3.5vw - 2px);
   }
 
+  .mediaControl {
+    /* font-size: 7vw; */
+  }
+
   .mediaControl i {
     padding: 0 5vw;
+    font-size: 7vw;
+
   }
 
   .answerOptions {
@@ -485,6 +493,8 @@ input[type='checkbox']:checked:after {
   .albumImg {
     width: 60vw;
     height: 60vw;
+    min-width: 60vw;
+    max-width: 60vw;
     padding: 5vw;
     margin: 0 15vw;
     border-radius: 15%;

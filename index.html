@@ -21,7 +21,7 @@
   <div class="overlayHelper"></div>
   <div class="overlay"></div>
   <div class="mainWrapper">
-    <img class="albumImg" src="assets/icons/logo.png">
+    <img class="albumImg" src="">
     <div class="main">
       <div class="gameInformation center noselect">
         <div class="pointsContainer">
@@ -60,7 +60,7 @@
           <p>(B) Have fun playing the game :)</p>
         </div>
         <div class="winnerScreen hide"></div>
-        <input id="awesomplete"/>
+        <input id="awesomplete" class="hide"/>
       </div>
 
     </div>
@@ -141,6 +141,15 @@
     // 	registration.active.postMessage(JSON.stringify(dataCardSet));
     // });
   }
+  function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+  }
+  let mainImgArr = ["assets/icons/nanaseImg/nanase1.jpg", "assets/icons/nanaseImg/nanase2.jpg", "assets/icons/nanaseImg/nanase3.jpg", "assets/icons/nanaseImg/nanase4.jpg", "assets/icons/nanaseImg/nanase5.jpg"]
+  document.querySelector(".albumImg").src = shuffle(mainImgArr).pop();
 </script>
 <script defer src="js/settings.js"></script>
 <script defer src="js/install-handler.js"></script>
