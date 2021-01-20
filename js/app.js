@@ -671,19 +671,19 @@ checkCustomAmountInputVisibility();
 // document.querySelector(".albumImg").src = shuffle(mainImgArr).pop();
 changeBGColor();
 
-function setHeight() {
-  if (img.complete) {
-    document.querySelector(".main").style.height = document.getElementsByClassName("albumImg")[0].height;
-  } else {
-    img.addEventListener('load', setHeightHelper);
-
-  }
-}
-function setHeightHelper() {
-  document.querySelector(".main").style.height = document.getElementsByClassName("albumImg")[0].height;
-  img.removeEventListener("load", setHeightHelper)
-}
-setHeight();
+// function setHeight() {
+//   if (img.complete) {
+//     document.querySelector(".main").style.height = document.getElementsByClassName("albumImg")[0].height;
+//   } else {
+//     img.addEventListener('load', setHeightHelper);
+//
+//   }
+// }
+// function setHeightHelper() {
+//   document.querySelector(".main").style.height = document.getElementsByClassName("albumImg")[0].height;
+//   img.removeEventListener("load", setHeightHelper)
+// }
+// setHeight();
 
 
 // dirty cheat to make the img and main part always same height
