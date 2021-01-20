@@ -1,4 +1,4 @@
-var shuffledSongList = shuffle(dataSet);
+var shuffledSongList = shuffle([...dataSet]);
 var deepCopy = dataSet;
 
 const player = new Plyr('#player');
@@ -215,17 +215,17 @@ function generateAnswers(data) {
   // if(!expert){
   let answerNodesText = document.querySelectorAll(".answerOption p");
   let answers = [];
-  let shuffledSongListHelper = shuffle(shuffledSongList);
+  let shuffledSongListHelper = shuffle([...dataSet]);
   if (displayKanji) {
     answers.push(data.nameKanji)
-    answers.push(shuffle(dataSet)[0].nameKanji);
-    answers.push(shuffle(dataSet)[1].nameKanji);
-    answers.push(shuffle(dataSet)[2].nameKanji);
+    answers.push(shuffledSongListHelper[0].nameKanji);
+    answers.push(shuffledSongListHelper[1].nameKanji);
+    answers.push(shuffledSongListHelper[2].nameKanji);
   } else {
     answers.push(data.name)
-    answers.push(shuffle(dataSet)[0].name);
-    answers.push(shuffle(dataSet)[1].name);
-    answers.push(shuffle(dataSet)[2].name);
+    answers.push(shuffledSongListHelper[0].name);
+    answers.push(shuffledSongListHelper[1].name);
+    answers.push(shuffledSongListHelper[2].name);
   }
 
   answers = shuffle(answers);
@@ -666,10 +666,13 @@ function setHeight() {
   if (img.complete) {
     document.querySelector(".main").style.height = document.getElementsByClassName("albumImg")[0].height;
   } else {
-    img.addEventListener('load', function() {
-      document.querySelector(".main").style.height = document.getElementsByClassName("albumImg")[0].height;
-    });
+    img.addEventListener('load', setHeightHelper);
+
   }
+}
+function setHeightHelper() {
+  document.querySelector(".main").style.height = document.getElementsByClassName("albumImg")[0].height;
+  img.removeEventListener("load", setHeightHelper)
 }
 setHeight();
 
