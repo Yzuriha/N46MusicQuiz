@@ -1,5 +1,4 @@
 var shuffledSongList = shuffle([...dataSet]);
-var deepCopy = dataSet;
 
 const player = new Plyr('#player');
 
@@ -60,40 +59,37 @@ const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 :
 var isRepeatedSong = false;
 var repeatedSongList = [];
 
-
+// function to change out picture; gets called on every new song
 function loadCoverImg(data) {
-  // if (hideCover) {
-  //   document.querySelector(".albumImg").classList.add("blurImage")
-  // }
   document.querySelector(".albumImg").src = `${window.location.href}/assets/images/${data.img}`
 }
 
+// function to change out song; gets called on every new song
 function loadSong(data) {
   document.querySelector("#player source").src = data.song;
   myAudio.load();
-  // myAudio.play();
 }
 
 function togglePlay() {
-  //make the first playButton press to start the game
+  // make the first playButton press to start the game
   if (!gameStarted) {
     getGameSettings();
-    if (hideCover) {
-      document.querySelector(".albumImg").classList.add("blurImage")
-    }
+    if (hideCover) document.querySelector(".albumImg").classList.add("blurImage");
     if (expert) {
+      // nly create a dropdownlist if we actually need it
       createAwesompleteList();
+
+      // since we dont need the answerOptions in expert mode, we are hiding them
       document.querySelectorAll(".answerOption").forEach((item, i) => {
         item.classList.add("hide")
       });
 
+      // we display he input box needed for expert mode again
       document.querySelector(".awesomplete").style.display = "inline-block";
-      document.querySelector("#awesomplete").classList.remove("hide")
-      // document.querySelectorAll(".awesomplete").forEach((item, i) => {
-      //   item.classList.remove("hide")
-      // });
-
+      document.querySelector("#awesomplete").classList.remove("hide");
     }
+
+    // when the user chooses a custom amount, only take that amound from the avaiable songs
     if (customAmount) {
       var numbersToRemove = document.getElementById("customAmountInput").value;
       shuffledSongList = shuffledSongList.splice(0, numbersToRemove);
@@ -103,33 +99,42 @@ function togglePlay() {
       document.getElementById("totalSongs").innerText = shuffledSongList.length;
     }
 
-
+    // initiate the game by simulating a button click
     nextButton.click();
     gameStarted = true;
-
   } else {
+    // once the next song is playing, start the timer for the points immendiately
     startPointsCounter();
+
+    // either plays/pauses and changes the icon respectively
     if (myAudio.paused) {
       playPauseButton.classList.replace("fa-play", "fa-pause");
-      myAudio.addEventListener("loadedmetadata", function() {
-        if (randomStart) {
+      // in case the user wants to have a random sample point, change the current time randomly
+      // we have to wait till the metadata is loaded or else we try to access a null value
+      if (randomStart) {
+        myAudio.addEventListener("loadedmetadata", function() {
           let randomDuration = shuffle([...Array(Math.round(myAudio.duration) - 30).keys()]).pop()
           myAudio.currentTime = randomDuration;
-        }
-      })
+        })
+      }
       return myAudio.play();
     } else {
       playPauseButton.classList.replace("fa-pause", "fa-play");
       return myAudio.pause()
     }
-
   }
 };
 
 function getGameSettings() {
   let chosenGameSettings = [];
+  // for each setting that user has checked,
   Array.from(getCheckedCheckboxes()).forEach((item, i) => {
+    // we push all checkedCheckboxes into an array so later we can use
+    // includes() to set the setting to either true/false
     chosenGameSettings.push(item.id)
+    // as sth like gameSettings["displayKanji"] gives you access to the value and
+    // the settingsID is the same name as the settings in data.js, we might as well set the boolean here
+    gameSettings[item.id] = 1;
   });
 
   customAmount = chosenGameSettings.includes("customAmount");
@@ -140,15 +145,16 @@ function getGameSettings() {
   autoplayNext = chosenGameSettings.includes("autoplayNext");
   displayKanji = chosenGameSettings.includes("displayKanji");
 
-  for (var value in gameSettings) {
-    if (chosenGameSettings.includes(value)) {
-      gameSettings[value] = 1;
-    }
-  }
+  // for (var value in gameSettings) {
+  //   if (chosenGameSettings.includes(value)) {
+  //     gameSettings[value] = 1;
+  //   }
+  // }
 
   checkCustomAmountInputVisibility();
 }
 
+// either hide/show the custom amount input depending if the user checked the setting
 function checkCustomAmountInputVisibility() {
   let customAmountInput = document.getElementById("customAmountInput")
   if (document.getElementById("customAmount").checked) {
@@ -159,7 +165,7 @@ function checkCustomAmountInputVisibility() {
 }
 
 // NO IDEA HOW THIS WORKS; IT JUST DOES
-whichTransitionEvent = () => {
+function whichTransitionEvent() {
   let t,
     el = document.createElement("fakeelement");
 
@@ -179,7 +185,7 @@ whichTransitionEvent = () => {
 
 let transitionEvent = whichTransitionEvent();
 
-transitionEndCallback = (e) => {
+function transitionEndCallback(e) {
   overlayHelper.removeEventListener(transitionEvent, transitionEndCallback);
   overlayHelper.classList.remove('fadeOut');
 }
@@ -192,27 +198,14 @@ function triggerOverlayHelper() {
   overlayHelper.addEventListener(transitionEvent, transitionEndCallback)
 }
 
-function toggleFadeClass() {
-  // fadeOut the overlayHelper background to show the new background
-  overlayHelper.classList.add("fadeOut");
-  overlayHelper.addEventListener(transitionEvent, transitionEndCallback)
-}
-
-transitionEndCallback = (e) => {
+function transitionEndCallback(e) {
   overlayHelper.removeEventListener(transitionEvent, transitionEndCallback);
   overlayHelper.style.background = document.body.style.background;
   overlayHelper.classList.remove("fadeOut");
   togglePlay();
 }
 
-function triggerOverlayHelper() {
-  // add old background to overlayHelper
-  overlayHelper.style.background = background.style.background;
-  toggleFadeClass();
-}
-
 function generateAnswers(data) {
-  // if(!expert){
   let answerNodesText = document.querySelectorAll(".answerOption p");
   let answers = [];
   let shuffledSongListHelper = shuffle([...dataSet]);
@@ -228,20 +221,19 @@ function generateAnswers(data) {
     answers.push(shuffledSongListHelper[2].name);
   }
 
+  // we need to shuffle the answers again or else the answer is always the first box
   answers = shuffle(answers);
   answerNodesText.forEach((item, i) => {
     item.innerText = answers.pop();
   });
-  // } else {
-
-
-  // }
 }
 
 function toggleSettings() {
   document.querySelector(".settings").classList.toggle("close");
 }
 
+// this is different from getGameSettings in the way that this fires right after site is loaded
+// we do this in order to automatically copy the settings from last session
 function loadSettings() {
   customAmount = gameSettings.customAmount;
   expert = gameSettings.expert;
@@ -251,17 +243,16 @@ function loadSettings() {
   autoplayNext = gameSettings.autoplayNext;
   displayKanji = gameSettings.displayKanji;
   document.querySelectorAll(".setting input[type=checkbox]").forEach((item, i) => {
-    if (gameSettings[item.id]) {
-      item.checked = true
-    }
+    if (gameSettings[item.id]) item.checked = true;
   });
 
   if (localStorage.getItem("customAmount") != "") {
-    document.getElementById("customAmountInput").value = localStorage.getItem("customAmount")
+    document.getElementById("customAmountInput").value = localStorage.getItem("customAmount");
   }
 
 }
 
+// save the settings into the local storage so settings are persisted in next session too
 function saveSettingsToLocalStorage() {
   getGameSettings();
   let newSettings = {
@@ -278,14 +269,13 @@ function saveSettingsToLocalStorage() {
   localStorage.setItem('customAmount', document.getElementById("customAmountInput").value);
 }
 
+// this basically loads every function possible, dont want to explain, hopefully function names work enough
 function nextSong() {
-  if (hideCover) {
-    document.querySelector(".albumImg").classList.add("blurImage")
-  }
   autoplayTimeoutFunctionClear();
   document.querySelector('#earnedPoints').classList.add("fadeOutFast");
   singleSongData = shuffledSongList.shift();
   rightAnswer = singleSongData;
+  if (hideCover)  document.querySelector(".albumImg").classList.add("blurImage");
   triggerOverlayHelper();
   loadCoverImg(singleSongData);
   changeBGColor();
@@ -295,9 +285,7 @@ function nextSong() {
     generateAnswers(singleSongData);
   } else {
     document.getElementById("awesomplete").value = "";
-    if (document.querySelector(".correctAnswer")) {
-      document.querySelector(".correctAnswer").remove()
-    }
+    if (document.querySelector(".correctAnswer")) document.querySelector(".correctAnswer").remove();
   }
   toggleKillClick();
   resetTimer = true;
@@ -320,8 +308,8 @@ function validateAnswer() {
   endTime = Date.now();
   isNextSong = false;
 
-  // let rightAnswerHelper = displayKanji ? rightAnswer.nameKanji.trim() : rightAnswer.name.trim()
   let rightAnswerChoice = "";
+  // we need to trim the answers because for some reason JS cant compare strings properly
   let rightAnswerNormal = rightAnswer.name.trim()
   let rightAnswerKanji = rightAnswer.nameKanji.trim()
   if (expert) {
@@ -334,31 +322,22 @@ function validateAnswer() {
         <p>The correct answer is:</p>
         <p><b>${rightAnswerNormal}</b> or <b>${rightAnswerKanji}</b></p>
        </div>`);
-
   } else {
     rightAnswerChoice = this.innerText.trim()
   }
-  // let rightAnswerChoice = expert ? document.getElementById("awesomplete").value.trim() : this.innerText.trim();
-
 
   if (rightAnswerChoice == rightAnswerNormal || rightAnswerChoice == rightAnswerKanji) {
     let currentPoints = pointsNode.innerText;
     let calculateDurationPercentage = (1 - ((audio.duration - (endTime - startTime) / 1000) / audio.duration)) * 100;
-
     let score = Math.round(0.01 * Math.pow(calculateDurationPercentage - 100.5, 2));
     if (score > 100) score = 100;
     let hideCoverScore = hideCover ? 3 : 0;
     let randomStartScore = randomStart ? 5 : 0;
     let expertScore = expert ? score = score * 2 : score;
-    // let endlessScore = isRepeatedSong ? Math.round(score * 0.8) : 0;
     let totalPoints = hideCoverScore + randomStartScore + expertScore;
-    if (repeatedSongList.includes(rightAnswerNormal) || repeatedSongList.includes(rightAnswerKanji)) {
-      isRepeatedSong = true
-    }
-
-    if (isRepeatedSong) {
-      totalPoints = Math.round(totalPoints * Math.pow(0.8, countOccurrences(repeatedSongList, rightAnswerNormal)))
-    }
+    if (repeatedSongList.includes(rightAnswerNormal) || repeatedSongList.includes(rightAnswerKanji)) isRepeatedSong = true;
+    // the more a song gets repeated, the less points you earn on next correct guess of that answer
+    if (isRepeatedSong) totalPoints = Math.round(totalPoints * Math.pow(0.8, countOccurrences(repeatedSongList, rightAnswerNormal)));
 
     points += totalPoints;
     displayAdditionalPoints(totalPoints);
@@ -373,11 +352,9 @@ function validateAnswer() {
     additionalSongsAmount++;
     document.querySelector('#additionalSongs').innerText = ` (+${additionalSongsAmount})`;
   }
+  if (hideCover) document.querySelector(".albumImg").classList.remove("blurImage");
   toggleKillClick();
   toggleRightAnswer();
-  if (hideCover) {
-    document.querySelector(".albumImg").classList.remove("blurImage")
-  }
 
   if (document.getElementById("songCounter").innerText == songAmount) {
     setTimeout(function() {
@@ -389,11 +366,6 @@ function validateAnswer() {
       autoplayTimeoutFunction();
     }
   }
-
-  console.log("dataset: ", dataSet.length)
-  console.log("shuffledSongList: ", shuffledSongList.length)
-  console.log("awesompleteList: ", awesompleteList.length)
-
 }
 
 function displayAdditionalPoints(totalPoints) {
@@ -416,9 +388,7 @@ function displayWinner() {
     item.classList.add("hide");
   });
 
-  if(expert){
-    document.querySelector(".awesomplete").classList.add("hide")
-  }
+  if (expert) document.querySelector(".awesomplete").classList.add("hide");
 
   document.querySelector(".winnerScreen").innerHTML = `<p>Congratulations!</p>
   <p>You guessed <b>${guessedSongs}/${songAmount}</b> songs and</p>
@@ -429,15 +399,9 @@ function displayWinner() {
   setTimeout(function() {
     document.querySelector(".winnerScreen").classList.add("fadeInFast");
   }, 50)
-  // document.querySelector(".winnerScreen").classList.add("fadeIn");
 
   document.querySelector('#earnedPoints').classList.add("fadeOutFast");
-
-
 }
-
-
-
 
 function toggleKillClick() {
   answerNodes.forEach((item, i) => {
@@ -449,9 +413,7 @@ function toggleKillClick() {
 function toggleRightAnswer() {
   let rightAnswerHelper = displayKanji ? rightAnswer.nameKanji.trim() : rightAnswer.name.trim()
   answerNodes.forEach((item, i) => {
-    if (item.innerText.trim() == rightAnswerHelper) {
-      item.classList.remove("fadeOutAnswer")
-    }
+    if (item.innerText.trim() == rightAnswerHelper) item.classList.remove("fadeOutAnswer");
   });
 }
 
@@ -483,35 +445,24 @@ function getCheckedCheckboxes() {
   return checkedCheckboxes = document.querySelectorAll("input[type=checkbox]:checked");
 }
 
+// HELPER FUNCTIONS
 
 var awesompleteList = []
-
 function createAwesompleteList() {
   for (item in dataSet) {
     awesompleteList.push(dataSet[item].name)
     awesompleteList.push(dataSet[item].nameKanji)
   }
-
 }
-// createAwesompleteList();
 
 var input = document.getElementById("awesomplete");
 new Awesomplete(input, {
-  // maxItems: 4,
   list: awesompleteList
 });
 
 input.addEventListener("awesomplete-selectcomplete", function() {
   validateAnswer();
 });
-
-
-
-
-
-
-
-
 
 // https://stackoverflow.com/questions/4605342/how-to-format-html5-audios-currenttime-property-with-javascript
 function formatTime(seconds) {
@@ -521,7 +472,6 @@ function formatTime(seconds) {
   seconds = (seconds >= 10) ? seconds : "0" + seconds;
   return minutes + ":" + seconds;
 }
-
 
 // https://stackoverflow.com/questions/16994662/count-animation-from-number-a-to-b
 function animateValue(id, start, end, duration) {
@@ -556,48 +506,9 @@ function animateValue(id, start, end, duration) {
   run();
 }
 
-
-
-
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-
-// Shuffle function from http://stackoverflow.com/a/2450976
-// function shuffle(array) {
-//   var currentIndex = array.length,
-//     temporaryValue, randomIndex;
-//
-//   while (currentIndex !== 0) {
-//     randomIndex = Math.floor(Math.random() * currentIndex);
-//     currentIndex -= 1;
-//     temporaryValue = array[currentIndex];
-//     array[currentIndex] = array[randomIndex];
-//     array[randomIndex] = temporaryValue;
-//   }
-//   return array;
-// }
-
-// function shuffle(array) {
-//     for (let i = array.length - 1; i > 0; i--) {
-//         const j = Math.floor(Math.random() * (i + 1));
-//         [array[i], array[j]] = [array[j], array[i]];
-//     }
-//     return array;
-// }
-
-
-
-
-
-
 //----------------- START COLOR THIEF -----------------------
 const colorThief = new ColorThief();
 const img = document.querySelector('.albumImg');
-
 function changeBGColor() {
   var arr = [];
   // Make sure image is finished loading
@@ -614,6 +525,30 @@ function changeBGColor() {
   }
 }
 //----------------- END COLOR THIEF -----------------------
+
+//----------------- START THINGS TO DO ONCE DONE LOADING -----------------------
+loadSettings();
+checkCustomAmountInputVisibility();
+changeBGColor();
+
+let timestamp = Date.now();
+document.getElementById("loadingScreenImg").src = `assets/icons/logoAnimated.svg?${timestamp}`;
+// ** FADE OUT FUNCTION **
+function fadeOut(el) {
+  el.style.opacity = 1;
+  (function fade() {
+    if ((el.style.opacity -= .1) < 0) {
+      el.style.display = "none";
+    } else {
+      requestAnimationFrame(fade);
+    }
+  })();
+};
+setTimeout(function() {
+  fadeOut(document.getElementById("loadingScreen"))
+  document.getElementById("loadingScreenImg").classList.add("hide")
+}, 2500);
+//----------------- END THINGS TO DO ONCE DONE LOADING -----------------------
 
 //----------------- SERVICE WORKER STUFF -----------------------
 window.addEventListener('load', main)
@@ -635,7 +570,6 @@ function vaildateCacheIfOnline() {
         let installedVersion = Settings.getVersion()
         if (installedVersion == 0) {
           Settings.setVersion(config.version)
-          // document.querySelector('#version').innerHTML= `version ${config.version}`;
           return resolve();
         } else if (installedVersion != config.version) {
           console.log('Cache Version mismatch')
@@ -651,7 +585,6 @@ function vaildateCacheIfOnline() {
         } else {
           // already updated
           console.log('Cache Updated')
-          // document.querySelector('#version').innerHTML= `version ${installedVersion}`;
           return resolve();
         }
       }).catch(err => {
@@ -662,48 +595,3 @@ function vaildateCacheIfOnline() {
   })
 }
 //----------------- END SERVICE WORKER STUFF -----------------------
-
-
-//----------------- START THINGS TO DO ONCE DONE LOADING -----------------------
-loadSettings();
-checkCustomAmountInputVisibility();
-// let mainImgArr = ["assets/icons/nanaseImg/nanase1.jpg", "assets/icons/nanaseImg/nanase2.jpg", "assets/icons/nanaseImg/nanase3.jpg", "assets/icons/nanaseImg/nanase4.jpg", "assets/icons/nanaseImg/nanase5.jpg"]
-// document.querySelector(".albumImg").src = shuffle(mainImgArr).pop();
-changeBGColor();
-
-let timestamp = Date.now();
-  document.getElementById("loadingScreenImg").src = `assets/icons/logoAnimated.svg?${timestamp}`;
-// ** FADE OUT FUNCTION **
-function fadeOut(el) {
-  el.style.opacity = 1;
-  (function fade() {
-    if ((el.style.opacity -= .1) < 0) {
-      el.style.display = "none";
-    } else {
-      requestAnimationFrame(fade);
-    }
-  })();
-};
-setTimeout(function(){
-  fadeOut(document.getElementById("loadingScreen"))
-  document.getElementById("loadingScreenImg").classList.add("hide")
-}, 2500);
-
-// function setHeight() {
-//   if (img.complete) {
-//     document.querySelector(".main").style.height = document.getElementsByClassName("albumImg")[0].height;
-//   } else {
-//     img.addEventListener('load', setHeightHelper);
-//
-//   }
-// }
-// function setHeightHelper() {
-//   document.querySelector(".main").style.height = document.getElementsByClassName("albumImg")[0].height;
-//   img.removeEventListener("load", setHeightHelper)
-// }
-// setHeight();
-
-
-// dirty cheat to make the img and main part always same height
-// document.querySelector(".main").style.height = document.getElementsByClassName("albumImg")[0].height;
-//----------------- END THINGS TO DO ONCE DONE LOADING -----------------------
