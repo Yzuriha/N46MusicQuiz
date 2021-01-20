@@ -389,6 +389,11 @@ function validateAnswer() {
       autoplayTimeoutFunction();
     }
   }
+
+  console.log("dataset: ", dataSet.length)
+  console.log("shuffledSongList: ", shuffledSongList.length)
+  console.log("awesompleteList: ", awesompleteList.length)
+
 }
 
 function displayAdditionalPoints(totalPoints) {
@@ -410,6 +415,10 @@ function displayWinner() {
   document.querySelectorAll(".answerOption").forEach((item, i) => {
     item.classList.add("hide");
   });
+
+  if(expert){
+    document.querySelector(".awesomplete").classList.add("hide")
+  }
 
   document.querySelector(".winnerScreen").innerHTML = `<p>Congratulations!</p>
   <p>You guessed <b>${guessedSongs}/${songAmount}</b> songs and</p>
