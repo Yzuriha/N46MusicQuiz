@@ -1,16 +1,12 @@
 {
-  "name": "乃木坂46 Memory",
-  "short_name": "N46 Memory",
+  "name": "乃木坂46 Music Quiz",
+  "short_name": "N46 Music Quiz",
   "start_url": "./",
   "scope": ".",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#7e1083",
   "icons": [
-    {
-      "src": "assets/icons/logoAnimated.svg",
-      "type": "image/svg", "sizes": "329x329"
-    },
     {
       "src": "assets/icons/logo.png",
       "type": "image/png", "sizes": "144x144"
