@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <!-- <meta content="width=device-width, initial-scale=1" name="viewport" /> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
   <title>乃木坂46 Music Quiz</title>
   <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
   <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
@@ -17,6 +17,11 @@
 </head>
 
 <body>
+
+  <div id="loadingScreen">
+    <img id="loadingScreenImg" draggable="false">
+  </div>
+
   <div id="background"></div>
   <div class="overlayHelper"></div>
   <div class="overlay"></div>
@@ -60,7 +65,7 @@
           <p>(B) Have fun playing the game :)</p>
         </div>
         <div class="winnerScreen hide"></div>
-        <input id="awesomplete" class="hide"/>
+        <input id="awesomplete" class="hide" />
       </div>
 
     </div>
@@ -83,50 +88,50 @@
         </div>
       </div>
       <div class="settingDetail">Choose a custom amount of songs.</div>
-      </li>
-      <li class="" style="">
-        <div class="setting">
-          <label for="expert">Expert Mode</label>
-          <input type="checkbox" id="expert" name="expert">
-        </div>
-        <div class="settingDetail">Earn x2 the points by writing out the song names instead of given a choice.</div>
-      </li>
-      <li>
-        <div class="setting">
-          <label for="hideCover">Hidden Album Image</label>
-          <input type="checkbox" id="hideCover" name="hideCover">
-        </div>
-        <div class="settingDetail">Earn +3 extra points by hiding the Album Image.</div>
-      </li>
-      <li>
-        <div class="setting">
-          <label for="randomStart">Random Startpoint</label>
-          <input type="checkbox" id="randomStart" name="randomStart">
-        </div>
-        <div class="settingDetail">Earn +5 extra points by having the song start from a random point.</div>
-      </li>
-      <li class="" style="">
-        <div class="setting">
-          <label for="endless">Endless Mode</label>
-          <input type="checkbox" id="endless" name="endless">
-        </div>
-        <div class="settingDetail">Wrongly guessed songs can be guessed again later for 80% of the points.</div>
-      </li>
-      <li class="" style="">
-        <div class="setting">
-          <label for="autoplayNext">Autoplay Next Song</label>
-          <input type="checkbox" id="autoplayNext" name="autoplayNext">
-        </div>
-        <div class="settingDetail">Autoplay the next song after a few seconds when done answering.</div>
-      </li>
-      <li class="k" style="">
-        <div class="setting">
-          <label for="displayKanji">Display Kanji Names</label>
-          <input type="checkbox" id="displayKanji" name="displayKanji">
-        </div>
-        <div class="settingDetail">Display Kanji instead of Romaji names.</div>
-      </li>
+    </li>
+    <li class="" style="">
+      <div class="setting">
+        <label for="expert">Expert Mode</label>
+        <input type="checkbox" id="expert" name="expert">
       </div>
+      <div class="settingDetail">Earn x2 the points by writing out the song names instead of given a choice.</div>
+    </li>
+    <li>
+      <div class="setting">
+        <label for="hideCover">Hidden Album Image</label>
+        <input type="checkbox" id="hideCover" name="hideCover">
+      </div>
+      <div class="settingDetail">Earn +3 extra points by hiding the Album Image.</div>
+    </li>
+    <li>
+      <div class="setting">
+        <label for="randomStart">Random Startpoint</label>
+        <input type="checkbox" id="randomStart" name="randomStart">
+      </div>
+      <div class="settingDetail">Earn +5 extra points by having the song start from a random point.</div>
+    </li>
+    <li class="" style="">
+      <div class="setting">
+        <label for="endless">Endless Mode</label>
+        <input type="checkbox" id="endless" name="endless">
+      </div>
+      <div class="settingDetail">Wrongly guessed songs can be guessed again later for 80% of the points.</div>
+    </li>
+    <li class="" style="">
+      <div class="setting">
+        <label for="autoplayNext">Autoplay Next Song</label>
+        <input type="checkbox" id="autoplayNext" name="autoplayNext">
+      </div>
+      <div class="settingDetail">Autoplay the next song after a few seconds when done answering.</div>
+    </li>
+    <li class="k" style="">
+      <div class="setting">
+        <label for="displayKanji">Display Kanji Names</label>
+        <input type="checkbox" id="displayKanji" name="displayKanji">
+      </div>
+      <div class="settingDetail">Display Kanji instead of Romaji names.</div>
+    </li>
+  </div>
 </body>
 
 </html>
@@ -141,12 +146,13 @@
     // 	registration.active.postMessage(JSON.stringify(dataCardSet));
     // });
   }
+
   function shuffle(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
   }
   let mainImgArr = ["assets/icons/nanaseImg/nanase1.jpg", "assets/icons/nanaseImg/nanase2.jpg", "assets/icons/nanaseImg/nanase3.jpg", "assets/icons/nanaseImg/nanase4.jpg", "assets/icons/nanaseImg/nanase5.jpg"]
   document.querySelector(".albumImg").src = shuffle(mainImgArr).pop();

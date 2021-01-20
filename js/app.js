@@ -596,7 +596,7 @@ function getRandomIntInclusive(min, max) {
 
 //----------------- START COLOR THIEF -----------------------
 const colorThief = new ColorThief();
-const img = document.querySelector('img');
+const img = document.querySelector('.albumImg');
 
 function changeBGColor() {
   var arr = [];
@@ -670,6 +670,24 @@ checkCustomAmountInputVisibility();
 // let mainImgArr = ["assets/icons/nanaseImg/nanase1.jpg", "assets/icons/nanaseImg/nanase2.jpg", "assets/icons/nanaseImg/nanase3.jpg", "assets/icons/nanaseImg/nanase4.jpg", "assets/icons/nanaseImg/nanase5.jpg"]
 // document.querySelector(".albumImg").src = shuffle(mainImgArr).pop();
 changeBGColor();
+
+let timestamp = Date.now();
+  document.getElementById("loadingScreenImg").src = `assets/icons/logoAnimated.svg?${timestamp}`;
+// ** FADE OUT FUNCTION **
+function fadeOut(el) {
+  el.style.opacity = 1;
+  (function fade() {
+    if ((el.style.opacity -= .1) < 0) {
+      el.style.display = "none";
+    } else {
+      requestAnimationFrame(fade);
+    }
+  })();
+};
+setTimeout(function(){
+  fadeOut(document.getElementById("loadingScreen"))
+  document.getElementById("loadingScreenImg").classList.add("hide")
+}, 2500);
 
 // function setHeight() {
 //   if (img.complete) {

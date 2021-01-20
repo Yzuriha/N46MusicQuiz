@@ -107,6 +107,26 @@ input[type='checkbox']:checked:after {
 
 /* ------- THE ACTUAL CSS CONTENT NOW ------- */
 
+#loadingScreen {
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  position: fixed;
+  z-index: 9999999;
+}
+
+#loadingScreen img {
+  cursor: pointer;
+  max-width: 370px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -355,6 +375,10 @@ input[type='checkbox']:checked:after {
 @media (max-width: 425px) {
   body {
     font-size: calc(3.5vw);
+  }
+
+  #loadingScreen img {
+    max-width: 50vw;
   }
 
   /* Dirty Cheat to replace Arrow with X */
