@@ -1874,5 +1874,95 @@ dataSet =
       "img":"uzkvWNf.jpg",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/～Do my best～じゃ意味はない.mp3"
+   },
+   {
+      "nameKanji":"世界中の隣人よ",
+      "name":"Sekaijuu no Rinjin yo",
+      "Single":"Sekaijuu no Rinjin yo",
+      "Album":"",
+      "img":"W99tSSm.jpg",
+      "Album IMG":"",
+      "song":"https://yzuriha.github.io/N46Sort/src/songs/世界中の隣人よ.mp3"
+   },
+   {
+      "nameKanji":"ゆっくりと咲く花",
+      "name":"Yukkuri to Sakuhana",
+      "Single":"Yukkuri to Sakuhanai",
+      "Album":"",
+      "img":"Nld1TO4.jpg",
+      "Album IMG":"",
+      "song":"https://yzuriha.github.io/N46Sort/src/songs/ゆっくりと咲く花.mp3"
+   },
+   {
+      "nameKanji":"Route 246",
+      "name":"Route 246",
+      "Single":"Yoakemade Tsuyogaranakutemoii",
+      "Album":"",
+      "img":"5KCSfT9.jpg",
+      "Album IMG":"",
+      "song":"https://yzuriha.github.io/N46Sort/src/songs/Route 246.mp3"
+   },
+   {
+      "nameKanji":"僕は僕を好きになる",
+      "name":"Boku wa Boku wo Suki ni Naru",
+      "Single":"Boku wa Boku wo Suki ni Naru",
+      "Album":"",
+      "img":"6bwFZgt.jpg",
+      "Album IMG":"",
+      "song":"https://yzuriha.github.io/N46Sort/src/songs/僕は僕を好きになる.mp3"
+   },
+   {
+      "nameKanji":"明日がある理由",
+      "name":"Ashita ga Aru Riyuu",
+      "Single":"Boku wa Boku wo Suki ni Naru",
+      "Album":"",
+      "img":"6bwFZgt.jpg",
+      "Album IMG":"",
+      "song":"https://yzuriha.github.io/N46Sort/src/songs/明日がある理由.mp3"
+   },
+   {
+      "nameKanji":"Wilderness world",
+      "name":"Wilderness world",
+      "Single":"Boku wa Boku wo Suki ni Naru",
+      "Album":"",
+      "img":"6bwFZgt.jpg",
+      "Album IMG":"",
+      "song":"https://yzuriha.github.io/N46Sort/src/songs/Wilderness world.mp3"
+   },
+   {
+      "nameKanji":"口ほどにもないKISS",
+      "name":"Kuchi Hodo ni mo Nai Kiss",
+      "Single":"Boku wa Boku wo Suki ni Naru",
+      "Album":"",
+      "img":"RvbZCD0.jpg",
+      "Album IMG":"",
+      "song":"https://yzuriha.github.io/N46Sort/src/songs/口ほどにもないKISS.mp3"
+   },
+   {
+      "nameKanji":"冷たい水の中",
+      "name":"Tsumetai Mizu no Naka",
+      "Single":"Boku wa Boku wo Suki ni Naru",
+      "Album":"",
+      "img":"pkWYWdq.jpg",
+      "Album IMG":"",
+      "song":"https://yzuriha.github.io/N46Sort/src/songs/冷たい水の中.mp3"
+   },
+   {
+      "nameKanji":"Out of the blue",
+      "name":"Out of the blue",
+      "Single":"Boku wa Boku wo Suki ni Naru",
+      "Album":"",
+      "img":"w0Idzwa.jpg",
+      "Album IMG":"",
+      "song":"https://yzuriha.github.io/N46Sort/src/songs/Out of the blue.mp3"
+   },
+   {
+      "nameKanji":"友情ピアス",
+      "name":"Yuujou Pierce",
+      "Single":"Boku wa Boku wo Suki ni Naru",
+      "Album":"",
+      "img":"uisuRzA.jpg",
+      "Album IMG":"",
+      "song":"https://yzuriha.github.io/N46Sort/src/songs/友情ピアス.mp3"
    }
 ]
