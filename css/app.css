@@ -105,6 +105,27 @@ input[type='checkbox']:checked:after {
   padding-left: 0.15rem;
 }
 
+.notification {
+  position:fixed;
+  width:315px;
+  top: 5px;
+  left:0;
+  right:0;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border: 2px white solid;
+  border-radius: 6px;
+  z-index: 10;
+  transition: all 1s;
+  text-align: center;
+}
+
+.slideOut {
+  /* top: -85px; */
+  /* (fontsize) - (deafult-p-margin) - (box-padding) - (border) - (top) -(some leeway)*/
+  top: calc((-1vw * 2) - 2em - 20px - 4px - 5px - 5px)
+}
+
 /* ------- THE ACTUAL CSS CONTENT NOW ------- */
 
 #loadingScreen {
@@ -202,7 +223,7 @@ input[type='checkbox']:checked:after {
 }
 
 .blurImage {
-  filter: blur(40px)grayscale(0.3);
+  filter: blur(40px) grayscale(0.4);
 }
 
 .gameInformation {
@@ -239,9 +260,7 @@ input[type='checkbox']:checked:after {
 }
 
 #closeButton {
-  position: absolute;
   font-size: 1.5em;
-  margin-left: 15px;
   cursor: pointer;
 }
 
@@ -342,6 +361,10 @@ input[type='checkbox']:checked:after {
     font-size: calc(1.5vw);
   }
 
+  .slideOut {
+    top: calc((-1.5vw * 2) - 2em - 20px - 4px - 5px - 5px)
+  }
+
   .mainWrapper {
     height: 100%;
     width: 100%;
@@ -375,6 +398,10 @@ input[type='checkbox']:checked:after {
 @media (max-width: 425px) {
   body {
     font-size: calc(3.5vw);
+  }
+
+  .slideOut {
+    top: calc((-3.5vw * 2) - 2em - 20px - 4px - 5px - 5px)
   }
 
   #loadingScreen img {

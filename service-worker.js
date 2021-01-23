@@ -2,7 +2,7 @@ let cacheName = "songQuiz-v1";
 
 let filesToCache = [
   // "/",
-  "/N46MusicQuiz/"
+  "/N46MusicQuiz/",
   "service-worker.js",
   "js/app.js",
   "js/install-handler.js",

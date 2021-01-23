@@ -14,6 +14,8 @@ const background = document.querySelector("#background");
 
 const settingsBackground = document.querySelector(".settings");
 
+const notification = document.querySelector(".notification");
+
 const answerNodes = document.querySelectorAll(".answerOption");
 
 const pointsNode = document.querySelector("#points");
@@ -58,6 +60,8 @@ var displayKanji = false;
 const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
 var isRepeatedSong = false;
 var repeatedSongList = [];
+
+var gameDone = false;
 
 // function to change out picture; gets called on every new song
 function loadCoverImg(data) {
@@ -267,31 +271,48 @@ function saveSettingsToLocalStorage() {
 
   localStorage.setItem('customSettings', JSON.stringify(newSettings));
   localStorage.setItem('customAmount', document.getElementById("customAmountInput").value);
+
+  if(gameStarted) {
+    // let arr = colorThief.getPalette(img, 3)
+    notification.style.background = `rgba(${colorThief.getPalette(img, 3)[2].toString()}, 0.8)`
+    // notification.style.background = `linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[2].toString()}))`;
+    notification.classList.remove("slideOut");
+    setTimeout(function(){ slideOutNotification(); }, 5000);
+  }
+}
+
+function slideOutNotification() {
+  notification.classList.add("slideOut")
 }
 
 // this basically loads every function possible, dont want to explain, hopefully function names work enough
 function nextSong() {
-  autoplayTimeoutFunctionClear();
-  document.querySelector('#earnedPoints').classList.add("fadeOutFast");
-  singleSongData = shuffledSongList.shift();
-  rightAnswer = singleSongData;
-  if (hideCover)  document.querySelector(".albumImg").classList.add("blurImage");
-  triggerOverlayHelper();
-  loadCoverImg(singleSongData);
-  changeBGColor();
-  addEventListenerToAnswers();
-  loadSong(singleSongData);
-  if (!expert) {
-    generateAnswers(singleSongData);
+  if(!gameDone){
+    autoplayTimeoutFunctionClear();
+    document.querySelector('#earnedPoints').classList.add("fadeOutFast");
+    singleSongData = shuffledSongList.shift();
+    rightAnswer = singleSongData;
+    if (hideCover)  document.querySelector(".albumImg").classList.add("blurImage");
+    triggerOverlayHelper();
+    loadCoverImg(singleSongData);
+    changeBGColor();
+    addEventListenerToAnswers();
+    loadSong(singleSongData);
+    if (!expert) {
+      generateAnswers(singleSongData);
+    } else {
+      document.getElementById("awesomplete").value = "";
+      if (document.querySelector(".correctAnswer")) document.querySelector(".correctAnswer").remove();
+    }
+    toggleKillClick();
+    resetTimer = true;
+    isNextSong = true;
+    document.getElementById("songCounter").innerText = ++songCounter;
+    document.getElementById("nextButton").classList.add("kill-click");
   } else {
-    document.getElementById("awesomplete").value = "";
-    if (document.querySelector(".correctAnswer")) document.querySelector(".correctAnswer").remove();
+    // just an lazy approach to reset everything lol
+    location.reload();
   }
-  toggleKillClick();
-  resetTimer = true;
-  isNextSong = true;
-  document.getElementById("songCounter").innerText = ++songCounter;
-  document.getElementById("nextButton").classList.add("kill-click");
 }
 
 function addEventListenerToAnswers() {
@@ -401,6 +422,9 @@ function displayWinner() {
   }, 50)
 
   document.querySelector('#earnedPoints').classList.add("fadeOutFast");
+  nextButton.classList.remove("kill-click", "fa-forward");
+  nextButton.classList.add("fa-redo-alt");
+  gameDone = true;
 }
 
 function toggleKillClick() {

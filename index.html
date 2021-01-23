@@ -76,12 +76,19 @@
     </div>
   </div>
 
+  <div class="notification center slideOut" style="">
+    <p>Settings will be applied next game.<br>
+    Or click <span style="cursor: pointer" onclick="window. location. reload()"><b><u>here</u></b></span> to restart the game.</p>
+    <div style="position: absolute;top: 0;right: 0;margin: 10px;" onclick="slideOutNotification()"><i class="fas fa-times"></i></div>
+  </div>
+
   <div class="settings close">
     <div class="overlay"></div>
     <li style="border-top: none">
-      <div class="">
+      <div class="center" style="justify-content:space-between">
         <i class="fas fa-arrow-left" id="closeButton" onclick="toggleSettings();saveSettingsToLocalStorage()"></i>
         <h1 class="center">Settings</h1>
+        <div></div><!-- just a cheat element to center stuff properly -->
       </div>
     </li>
     <li class="" style="">
