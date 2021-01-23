@@ -46,6 +46,24 @@
 }
 /*----------------------------END PLYR-----------------------------*/
 
+/* THIN SCROLLBAR */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #00000045 #00000015;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #00000045;
+}
+
+*::-webkit-scrollbar-track,
+*::-webkit-scrollbar-corner {
+    background: #00000015;
+}
 
 
 
@@ -54,6 +72,11 @@
 .awesomplete > ul:before {
   display: none
 }
+
+.awesompleteOpen {
+  border-radius: 10px 10px 0 0 !important;
+}
+
 .awesomplete {
   width: 100%;
   height: calc(28vw + 12px + 4vw);
@@ -69,11 +92,22 @@ input#awesomplete {
   text-align: center;
   border: white 1px solid;
   border-radius: 6px;
+  transition: all 0.1s;
 }
 
 input#awesomplete:focus {
   outline: none;
   border-width: 2px;
+}
+
+.awesomplete > ul > li:hover {
+  background: #3d6c8e;
+  color: white;
+}
+
+.awesomplete > ul > li:hover mark{
+  background: hsl(0deg 0% 48%);
+
 }
 
 .awesomplete > ul[hidden], .awesomplete > ul:empty{

@@ -487,6 +487,12 @@ new Awesomplete(input, {
 input.addEventListener("awesomplete-selectcomplete", function() {
   validateAnswer();
 });
+input.addEventListener("awesomplete-open", function() {
+  input.classList.add("awesompleteOpen")
+});
+input.addEventListener("awesomplete-close", function() {
+  input.classList.remove("awesompleteOpen")
+});
 
 // https://stackoverflow.com/questions/4605342/how-to-format-html5-audios-currenttime-property-with-javascript
 function formatTime(seconds) {
@@ -574,12 +580,12 @@ setTimeout(function() {
 }, 2500);
 
 // only load the scrollbar on desktop
-(function() {
-  // I only want to redirect iPhones, Android phones
-  if (!isMobile.any) {
-    const ps = new PerfectScrollbar('#awesomplete_list_1');
-  }
-})();
+// (function() {
+//   // I only want to redirect iPhones, Android phones
+//   if (!isMobile.any) {
+//     const ps = new PerfectScrollbar('#awesomplete_list_1');
+//   }
+// })();
 //----------------- END THINGS TO DO ONCE DONE LOADING -----------------------
 
 //----------------- SERVICE WORKER STUFF -----------------------
