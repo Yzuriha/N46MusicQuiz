@@ -10,15 +10,13 @@ let filesToCache = [
   "js/data.js",
   "css/app.css",
   "css/externalCssChanges.css",
-  "css/fonts/Lato-Regular.ttf",
-  // "assets/icons/logo.png",
   "manifest.json",
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css",
   "https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.min.js",
   "https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.3/plyr.min.css",
+  "https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.3/plyr.min.js",
   "https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.css",
-  "https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js",
-  "https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.3/plyr.min.js"
+  "https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"
 ];
 
 
