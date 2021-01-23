@@ -49,7 +49,7 @@
 /* THIN SCROLLBAR */
 * {
     scrollbar-width: thin;
-    scrollbar-color: #00000045 #00000015;
+    scrollbar-color: #00000045 #00000000;
 }
 
 *::-webkit-scrollbar {
@@ -62,7 +62,7 @@
 
 *::-webkit-scrollbar-track,
 *::-webkit-scrollbar-corner {
-    background: #00000015;
+    background: #00000000;
 }
 
 
