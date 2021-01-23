@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   color: white;
-  font-size: 1vw;
+  font-size: min(1vw, 20px);
 }
 
 /* ------- HELPER FUNCTIONS ------- */
