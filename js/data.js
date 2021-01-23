@@ -71,7 +71,7 @@ dataSet =
       "name":"Anastasia",
       "Single":"Shiawase no Hogosyoku",
       "album":"",
-      "img":"uzkvWNf.jpg",
+      "img":"placeholder.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/アナスターシャ.mp3"
    },
@@ -215,7 +215,7 @@ dataSet =
       "name":"Boku no Koto, Shitteru?",
       "Single":"Yoakemade Tsuyogaranakutemoii",
       "album":"",
-      "img":"uzkvWNf.jpg",
+      "img":"placeholder.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/僕のこと、知ってる.mp3"
    },
@@ -224,7 +224,7 @@ dataSet =
       "name":"Boku no Omoikomi",
       "Single":"Yoakemade Tsuyogaranakutemoii",
       "album":"",
-      "img":"uzkvWNf.jpg",
+      "img":"placeholder.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/僕の思い込み.mp3"
    },
@@ -332,7 +332,7 @@ dataSet =
       "name":"Fantastic Sanshokupan",
       "Single":"Shiawase no Hogosyoku",
       "album":"",
-      "img":"uzkvWNf.jpg",
+      "img":"placeholder.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/ファンタスティック三色パン.mp3"
    },
@@ -566,7 +566,7 @@ dataSet =
       "name":"I see…",
       "Single":"Shiawase no Hogosyoku",
       "album":"",
-      "img":"uzkvWNf.jpg",
+      "img":"placeholder.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/I see….mp3"
    },
@@ -638,7 +638,7 @@ dataSet =
       "name":"Jaane.",
       "Single":"Shiawase no Hogosyoku",
       "album":"",
-      "img":"uzkvWNf.jpg",
+      "img":"placeholder.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/じゃあね。.mp3"
    },
@@ -998,7 +998,7 @@ dataSet =
       "name":"Mainichi ga Brand New Day",
       "Single":"Shiawase no Hogosyoku",
       "album":"",
-      "img":"uzkvWNf.jpg",
+      "img":"placeholder.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/毎日がBrand new day.mp3"
    },
@@ -1331,7 +1331,7 @@ dataSet =
       "name":"Romendensha no Machi",
       "Single":"Yoakemade Tsuyogaranakutemoii",
       "album":"",
-      "img":"uzkvWNf.jpg",
+      "img":"placeholder.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/路面電車の街.mp3"
    },
@@ -1385,7 +1385,7 @@ dataSet =
       "name":"Sayonara Stay With Me",
       "Single":"Shiawase no Hogosyoku",
       "album":"",
-      "img":"uzkvWNf.jpg",
+      "img":"placeholder.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/サヨナラ Stay with me.mp3"
    },
@@ -1475,7 +1475,7 @@ dataSet =
       "name":"Shiawase no Hogosyoku",
       "Single":"Shiawase no Hogosyoku",
       "album":"",
-      "img":"uzkvWNf.jpg",
+      "img":"placeholder.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/しあわせの保護色.mp3"
    },
@@ -1664,7 +1664,7 @@ dataSet =
       "name":"Tokidoki Omoidashite Kudasai",
       "Single":"Yoakemade Tsuyogaranakutemoii",
       "album":"",
-      "img":"uzkvWNf.jpg",
+      "img":"placeholder.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/時々　思い出してください.mp3"
    },
@@ -1691,7 +1691,7 @@ dataSet =
       "name":"Toshoshitsu no Kimi e",
       "Single":"Yoakemade Tsuyogaranakutemoii",
       "album":"",
-      "img":"uzkvWNf.jpg",
+      "img":"placeholder.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/図書室の君へ.mp3"
    },
@@ -1826,7 +1826,7 @@ dataSet =
       "name":"Yoakemade Tsuyogaranakutemoii",
       "Single":"Yoakemade Tsuyogaranakutemoii",
       "album":"",
-      "img":"uzkvWNf.jpg",
+      "img":"placeholder.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/夜明けまで強がらなくてもいい.mp3"
    },
@@ -1871,7 +1871,7 @@ dataSet =
       "name":"~Do my best~ Ja Imi wa Nai",
       "Single":"Yoakemade Tsuyogaranakutemoii",
       "album":"",
-      "img":"uzkvWNf.jpg",
+      "img":"placeholder.png",
       "albumImg":"https://i.imgur.com/",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/～Do my best～じゃ意味はない.mp3"
    },

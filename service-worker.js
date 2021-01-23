@@ -11,7 +11,7 @@ let filesToCache = [
   "css/app.css",
   "css/externalCssChanges.css",
   "css/fonts/Lato-Regular.ttf",
-  "assets/icons/logo.png",
+  // "assets/icons/logo.png",
   "manifest.json",
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css",
   "https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.min.js",
