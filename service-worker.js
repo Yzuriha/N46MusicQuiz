@@ -17,6 +17,7 @@ let filesToCache = [
   "https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.3/plyr.min.js",
   "https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.css",
   "https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"
+  "https://cdn.jsdelivr.net/npm/ismobilejs@1/dist/isMobile.min.js"
 ];
 
 

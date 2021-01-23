@@ -301,8 +301,10 @@ function nextSong() {
     if (!expert) {
       generateAnswers(singleSongData);
     } else {
-      document.getElementById("awesomplete").value = "";
+      let awesompleteEl = document.getElementById("awesomplete")
+      awesompleteEl.value = "";
       if (document.querySelector(".correctAnswer")) document.querySelector(".correctAnswer").remove();
+      if(!isMobile.any) awesompleteEl.focus();
     }
     toggleKillClick();
     resetTimer = true;
@@ -335,7 +337,6 @@ function validateAnswer() {
   let rightAnswerKanji = rightAnswer.nameKanji.trim()
   if (expert) {
     let awesompleteEl = document.getElementById("awesomplete");
-    awesompleteEl.blur()
     rightAnswerChoice = awesompleteEl.value.trim()
     let awesompleteUl = document.getElementById("awesomplete_list_1");
     awesompleteUl.insertAdjacentHTML("afterend",
