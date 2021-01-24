@@ -337,6 +337,7 @@ function validateAnswer() {
   let rightAnswerKanji = rightAnswer.nameKanji.trim()
   if (expert) {
     let awesompleteEl = document.getElementById("awesomplete");
+    awesompleteEl.blur();
     rightAnswerChoice = awesompleteEl.value.trim()
     let awesompleteUl = document.getElementById("awesomplete_list_1");
     awesompleteUl.insertAdjacentHTML("afterend",
@@ -580,13 +581,6 @@ setTimeout(function() {
   document.getElementById("loadingScreenImg").classList.add("hide")
 }, 2500);
 
-// only load the scrollbar on desktop
-// (function() {
-//   // I only want to redirect iPhones, Android phones
-//   if (!isMobile.any) {
-//     const ps = new PerfectScrollbar('#awesomplete_list_1');
-//   }
-// })();
 //----------------- END THINGS TO DO ONCE DONE LOADING -----------------------
 
 //----------------- SERVICE WORKER STUFF -----------------------
