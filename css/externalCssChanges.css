@@ -90,14 +90,14 @@ input#awesomplete {
   padding: .3em .5em;
   height: calc(3.5vw + 1em + 2px);
   text-align: center;
-  border: white 1px solid;
+  border: #ffffff90 2px solid;
   border-radius: 6px;
-  transition: all 0.1s;
+  transition: border 1s ease;
 }
 
 input#awesomplete:focus {
   outline: none;
-  border-width: 2px;
+  border: white 2px solid;
 }
 
 .awesomplete > ul > li:hover {
@@ -152,6 +152,17 @@ input#awesomplete:focus {
 
   .awesomplete > ul{
     max-height: calc(100% - (1.5vw + 1em + 2px));
+  }
+}
+
+@media (max-width: 425px) {
+  input#awesomplete {
+    border: #ffffff90 1px solid;
+    transition: border 1s ease;
+  }
+
+  input#awesomplete:focus {
+    border: white 1px solid;
   }
 }
 /*----------------------------END AWESOMPLETE-----------------------------*/
