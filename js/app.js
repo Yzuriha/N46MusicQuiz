@@ -78,7 +78,6 @@ function togglePlay() {
   // make the first playButton press to start the game
   if (!gameStarted) {
     getGameSettings();
-    if (hideCover) document.querySelector(".albumImg").classList.add("blurImage");
     if (expert) {
       // nly create a dropdownlist if we actually need it
       createAwesompleteList();
