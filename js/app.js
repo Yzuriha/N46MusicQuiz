@@ -540,18 +540,19 @@ function animateValue(id, start, end, duration) {
 //----------------- START COLOR THIEF -----------------------
 const colorThief = new ColorThief();
 const img = document.querySelector('.albumImg');
+
 function changeBGColor() {
   var arr = [];
   // Make sure image is finished loading
   if (img.complete) {
     arr = colorThief.getPalette(img, 3)
-    background.style.background = `linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[2].toString()}))`;
-    settingsBackground.style.background = background.style.background;
+    background.style.backgroundImage = `${noise}, linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[2].toString()}))`;
+    settingsBackground.style.backgroundImage = background.style.backgroundImage;
   } else {
     img.addEventListener('load', function() {
       arr = colorThief.getPalette(img, 3)
-      background.style.background = `linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[2].toString()}))`;
-      settingsBackground.style.background = background.style.background;
+      background.style.backgroundImage = `${noise}, linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[2].toString()}))`;
+      settingsBackground.style.backgroundImage = background.style.backgroundImage;
     });
   }
 }
