@@ -546,14 +546,22 @@ function changeBGColor() {
   // Make sure image is finished loading
   if (img.complete) {
     arr = colorThief.getPalette(img, 3)
-    background.style.background = `${noise}, linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[2].toString()}))`;
+    changeBGColorHelper(arr);
     settingsBackground.style.background = background.style.background;
   } else {
     img.addEventListener('load', function() {
       arr = colorThief.getPalette(img, 3)
-      background.style.background = `${noise}, linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[2].toString()}))`;
+      changeBGColorHelper(arr);
       settingsBackground.style.background = background.style.background;
     });
+  }
+}
+
+function changeBGColorHelper(arr) {
+  if(isMobile.any) {
+    background.style.background = `linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[2].toString()}))`;
+  } else {
+    background.style.background = `${noise}, linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[2].toString()}))`;
   }
 }
 //----------------- END COLOR THIEF -----------------------
