@@ -292,7 +292,7 @@ function nextSong() {
     singleSongData = shuffledSongList.shift();
     rightAnswer = singleSongData;
     if (hideCover)  document.querySelector(".albumImg").classList.add("blurImage");
-
+triggerOverlayHelper();
     loadCoverImg(singleSongData);
     addEventListenerToAnswers();
     loadSong(singleSongData);
@@ -310,7 +310,6 @@ function nextSong() {
     document.getElementById("songCounter").innerText = ++songCounter;
     document.getElementById("nextButton").classList.add("kill-click");
     changeBGColor()
-    triggerOverlayHelper();
   } else {
     // just an lazy approach to reset everything lol
     location.reload();
