@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /*----------------------------START PLYR-----------------------------*/
 
 :root {
@@ -92,6 +99,8 @@ input#awesomplete {
   text-align: center;
   border: #ffffff90 2px solid;
   border-radius: 6px;
+  -webkit-transition: border 1s ease;
+  -o-transition: border 1s ease;
   transition: border 1s ease;
 }
 
@@ -111,7 +120,9 @@ input#awesomplete:focus {
 }
 
 .awesomplete > ul[hidden], .awesomplete > ul:empty{
-  transform: scale(1, 0);
+  -webkit-transform: scale(1, 0);
+      -ms-transform: scale(1, 0);
+          transform: scale(1, 0);
 }
 
 .awesomplete li[aria-selected="true"] mark{
@@ -158,6 +169,8 @@ input#awesomplete:focus {
 @media (max-width: 425px) {
   input#awesomplete {
     border: #ffffff90 1px solid;
+    -webkit-transition: border 1s ease;
+    -o-transition: border 1s ease;
     transition: border 1s ease;
   }
 

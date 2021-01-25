@@ -292,7 +292,7 @@ function nextSong() {
     singleSongData = shuffledSongList.shift();
     rightAnswer = singleSongData;
     if (hideCover)  document.querySelector(".albumImg").classList.add("blurImage");
-    triggerOverlayHelper();
+
     loadCoverImg(singleSongData);
     addEventListenerToAnswers();
     loadSong(singleSongData);
@@ -309,7 +309,8 @@ function nextSong() {
     isNextSong = true;
     document.getElementById("songCounter").innerText = ++songCounter;
     document.getElementById("nextButton").classList.add("kill-click");
-    changeBGColor();
+    changeBGColor()
+    triggerOverlayHelper();
   } else {
     // just an lazy approach to reset everything lol
     location.reload();
@@ -561,6 +562,8 @@ function changeBGColor() {
 loadSettings();
 checkCustomAmountInputVisibility();
 changeBGColor();
+
+if(isMobile.any) document.querySelector(".hiddenImgDetail").innerHTML += "<br>(Might break the pretty background transitions)"
 
 let timestamp = Date.now();
 document.getElementById("loadingScreenImg").src = `assets/icons/logoAnimated.svg?${timestamp}`;

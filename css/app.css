@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -14,7 +21,6 @@ body {
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -22,6 +28,7 @@ body {
 
 .fadeOut {
   opacity: 0;
+  -o-transition: opacity .75s ease-in-out;
   transition: opacity .75s ease-in-out;
   -moz-transition: opacity .75s ease-in-out;
   -webkit-transition: opacity .75s ease-in-out;
@@ -29,6 +36,7 @@ body {
 
 .fadeOutFast {
   opacity: 0;
+  -o-transition: opacity .2s ease-in-out;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   -webkit-transition: opacity .2s ease-in-out;
@@ -36,6 +44,7 @@ body {
 
 .fadeIn {
   opacity: 1 !important;
+  -o-transition: opacity .75s ease-in-out;
   transition: opacity .75s ease-in-out;
   -moz-transition: opacity .75s ease-in-out;
   -webkit-transition: opacity .75s ease-in-out;
@@ -43,6 +52,7 @@ body {
 
 .fadeInFast {
   opacity: 1 !important;
+  -o-transition: opacity .2s ease-in-out;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   -webkit-transition: opacity .2s ease-in-out;
@@ -50,6 +60,7 @@ body {
 
 .fadeOutAnswer {
   opacity: 0.6;
+  -o-transition: opacity .25s ease-in-out;
   transition: opacity .25s ease-in-out;
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;
@@ -60,10 +71,17 @@ body {
 }
 
 .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 
@@ -77,7 +95,8 @@ input[type='tel'], input[type='tel']:focus {
   -o-appearance: none;
   appearance: none;
   border: 2px solid white;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   outline: none;
   border-radius: 4px;
   opacity: 0.8;
@@ -116,6 +135,8 @@ input[type='checkbox']:checked:after {
   border: 2px white solid;
   border-radius: 6px;
   z-index: 10;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
   transition: all 1s;
   text-align: center;
 }
@@ -145,7 +166,9 @@ input[type='checkbox']:checked:after {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .overlay {
@@ -155,7 +178,7 @@ input[type='checkbox']:checked:after {
   left: 0;
   right: 0;
   background-color: black;
-  opacity: 0.35;
+  opacity: 0.3;
   z-index: -1;
 }
 
@@ -176,9 +199,16 @@ input[type='checkbox']:checked:after {
 }
 
 .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .trackbar {
@@ -187,8 +217,12 @@ input[type='checkbox']:checked:after {
 }
 
 .times {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0 1px;
 }
 
@@ -207,10 +241,19 @@ input[type='checkbox']:checked:after {
   border-radius: 7px;
   text-align: center;
   opacity: 0.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .albumImg {
@@ -218,16 +261,22 @@ input[type='checkbox']:checked:after {
   width: calc((75vw / 2) - 10vw);
   height: calc((75vw / 2) - 10vw);
   border-radius: 15%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.15s;
+  -o-transition: all 0.15s;
   transition: all 0.15s;
 }
 
 .blurImage {
-  filter: blur(40px) grayscale(0.4);
+  -webkit-filter: blur(40px) grayscale(0.4);
+          filter: blur(40px) grayscale(0.4);
 }
 
 .gameInformation {
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   text-align: center;
 }
 
@@ -247,7 +296,9 @@ input[type='checkbox']:checked:after {
 .answerOptions {
   height: 50%;
   padding: 0 5vw;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .answerOption {
@@ -265,17 +316,29 @@ input[type='checkbox']:checked:after {
 }
 
 .settings {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(199, 96, 121)), to(rgb(53, 97, 126)));
+  background: -o-linear-gradient(rgb(199, 96, 121), rgb(53, 97, 126));
   background: linear-gradient(rgb(199, 96, 121), rgb(53, 97, 126));
   position: fixed;
   bottom: 0;
   width: 50%;
   height: 100%;
+  -webkit-transition: ease-in-out 0.5s;
+  -o-transition: ease-in-out 0.5s;
   transition: ease-in-out 0.5s;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  box-shadow: 0px 0px 10px 0px 0px 0px 10px 0px #000000c7;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0px 0px 10px 0px 0px 0px 10px 0px #000000c7;
+          box-shadow: 0px 0px 10px 0px 0px 0px 10px 0px #000000c7;
 }
 
 .settings.close {
@@ -289,13 +352,17 @@ input[type='checkbox']:checked:after {
 
 .settings li {
   list-style-type: none;
-  padding: 1.5vh 15px;
+  padding: 1.5vh 15px 0 15px;
   border-top: 1px solid #7b7b7b8a;
 }
 
 .setting {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .setting label {
@@ -306,8 +373,12 @@ input[type='checkbox']:checked:after {
 .settingDetail {
   opacity: 0.75;
   width: calc(100% - 2px);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .customAmountWrapper {
@@ -320,8 +391,11 @@ input[type='checkbox']:checked:after {
   border: 1px white solid;
   border-radius: 12px;
   margin-top: 8px;
-  box-sizing: border-box;
-  justify-content: space-evenly;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .correctAnswer p {
@@ -338,12 +412,18 @@ input[type='checkbox']:checked:after {
   }
 
   .mainWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 75vh;
     width: 75vw;
     padding: 12.5vh 12.5vw;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .main div {
@@ -414,9 +494,15 @@ input[type='checkbox']:checked:after {
   }
 
   .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     height: calc(100vh - 100vw);
     max-height: none !important;
   }
@@ -445,7 +531,9 @@ input[type='checkbox']:checked:after {
   .answerOptions {
     height: calc(28vw + 12px + 4vw);
     padding: 0 5vw;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .gameInformation i {
