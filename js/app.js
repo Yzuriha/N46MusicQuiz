@@ -544,16 +544,17 @@ const img = document.querySelector('.albumImg');
 
 function changeBGColor() {
   var arr = [];
-  arr = colorThief.getPalette(img, 3)
+  // 4, 1, 3
+  arr = colorThief.getPalette(img, 5)
   changeBGColorHelper(arr);
   settingsBackground.style.background = background.style.background;
 }
 
 function changeBGColorHelper(arr) {
   if (isMobile.any) {
-    background.style.background = `linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[2].toString()}))`;
+    background.style.background = `linear-gradient(to bottom, rgba(${arr[2].toString()}),rgba(${arr[3].toString()}))`;
   } else {
-    background.style.background = `${noise}, linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[2].toString()}))`;
+    background.style.background = `${noise}, linear-gradient(to bottom, rgba(${arr[2].toString()}),rgba(${arr[3].toString()}))`;
   }
 }
 //----------------- END COLOR THIEF -----------------------

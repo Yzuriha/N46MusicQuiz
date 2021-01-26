@@ -142,7 +142,6 @@ input[type='checkbox']:checked:after {
 }
 
 .slideOut {
-  /* top: -85px; */
   /* (fontsize) - (deafult-p-margin) - (box-padding) - (border) - (top) -(some leeway)*/
   top: calc((-1vw * 2) - 2em - 20px - 4px - 5px - 5px)
 }
@@ -178,7 +177,7 @@ input[type='checkbox']:checked:after {
   left: 0;
   right: 0;
   background-color: black;
-  opacity: 0.3;
+  opacity: 0.2;
   z-index: -1;
 }
 
