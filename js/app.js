@@ -205,7 +205,7 @@ function transitionEndCallback(e) {
 function generateAnswers(data) {
   let answerNodesText = document.querySelectorAll(".answerOption p");
   let answers = [];
-  let shuffledSongListHelper = shuffle([...dataSet]);
+  let shuffledSongListHelper = shuffle([...dataSet]).filter(item => data.name != item.name);
   if (displayKanji) {
     answers.push(data.nameKanji)
     answers.push(shuffledSongListHelper[0].nameKanji);
@@ -350,8 +350,11 @@ function validateAnswer() {
 
   if (rightAnswerChoice == rightAnswerNormal || rightAnswerChoice == rightAnswerKanji) {
     let currentPoints = pointsNode.innerText;
-    let calculateDurationPercentage = (1 - ((audio.duration - (endTime - startTime) / 1000) / audio.duration)) * 100;
-    let score = Math.round(0.01 * Math.pow(calculateDurationPercentage - 100.5, 2));
+    // let calculateDurationPercentage = (1 - ((audio.duration - (endTime - startTime) / 1000) / audio.duration)) * 100;
+    let calculateDurationPercentage = (1 - ((audio.duration - (endTime - startTime + 1000) / 1000) / audio.duration)) * 100;
+    // let score = Math.round(0.01 * Math.pow(calculateDurationPercentage - 100.5, 2));
+    // 211.816−24.1575ln(102.376+65.2873*x)+5
+    let score = Math.round((211.816 - 24.1575 * Math.log(102.376 + 65.2873 * calculateDurationPercentage)) + 10)
     if (score > 100) score = 100;
     let hideCoverScore = hideCover ? 3 : 0;
     let randomStartScore = randomStart ? 5 : 0;
