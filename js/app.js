@@ -148,12 +148,6 @@ function getGameSettings() {
   autoplayNext = chosenGameSettings.includes("autoplayNext");
   displayKanji = chosenGameSettings.includes("displayKanji");
 
-  // for (var value in gameSettings) {
-  //   if (chosenGameSettings.includes(value)) {
-  //     gameSettings[value] = 1;
-  //   }
-  // }
-
   checkCustomAmountInputVisibility();
 }
 
@@ -204,7 +198,6 @@ function triggerOverlayHelper() {
 function transitionEndCallback(e) {
   overlayHelper.removeEventListener(transitionEvent, transitionEndCallback);
   overlayHelper.style.background = document.body.style.background;
-  overlayHelper.classList.remove("fadeOut");
   togglePlay();
 }
 
@@ -271,12 +264,12 @@ function saveSettingsToLocalStorage() {
   localStorage.setItem('customSettings', JSON.stringify(newSettings));
   localStorage.setItem('customAmount', document.getElementById("customAmountInput").value);
 
-  if(gameStarted) {
-    // let arr = colorThief.getPalette(img, 3)
+  if (gameStarted) {
     notification.style.background = `rgba(${colorThief.getPalette(img, 3)[2].toString()}, 0.8)`
-    // notification.style.background = `linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[2].toString()}))`;
     notification.classList.remove("slideOut");
-    setTimeout(function(){ slideOutNotification(); }, 5000);
+    setTimeout(function() {
+      slideOutNotification();
+    }, 5000);
   }
 }
 
@@ -284,32 +277,37 @@ function slideOutNotification() {
   notification.classList.add("slideOut")
 }
 
+document.querySelector(".albumImg").addEventListener("load", function() {
+  changeBGColor()
+})
+
 // this basically loads every function possible, dont want to explain, hopefully function names work enough
 function nextSong() {
-  if(!gameDone){
+  if (!gameDone) {
     autoplayTimeoutFunctionClear();
     document.querySelector('#earnedPoints').classList.add("fadeOutFast");
     singleSongData = shuffledSongList.shift();
     rightAnswer = singleSongData;
-    if (hideCover)  document.querySelector(".albumImg").classList.add("blurImage");
-triggerOverlayHelper();
-    loadCoverImg(singleSongData);
-    addEventListenerToAnswers();
-    loadSong(singleSongData);
-    if (!expert) {
-      generateAnswers(singleSongData);
-    } else {
-      let awesompleteEl = document.getElementById("awesomplete")
-      awesompleteEl.value = "";
-      if (document.querySelector(".correctAnswer")) document.querySelector(".correctAnswer").remove();
-      if(!isMobile.any) awesompleteEl.focus();
-    }
-    toggleKillClick();
-    resetTimer = true;
-    isNextSong = true;
-    document.getElementById("songCounter").innerText = ++songCounter;
-    document.getElementById("nextButton").classList.add("kill-click");
-    changeBGColor()
+    if (hideCover) document.querySelector(".albumImg").classList.add("blurImage");
+    setTimeout(function() {
+      triggerOverlayHelper();
+      loadCoverImg(singleSongData);
+      addEventListenerToAnswers();
+      loadSong(singleSongData);
+      if (!expert) {
+        generateAnswers(singleSongData);
+      } else {
+        let awesompleteEl = document.getElementById("awesomplete")
+        awesompleteEl.value = "";
+        if (document.querySelector(".correctAnswer")) document.querySelector(".correctAnswer").remove();
+        if (!isMobile.any) awesompleteEl.focus();
+      }
+      toggleKillClick();
+      resetTimer = true;
+      isNextSong = true;
+      document.getElementById("songCounter").innerText = ++songCounter;
+      document.getElementById("nextButton").classList.add("kill-click");
+    }, 0);
   } else {
     // just an lazy approach to reset everything lol
     location.reload();
@@ -327,6 +325,7 @@ function addEventListenerToAnswers() {
 var autoplayTimeout;
 
 function validateAnswer() {
+  overlayHelper.classList.remove("fadeOut");
   endTime = Date.now();
   isNextSong = false;
 
@@ -473,6 +472,7 @@ function getCheckedCheckboxes() {
 // HELPER FUNCTIONS
 
 var awesompleteList = []
+
 function createAwesompleteList() {
   for (item in dataSet) {
     awesompleteList.push(dataSet[item].name)
@@ -543,22 +543,13 @@ const img = document.querySelector('.albumImg');
 
 function changeBGColor() {
   var arr = [];
-  // Make sure image is finished loading
-  if (img.complete) {
-    arr = colorThief.getPalette(img, 3)
-    changeBGColorHelper(arr);
-    settingsBackground.style.background = background.style.background;
-  } else {
-    img.addEventListener('load', function() {
-      arr = colorThief.getPalette(img, 3)
-      changeBGColorHelper(arr);
-      settingsBackground.style.background = background.style.background;
-    });
-  }
+  arr = colorThief.getPalette(img, 3)
+  changeBGColorHelper(arr);
+  settingsBackground.style.background = background.style.background;
 }
 
 function changeBGColorHelper(arr) {
-  if(isMobile.any) {
+  if (isMobile.any) {
     background.style.background = `linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[2].toString()}))`;
   } else {
     background.style.background = `${noise}, linear-gradient(to bottom, rgba(${arr[0].toString()}),rgba(${arr[2].toString()}))`;
@@ -569,9 +560,6 @@ function changeBGColorHelper(arr) {
 //----------------- START THINGS TO DO ONCE DONE LOADING -----------------------
 loadSettings();
 checkCustomAmountInputVisibility();
-changeBGColor();
-
-if(isMobile.any) document.querySelector(".hiddenImgDetail").innerHTML += "<br>(Might break the pretty background transitions)"
 
 let timestamp = Date.now();
 document.getElementById("loadingScreenImg").src = `assets/icons/logoAnimated.svg?${timestamp}`;

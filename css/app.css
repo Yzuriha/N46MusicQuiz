@@ -27,11 +27,11 @@ body {
 }
 
 .fadeOut {
-  opacity: 0;
-  -o-transition: opacity .75s ease-in-out;
-  transition: opacity .75s ease-in-out;
-  -moz-transition: opacity .75s ease-in-out;
-  -webkit-transition: opacity .75s ease-in-out;
+  opacity: 0 !important;
+  -o-transition: opacity 1.25s ease-in-out;
+  transition: opacity 1.25s ease-in-out;
+  -moz-transition: opacity 1.25s ease-in-out;
+  -webkit-transition: opacity 1.25s ease-in-out;
 }
 
 .fadeOutFast {
@@ -263,9 +263,9 @@ input[type='checkbox']:checked:after {
   border-radius: 15%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: all 0.15s;
-  -o-transition: all 0.15s;
-  transition: all 0.15s;
+  -webkit-transition: all .15s;
+  -o-transition: all .15s;
+  transition: all .15s;
 }
 
 .blurImage {
