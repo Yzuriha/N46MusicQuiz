@@ -269,8 +269,8 @@ input[type='checkbox']:checked:after {
 }
 
 .blurImage {
-  -webkit-filter: blur(40px) grayscale(0.4);
-          filter: blur(40px) grayscale(0.4);
+  -webkit-filter: blur(35px) grayscale(0.6);
+          filter: blur(35px) grayscale(0.6);
 }
 
 .gameInformation {
@@ -305,7 +305,7 @@ input[type='checkbox']:checked:after {
   width: calc(50% - 1vw - 6px);
   height: calc(50% - 1vw - 16px);
   border: 2px white solid;
-  border-radius: 1vw;
+  border-radius: 10px;
   text-align: center;
   cursor: pointer;
 }

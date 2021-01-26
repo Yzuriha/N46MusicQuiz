@@ -114,12 +114,7 @@ function togglePlay() {
       playPauseButton.classList.replace("fa-play", "fa-pause");
       // in case the user wants to have a random sample point, change the current time randomly
       // we have to wait till the metadata is loaded or else we try to access a null value
-      if (randomStart) {
-        myAudio.addEventListener("loadedmetadata", function() {
-          let randomDuration = shuffle([...Array(Math.round(myAudio.duration) - 30).keys()]).pop()
-          myAudio.currentTime = randomDuration;
-        })
-      }
+      if (randomStart) myAudio.addEventListener("loadedmetadata", getRandomDuration);
       return myAudio.play();
     } else {
       playPauseButton.classList.replace("fa-pause", "fa-play");
@@ -127,6 +122,12 @@ function togglePlay() {
     }
   }
 };
+
+function getRandomDuration() {
+  let randomDuration = shuffle([...Array(Math.round(myAudio.duration) - 30).keys()]).pop()
+  myAudio.currentTime = randomDuration;
+  myAudio.removeEventListener("loadedmetadata", getRandomDuration)
+}
 
 function getGameSettings() {
   let chosenGameSettings = [];
