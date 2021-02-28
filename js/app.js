@@ -340,7 +340,7 @@ function validateAnswer() {
     rightAnswerChoice = awesompleteEl.value.trim()
     let awesompleteUl = document.getElementById("awesomplete_list_1");
     awesompleteUl.insertAdjacentHTML("afterend",
-      `<div class="correctAnswer center" style="flex-direction: column;">
+      `<div class="correctAnswer center" style="flex-direction: column; padding: 10px;">
         <p>The correct answer is:</p>
         <p><b>${rightAnswerNormal}</b> or <b>${rightAnswerKanji}</b></p>
        </div>`);
