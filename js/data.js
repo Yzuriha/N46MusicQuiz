@@ -1964,7 +1964,16 @@ dataSet =
       "img":"uisuRzA.jpg",
       "Album IMG":"",
       "song":"https://yzuriha.github.io/N46Sort/src/songs/友情ピアス.mp3"
-   }
+   },
+   {
+      "nameKanji":"Against",
+      "name":"Against",
+      "Single":"Synchronicity",
+      "Album":"",
+      "img":"5QTDIXH.jpg",
+      "Album IMG":"",
+      "song":"src/songs/Against.mp3"
+   },
 ]
 
 
